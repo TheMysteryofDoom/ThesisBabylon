@@ -10,6 +10,7 @@ public class LoginAction extends ActionSupport{
 	AccessBean access;
 	User user = new User(); 
 	//Users userLogin;
+	@Override
 	public void validate(){
 		if(access.getUsername().length()==(0)){
 			this.addFieldError("access.username", "Username is required");
@@ -18,6 +19,15 @@ public class LoginAction extends ActionSupport{
 			this.addFieldError("access.password", "Password is required");
 		}
 	}
+	@Override
+	public String execute(){
+		if(){
+			
+		}else{
+			
+		}
+	}
+	
 	
 	
 	
