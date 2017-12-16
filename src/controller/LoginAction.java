@@ -19,15 +19,6 @@ public class LoginAction extends ActionSupport{
 			this.addFieldError("access.password", "Password is required");
 		}
 	}
-	@Override
-	public String execute(){
-		if(){
-			
-		}else{
-			
-		}
-	}
-	
 	
 	
 	
