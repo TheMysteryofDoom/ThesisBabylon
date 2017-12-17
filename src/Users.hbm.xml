@@ -2,19 +2,14 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="model.AccessBean" table="users" catalog="dbname" optimistic-lock="version">
-        <id name="uname" type="string">
-            <column name="uname" length="10" />
+    <class name="model.AccessBean" table="login" catalog="codersofbabylon" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="username" length="50" />
             <generator class="assigned" />
         </id>
-        <property name="pwd" type="string">
-            <column name="pwd" length="10" />
+        <property name="password" type="string">
+            <column name="password" length="100" />
         </property>
-        <property name="email" type="string">
-            <column name="email" length="50" unique="true" />
-        </property>
-        <property name="dor" type="date">
-            <column name="dor" length="10" />
-        </property>
+       
     </class>
 </hibernate-mapping>

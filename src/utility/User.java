@@ -9,10 +9,10 @@ public class User {
 	public boolean find(String username, String password){
 		  Session session = HibernateUtil.getSessionFactory().openSession();
 		  //session.beginTransaction();
-		  String sql = " from Users u where u.uname=:name and u.pwd=:pass";
+		  String sql = " from login u where u.uname=:username and u.pwd=:password";
 	        Query query = session.createQuery(sql);
-	        query.setParameter("name", username);
-	        query.setParameter("pass", password);
+	        query.setParameter("username", username);
+	        query.setParameter("password", password);
 	        List<AccessBean> list = query.list();
 	        if (list.size() > 0) {
 	            session.close();
