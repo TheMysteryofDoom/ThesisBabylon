@@ -6,8 +6,8 @@
 <struts>
 	<package name="default" extends="struts-default">
 		<action name="login" class="controller.LoginAction">
-			<result name="success">/portal.jsp</result>
-			<result name="input">/index.jsp</result>
+			<result name="success">portal.jsp</result>
+			<result name="error">index.jsp</result>
 		</action>
 	</package>
 </struts>
