@@ -3,7 +3,7 @@ import java.util.Map;
 
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
-import org.hibernate.Session;
+//import org.hibernate.Session;
 
 import model.AccessBean;
 import utility.*;
