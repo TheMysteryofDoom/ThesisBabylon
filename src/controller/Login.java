@@ -5,15 +5,16 @@ import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 //import org.hibernate.Session;
 
-import model.AccessBean;
+//import model.AccessBean;
 import utility.*;
 
-import com.opensymphony.xwork2.ActionSupport;
+//import com.opensymphony.xwork2.ActionSupport;
 
-public class LoginAction implements SessionAware{
+public class Login implements SessionAware{
 	SessionMap<String,String> sessionmap;  
-	AccessBean user = new AccessBean();
-	private String username,password;  
+	
+	private String username;
+	private String password;  
 	public String getUsername() {  
 	    return username;  
 	}  
@@ -22,14 +23,16 @@ public class LoginAction implements SessionAware{
 	    this.username = username;  
 	}  
 	  
-	public String getUserpass() {  
-	    return password;  
-	}  
+
 	  
-	public void setUserpass(String password) {  
-	    this.password = password;  
-	}  
-	  
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public String execute(){  
 	    if(User.validate(username, password)){  
 	        return "success";  
@@ -38,8 +41,6 @@ public class LoginAction implements SessionAware{
 	        return "error";  
 	    }  
 	}  
-	
-	
 	
 	public void setSession(Map map) {  
 	    sessionmap=(SessionMap)map;  

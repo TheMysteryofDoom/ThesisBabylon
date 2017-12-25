@@ -11,10 +11,11 @@
 <h1>Placeholder Title</h1>
 <hr>
 <s:form action="login" method="post">
-<s:textfield label="Username or Email" key="username"></s:textfield>
-<s:textfield label="Password" key="password"></s:textfield>
-<s:submit value="Login"></s:submit>
+<s:textfield name="username" label="Username or Email"></s:textfield>
+<s:password name="password" label="Password"></s:password> 
+<s:submit value="login"></s:submit>
 </s:form>
+
 
 </body>
 </html>

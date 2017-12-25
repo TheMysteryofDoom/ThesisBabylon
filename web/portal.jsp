@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<p>Welcome to profile!</p>
 
 </body>
 </html>

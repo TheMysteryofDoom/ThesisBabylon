@@ -5,12 +5,16 @@
     
 <struts>
 	<package name="default" extends="struts-default">
-		<action name="login" class="controller.LoginAction">
+		<action name="login" class="controller.Login">
 			<result name="success">portal.jsp</result>
 			<result name="error">error.jsp</result>
 		</action>
-		<action name="logout" class="controller.LoginAction" method="logout">
+		<action name="logout" class="controller.Login" method="logout">
 			<result name="success">index.jsp</result>
 		</action>
+		<action name="profile" class="controller.Profile">  
+			<result name="success" >portal.jsp</result>  
+			<result name="error" >error.jsp</result>  
+		</action>  
 	</package>
 </struts>
