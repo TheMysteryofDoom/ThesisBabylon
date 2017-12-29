@@ -1,16 +1,16 @@
 package model;
 
-public class AccessBean {
+public class User {
 	private String username;
 	private String password;
-	public AccessBean(){
+	public User(){
 		
 	}
-	public AccessBean(String username){
+	public User(String username){
 		this.username = username;
 	}
 	
-	public AccessBean(String username, String password){
+	public User(String username, String password){
 		this.username = username;
 		this.password = password;
 	}
