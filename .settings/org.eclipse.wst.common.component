@@ -2,7 +2,7 @@
     <wb-module deploy-name="Thesis2-CodersOfBabylon">
         <wb-resource deploy-path="/" source-path="/web" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="Thesis2-CodersOfBabylon"/>
         <property name="java-output-path" value="/Thesis2-CodersOfBabylon/build/classes"/>
+        <property name="context-root" value="Thesis-AdminSide"/>
     </wb-module>
 </project-modules>

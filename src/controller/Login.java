@@ -34,6 +34,8 @@ public class Login implements SessionAware{
 	}
 
 	public String execute(){  
+		System.out.println(username);
+	    sessionmap.put("username", username);
 	    if(User.validate(username, password)){  
 	        return "success";  
 	    }  
@@ -42,9 +44,9 @@ public class Login implements SessionAware{
 	    }  
 	}  
 	
-	public void setSession(Map map) {  
+	public void setSession(Map map) {  //This happens before execute
 	    sessionmap=(SessionMap)map;  
-	    sessionmap.put("login","true");  
+	    sessionmap.put("login","true");
 	}  
 	  
 	public String logout(){  

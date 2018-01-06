@@ -9,7 +9,7 @@ public class Profile {
 	public String execute(){  
 		HttpServletRequest request=ServletActionContext.getRequest();  
 		HttpSession session=request.getSession();  
-		  
+		System.out.println("This actually Happened...");  
 		String s=(String)session.getAttribute("login");  
 		if(s!=null && !s.equals("")){  
 		    return "success";  

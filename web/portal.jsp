@@ -12,7 +12,7 @@
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
 </head>
 <body>
-
+<jsp:include page="script/SessionCheck.jsp"></jsp:include>
 <div class="topbanner"></div>
 <div class = "container">
 	<br>
@@ -48,8 +48,8 @@
 		<div class="five columns"> 											<!-- Tier 1 -->
 			<div class="seven columns"> 									<!-- Tier 2 -->
 				<p><br>
-				[Name of Admin goes here]<br>
-				[ID No. Goes Here]
+				<%= session.getAttribute("username") %><br>
+				[Med Liscence No. Goes Here]
 				</p>
 			</div> 															<!-- Tier 2 -->
 			<div class="five columns"> 										<!-- Tier 2 -->

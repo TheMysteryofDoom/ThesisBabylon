@@ -14,7 +14,7 @@
 		</action>
 		<action name="profile" class="controller.Profile">  
 			<result name="success" >portal.jsp</result>  
-			<result name="error" >error.jsp</result>  
+			<result name="error" >index.jsp</result>  
 		</action>  
 	</package>
 </struts>
