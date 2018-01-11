@@ -50,6 +50,7 @@ public class Login implements SessionAware{
 	}  
 	  
 	public String logout(){  
+		sessionmap.remove("username");
 	    sessionmap.invalidate();  
 	    return "success";  
 	}  
