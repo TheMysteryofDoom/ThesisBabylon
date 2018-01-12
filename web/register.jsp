@@ -298,6 +298,21 @@
 				    <input class="u-full-width" type="text" name="fathermiddleName" id="fathermiddleName" placeholder="Middle Name"></input>
 				</div>
 			</div>
+			<br>
+			<div class="row">
+				<div class="three columns">
+					<label>Spouse's Name:</label>
+				</div>
+				<div class="three columns">
+				    <input class="u-full-width" type="text" name="spouseName" id="spousefirstName" placeholder="First Name"></input>
+				</div>
+				<div class="three columns">
+				    <input class="u-full-width" type="text" name="spouselastName" id="spouselastName" placeholder="Last Name"></input>
+				</div>
+				<div class="three columns">
+				    <input class="u-full-width" type="text" name="spousemiddleName" id="spousemiddleName" placeholder="Middle Name"></input>
+				</div>
+			</div>
 	</form>
 </div>
 </body>
