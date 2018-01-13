@@ -10,9 +10,9 @@
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
+<%@ include file="script/SessionCheck2.jsp" %>
 </head>
 <body>
-<jsp:include page="script/SessionCheck.jsp"></jsp:include>
 <div class="topbanner"></div>
 <div class = "container">
 	<br>

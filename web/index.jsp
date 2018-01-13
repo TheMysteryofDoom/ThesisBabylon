@@ -9,8 +9,9 @@
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-
 <script type="text/javascript" src="javascript/message.js"></script>
+
+<%@ include file="script/SessionCheck.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
