@@ -12,7 +12,6 @@
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
 </head>
 <body>
-<jsp:include page="script/SessionCheck.jsp"></jsp:include>
 <div class="topbanner"></div>
 <div class = "container">
 	<br>
