@@ -241,13 +241,13 @@
 					<label>Employer: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="employer" id="employer" placeholder="Company"></input>
+					<input class="u-full-width" type="text" name="employer" id="employer" placeholder="Employer"></input>
 				</div>
 				<div class="three columns">
 					<label>ID Number: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="employerid" id="employerid"></input>
+					<input class="u-full-width" type="text" name="employerid" id="employerid" placeholder="ID Number from Employer"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
@@ -311,6 +311,12 @@
 				</div>
 				<div class="three columns">
 				    <input class="u-full-width" type="text" name="spousemiddleName" id="spousemiddleName" placeholder="Middle Name"></input>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="three columns">
+				<input class="button-primary u-pull-right" value="Register Patient" type="submit"></input>
 				</div>
 			</div>
 	</form>
