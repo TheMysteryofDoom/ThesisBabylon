@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<%@ include file="script/SessionCheck2.jsp"%>
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
 </head>
 <body>

@@ -9,10 +9,12 @@
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+
+	<%@ include file="script/SessionCheck.jsp"%>
 <script type="text/javascript" src="javascript/message.js"></script>
-<jsp:include page="script/SessionCheck.jsp"></jsp:include>
 </head>
 <body>
+
 <div class="topbanner"></div>
 <div class="container">
 <h1>Philippine Hospital System</h1>
