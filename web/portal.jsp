@@ -39,7 +39,7 @@
 				</div>
 				<div class="five columns">
 					<label>Or Register New Patient:</label>
-					<form action="registerNewPaitent.action" method="post">
+					<form action="register.jsp" method="post">
 					<input class="button u-pull-left" value="Register" type="submit">
 					</form>
 				</div>
