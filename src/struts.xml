@@ -6,15 +6,19 @@
 <struts>
 	<package name="default" extends="struts-default">
 		<action name="login" class="controller.Login">
-			<result name="success">portal.jsp</result>
-			<result name="error">error.jsp</result>
+			<result name="success">/portal.jsp</result>
+			<result name="error">/error.jsp</result>
 		</action>
 		<action name="logout" class="controller.Login" method="logout">
-			<result name="success">index.jsp</result>
+			<result name="success">/index.jsp</result>
 		</action>
 		<action name="profile" class="controller.Profile">  
-			<result name="success" >portal.jsp</result>  
-			<result name="error" >index.jsp</result>  
+			<result name="success" >/portal.jsp</result>  
+			<result name="error" >/index.jsp</result>  
+		</action>  
+		<action name="registerPatient.action" class="controller.RegisterAction">  
+			<result name="success" >/portal.jsp</result>  
+			<result name="error" >/error.jsp</result>  
 		</action>  
 	</package>
 </struts>
