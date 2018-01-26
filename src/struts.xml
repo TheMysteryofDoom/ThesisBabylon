@@ -5,20 +5,27 @@
     
 <struts>
 	<package name="default" extends="struts-default">
+	<!-- For the user to be logged in and able to access the patient.  -->
 		<action name="login" class="controller.Login">
 			<result name="success">/portal.jsp</result>
 			<result name="error">/error.jsp</result>
 		</action>
+		<!-- Logouts the user. -->
 		<action name="logout" class="controller.Login" method="logout">
 			<result name="success">/index.jsp</result>
 		</action>
+		<!-- Admin Profile -->
 		<action name="profile" class="controller.Profile">  
 			<result name="success" >/portal.jsp</result>  
 			<result name="error" >/index.jsp</result>  
 		</action>  
-		<action name="registerPatient.action" class="controller.RegisterAction">  
+		
+		<!-- Patient registration -->
+		<action name="registerPatient" class="controller.RegisterAction">  
 			<result name="success" >/portal.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
+		
+		
 	</package>
 </struts>

@@ -6,7 +6,6 @@ import model.PatientBean;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -28,9 +27,6 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		Session session = null;
 		Transaction transaction = null;
 		try{
-			
-			
-		}catch(Exception e){
 			session = sessionFactory.openSession();
 			 if(session!=null){
 				transaction = session.beginTransaction();
@@ -39,6 +35,9 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 			 }else{
 				 System.err.println("session is null");
 			 }
+			
+		}catch(Exception e){
+			transaction.rollback();
 		}
 		return status;
 	}
