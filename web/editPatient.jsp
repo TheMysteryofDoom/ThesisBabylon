@@ -269,7 +269,7 @@
 					<label>Employer's Address: </label>
 				</div>
 				<div class="nine columns">
-					<input class="u-full-width" type="text" name="employerAddress" id="employerAddress"></input>
+					<input class="u-full-width" type="text" name="employersAddress" id="employersAddress"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
@@ -287,13 +287,13 @@
 					<label>Mother's Name:</label>
 				</div>
 				<div class="three columns">
-				    <input class="u-full-width" type="text" name="motherfirstName" id="motherfirstName" placeholder="First Name"></input>
+				    <input class="u-full-width" type="text" name="mothersFirstName" id="mothersFirstName" placeholder="First Name"></input>
 				</div>
 				<div class="three columns">
-				    <input class="u-full-width" type="text" name="motherlastName" id="motherlastName" placeholder="Last Name"></input>
+				    <input class="u-full-width" type="text" name="mothersLastName" id="mothersLastName" placeholder="Last Name"></input>
 				</div>
 				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothermiddleName" id="mothermiddleName" placeholder="Middle Name"></input>
+				    <input class="u-full-width" type="text" name="mothersMiddleName" id="mothersMiddleName" placeholder="Middle Name"></input>
 				</div>
 			</div>
 			<br>
@@ -302,13 +302,13 @@
 					<label>Father's Name:</label>
 				</div>
 				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fatherfirstName" id="fatherfirstName" placeholder="First Name"></input>
+				    <input class="u-full-width" type="text" name="fathersFirstName" id="fathersFirstName" placeholder="First Name"></input>
 				</div>
 				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fatherlastName" id="fatherlastName" placeholder="Last Name"></input>
+				    <input class="u-full-width" type="text" name="fathersLastName" id="fathersLastName" placeholder="Last Name"></input>
 				</div>
 				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathermiddleName" id="fathermiddleName" placeholder="Middle Name"></input>
+				    <input class="u-full-width" type="text" name="fathersMiddleName" id="fathersMiddleName" placeholder="Middle Name"></input>
 				</div>
 			</div>
 			<br>
