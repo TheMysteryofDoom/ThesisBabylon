@@ -278,7 +278,7 @@
 					<label>Employer's Contact No.: </label>
 				</div>
 				<div class="nine columns">
-					<input class="u-full-width" type="text" name="employerNo" id="employerNo"></input>
+					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="employerNo" id="employerNo"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
