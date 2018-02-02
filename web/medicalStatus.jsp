@@ -137,33 +137,61 @@
 			</div>
 		</div>
 		<div class ="row">
-			<div class="four columns">
+			<div class="three columns">
 				<label>Head Circumference:</label>
 			</div>
-			<div class="eight columns">
+			<div class="nine columns">
 				<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<div class ="row">
-			<div class="four columns">
+			<div class="three columns">
 				<label>Chest Circumference:</label>
 			</div>
-			<div class="eight columns">
+			<div class="nine columns">
 				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<div class ="row">
-			<div class="four columns">
+			<div class="three columns">
 				<label>Abdominal:</label>
 			</div>
-			<div class="eight columns">
+			<div class="nine columns">
 				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<hr>
 		<div class ="row">
 			<div class="twelve columns" align="center">
+				<h5><b>Hospital Details</b></h5>
+			</div>
+		</div>
+		<hr>
+		<div class ="row">
+			<div class="twelve columns" align="center">
 				<h5><b>Medical History</b></h5>
+			</div>
+		</div>
+		<div class ="row">
+			<div class="twelve columns">
+				<textarea class="u-full-width dontresize textboxheight" name="medHistory" placeholder="Write down the patient's Medical History here."></textarea>
+			</div>
+		</div>
+		<hr>
+		<div class ="row">
+			<div class="twelve columns" align="center">
+				<h5><b>Treatment Plan</b></h5>
+			</div>
+		</div>
+		<div class ="row">
+			<div class="twelve columns">
+				<textarea class="u-full-width dontresize textboxheight" name="treatmentPlan" placeholder="Write down the patient's Treatment Plan here."></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="three columns">
+			<input class="button-primary u-pull-right" value="Update Patient" type="submit"></input>
 			</div>
 		</div>
 	</form>
