@@ -58,84 +58,115 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr> <!-- End of Header -->
-	<div class ="row">
-		<div class="six columns">
-			<label>Patient: </label>[PatientName]
+	<form action="updateMedical.action" method="post">
+		<div class ="row">
+			<div class="six columns">
+				<label>Patient: </label>[PatientName]
+			</div>
+			<div class="six columns">
+				<label>ID Number: </label>[PatientNumber]
+			</div>
 		</div>
-		<div class="six columns">
-			<label>ID Number: </label>[PatientNumber]
+		<br>
+		<div class ="row">
+			<div class="three columns">
+				<label>Chief Complaint:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" name="complaint" id="complaint" placeholder="">
+			</div>
 		</div>
-	</div>
-	<hr>
-	<div class ="row">
-		<div class="twelve columns" align="center">
-			<h5><b>Vital Signs</b></h5>
+		<hr>
+		<div class ="row">
+			<div class="twelve columns" align="center">
+				<h5><b>Vital Signs</b></h5>
+			</div>
 		</div>
-	</div>
-	<div class ="row">
-		<div class="three columns">
-			<label>Blood Pressure:</label>
+		<div class ="row">
+			<div class="three columns">
+				<label>Blood Pressure:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="bloodPressure" id="bloodPressure" placeholder="mm/HG"> (mm/HG)
+			</div>
 		</div>
-		<div class="nine columns">
-			<input type="text" onkeypress="return isNumberKey(event)" name="bloodPressure" id="bloodPressure" placeholder="mm/HG"> (mm/HG)
+		<div class ="row">
+			<div class="three columns">
+				<label>PR/CR:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="prcr" id="prcr" placeholder="bpm"> (bpm)
+			</div>
 		</div>
-	</div>
-	<br>
-	<div class ="row">
-		<div class="three columns">
-			<label>PR/CR:</label>
+		<div class ="row">
+			<div class="three columns">
+				<label>Respiratory Rate:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="respiratoryRate" id="respiratoryRate" placeholder="bpm"> (bpm)
+			</div>
 		</div>
-	</div>
-	<br>
-	<div class ="row">
-		<div class="three columns">
-			<label>Respiratory Rate:</label>
+		<div class ="row">
+			<div class="three columns">
+				<label>Temperature:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="temperature" id="temperature" placeholder="Celsius"> (Celsius)
+			</div>
 		</div>
-		<div class="nine columns">
-			<input type="text" onkeypress="return isNumberKey(event)" name="respiratoryRate" id="respiratoryRate" placeholder="bpm"> (bpm)
+		<div class ="row">
+			<div class="three columns">
+				<label>Weight:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="weight" id="weight" placeholder="kg"> (kg)
+			</div>
 		</div>
-	</div>
-	<br>
-	<div class ="row">
-		<div class="three columns">
-			<label>Temperature:</label>
+		<div class ="row">
+			<div class="three columns">
+				<label>Height:</label>
+			</div>
+			<div class="nine columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="height" id="height" placeholder="cm"> (cm)
+			</div>
 		</div>
-		<div class="nine columns">
-			<input type="text" onkeypress="return isNumberKey(event)" name="temperature" id="temperature" placeholder="Celsius"> (Celsius)
+		<hr>
+		<div class ="row">
+			<div class="twelve columns" align="center">
+				<h5><b>Anthropometric Measurements</b></h5>
+			</div>
 		</div>
-	</div>
-	<br>
-	<div class ="row">
-		<div class="three columns">
-			<label>Weight:</label>
+		<div class ="row">
+			<div class="four columns">
+				<label>Head Circumference:</label>
+			</div>
+			<div class="eight columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" placeholder="cm"> (cm)
+			</div>
 		</div>
-		<div class="nine columns">
-			<input type="text" onkeypress="return isNumberKey(event)" name="weight" id="weight" placeholder="kg"> (kg)
+		<div class ="row">
+			<div class="four columns">
+				<label>Chest Circumference:</label>
+			</div>
+			<div class="eight columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
+			</div>
 		</div>
-	</div>
-	<br>
-	<div class ="row">
-		<div class="three columns">
-			<label>Height:</label>
+		<div class ="row">
+			<div class="four columns">
+				<label>Abdominal:</label>
+			</div>
+			<div class="eight columns">
+				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
+			</div>
 		</div>
-		<div class="nine columns">
-			<input type="text" onkeypress="return isNumberKey(event)" name="height" id="height" placeholder="cm"> (cm)
+		<hr>
+		<div class ="row">
+			<div class="twelve columns" align="center">
+				<h5><b>Medical History</b></h5>
+			</div>
 		</div>
-	</div>
-	<hr>
-	<div class ="row">
-		<div class="twelve columns" align="center">
-			<h5><b>Anthropometric Measurements</b></h5>
-		</div>
-	</div>
-	<div class ="row">
-		<div class="four columns">
-			<label>Head Circumference:</label>
-		</div>
-		<div class="eight columns">
-			<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" placeholder="cm"> (cm)
-		</div>
-	</div>
+	</form>
 </div>
 </body>
 </html>
