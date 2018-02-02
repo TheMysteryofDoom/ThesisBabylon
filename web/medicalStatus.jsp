@@ -68,7 +68,7 @@
 	</div>
 	<hr>
 	<div class ="row">
-		<div class="three columns">
+		<div class="twelve columns" align="center">
 			<h5><b>Vital Signs</b></h5>
 		</div>
 	</div>
@@ -120,6 +120,20 @@
 		</div>
 		<div class="nine columns">
 			<input type="text" onkeypress="return isNumberKey(event)" name="height" id="height" placeholder="cm"> (cm)
+		</div>
+	</div>
+	<hr>
+	<div class ="row">
+		<div class="twelve columns" align="center">
+			<h5><b>Anthropometric Measurements</b></h5>
+		</div>
+	</div>
+	<div class ="row">
+		<div class="four columns">
+			<label>Head Circumference:</label>
+		</div>
+		<div class="eight columns">
+			<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" placeholder="cm"> (cm)
 		</div>
 	</div>
 </div>
