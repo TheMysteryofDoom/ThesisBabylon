@@ -54,8 +54,21 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr> <!-- End of Header -->
-	
-	
+	<div class ="row">
+		<div class="three columns">
+			<label>Vital Signs:</label>
+		</div>
 	</div>
+	<div class ="row">
+		<div class="three columns">
+			<label>Vital Signs:</label>
+		</div>
+	</div>
+	<div class ="row">
+		<div class="three columns">
+			<label>Vital Signs:</label>
+		</div>
+	</div>
+</div>
 </body>
 </html>
