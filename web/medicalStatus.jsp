@@ -4,7 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Medical Status</title>
+<link rel="stylesheet" type="text/css" href="css/basedesign.css" />
+<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<script type="text/javascript" src="javascript/isNumberKey.js"></script>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -59,14 +63,43 @@
 			<label>Vital Signs:</label>
 		</div>
 	</div>
+	<br>
 	<div class ="row">
 		<div class="three columns">
-			<label>Vital Signs:</label>
+			<label>Blood Pressure:</label>
+		</div>
+		<div class="three columns">
+			<input type="text" onkeypress="return isNumberKey(event)" name="bloodPressure" id="bloodPressure" placeholder="Input Patient ID">(mm/Hg)
 		</div>
 	</div>
+	<br>
 	<div class ="row">
 		<div class="three columns">
-			<label>Vital Signs:</label>
+			<label>PR/CR:</label>
+		</div>
+	</div>
+	<br>
+	<div class ="row">
+		<div class="three columns">
+			<label>Respiratory Rate:</label>
+		</div>
+	</div>
+	<br>
+	<div class ="row">
+		<div class="three columns">
+			<label>Temperature:</label>
+		</div>
+	</div>
+	<br>
+	<div class ="row">
+		<div class="three columns">
+			<label>Weight:</label>
+		</div>
+	</div>
+	<br>
+	<div class ="row">
+		<div class="three columns">
+			<label>Height:</label>
 		</div>
 	</div>
 </div>
