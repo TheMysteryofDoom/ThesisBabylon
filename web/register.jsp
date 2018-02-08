@@ -197,139 +197,16 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Present Address: </label>
-				</div>
-				<div class="nine columns">
-					<input class="u-full-width" type="text" name="presentAddress" id="presentAddress" placeholder="Address" required="required"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Permanent Address: </label>
-				</div>
-				<div class="nine columns">
-					<input class="u-full-width" type="text" name="permanentAddress" id="permanentAddress" placeholder="Disregard this line if the address is the same as the present address"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Cellphone Number: </label>
-				</div>
-				<div class="three columns">
-					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="cellno" id="cellno" placeholder="e.g. 04799755545" required="required"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Home Number: </label>
-				</div>
-				<div class="three columns">
-					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="homeno" id="homeno" placeholder="e.g. 8653326"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Email: </label>
-				</div>
-				<div class="three columns">
-					<input class="u-full-width" type="text" name="email" id="email" placeholder="e.g. email@email.com" required="required"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
 					<label>Occupation: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="job" id="job" placeholder="e.g. Accountant. If unemployed, state Unemployed" required="required"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Employer: </label>
-				</div>
-				<div class="three columns">
-					<input class="u-full-width" type="text" name="employer" id="employer" placeholder="Employer"></input>
-				</div>
-				<div class="three columns">
-					<label>ID Number: </label>
-				</div>
-				<div class="three columns">
-					<input class="u-full-width" type="text" name="employerid" id="employerid" placeholder="ID Number from Employer"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Employer's Address: </label>
-				</div>
-				<div class="nine columns">
-					<input class="u-full-width" type="text" name="employersAddress" id="employersAddress"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Employer's Contact No.: </label>
-				</div>
-				<div class="nine columns">
-					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="employerNo" id="employerNo"></input>
+					<input class="u-full-width" type="text" name="job" id="job" placeholder="e.g. Accountant"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row">
 				<div class="three columns">
-					<label>Mother's Name:</label>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothersFirstName" id="mothersFirstName" placeholder="First Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothersLastName" id="mothersLastName" placeholder="Last Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothersMiddleName" id="mothersMiddleName" placeholder="Middle Name"></input>
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="three columns">
-					<label>Father's Name:</label>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathersFirstName" id="fathersFirstName" placeholder="First Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathersLastName" id="fathersLastName" placeholder="Last Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathersMiddleName" id="fathersMiddleName" placeholder="Middle Name"></input>
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="three columns">
-					<label>Spouse's Name:</label>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="spouseName" id="spousefirstName" placeholder="First Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="spouselastName" id="spouselastName" placeholder="Last Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="spousemiddleName" id="spousemiddleName" placeholder="Middle Name"></input>
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="three columns">
-				<input class="button-primary u-pull-right" value="Register Patient" type="submit"></input>
+				<input class="button-primary u-pull-right" value="Next" type="submit"></input>
 				</div>
 			</div>
 	</form>

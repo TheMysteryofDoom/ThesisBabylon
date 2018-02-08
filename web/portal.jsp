@@ -68,12 +68,12 @@
 	<div class="row">
 		<div class="four columns">
 			<form action="editRecord.action" method="post">
-					<input class="button u-pull-right" value="Edit" type="submit">
+					<input class="button u-pull-right" value="Edit Biography" type="submit">
 			</form>		
 		</div>
 		<div class="four columns" align="center">
 			<form action="addRecord.action" method="post">
-					<input class="button" value="Add Record" type="submit">
+					<input class="button" value="Update Medical Status" type="submit">
 			</form>	
 		</div>
 		<div class="four columns">
