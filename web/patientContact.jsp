@@ -132,7 +132,7 @@
 			<br>
 			<div class="row">
 				<div class="three columns">
-				<input class="button-primary u-pull-right" value="Register Contact Number" type="submit"></input>
+				<input class="button-primary u-pull-right" value="Next" type="submit"></input>
 				</div>
 			</div>
 	</form>

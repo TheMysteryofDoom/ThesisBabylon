@@ -103,7 +103,7 @@
 			<br>
 			<div class="row">
 				<div class="five columns">
-				<input class="button-primary u-pull-right" value="Register Patient's Contact Person" type="submit"></input>
+				<input class="button-primary u-pull-right" value="Finish" type="submit"></input>
 				</div>
 			</div>
 	</form>
