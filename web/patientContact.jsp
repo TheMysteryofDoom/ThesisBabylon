@@ -25,7 +25,7 @@
 						</div>														<!-- Tier 2 -->
 						<div class="nine columns">									<!-- Tier 2 -->
 							<br>
-							<h4>Register Patient's Contact ID</h4>
+							<h4>Register Patient's Contact Info</h4>
 						</div>												<!-- Tier 2 -->
 					</div>
 					<div class="row">
