@@ -102,7 +102,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row">
-				<div class="five columns">
+				<div class="three columns">
 				<input class="button-primary u-pull-right" value="Finish" type="submit"></input>
 				</div>
 			</div>
