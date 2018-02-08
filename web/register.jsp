@@ -197,75 +197,12 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Present Address: </label>
-				</div>
-				<div class="nine columns">
-					<input class="u-full-width" type="text" name="presentAddress" id="presentAddress" placeholder="Address" required="required"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
-					<label>Permanent Address: </label>
-				</div>
-				<div class="nine columns">
-					<input class="u-full-width" type="text" name="permanentAddress" id="permanentAddress" placeholder="Disregard this line if the address is the same as the present address"></input>
-				</div>
-			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
 					<label>Occupation: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="job" id="job" placeholder="e.g. Accountant. If unemployed, state Unemployed" required="required"></input>
+					<input class="u-full-width" type="text" name="job" id="job" placeholder="e.g. Accountant"></input>
 				</div>
 			</div> <!-- 1 Row End -->
-			<br>
-			<div class="row">
-				<div class="three columns">
-					<label>Mother's Name:</label>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothersFirstName" id="mothersFirstName" placeholder="First Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothersLastName" id="mothersLastName" placeholder="Last Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="mothersMiddleName" id="mothersMiddleName" placeholder="Middle Name"></input>
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="three columns">
-					<label>Father's Name:</label>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathersFirstName" id="fathersFirstName" placeholder="First Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathersLastName" id="fathersLastName" placeholder="Last Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="fathersMiddleName" id="fathersMiddleName" placeholder="Middle Name"></input>
-				</div>
-			</div>
-			<br>
-			<div class="row">
-				<div class="three columns">
-					<label>Spouse's Name:</label>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="spouseName" id="spousefirstName" placeholder="First Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="spouselastName" id="spouselastName" placeholder="Last Name"></input>
-				</div>
-				<div class="three columns">
-				    <input class="u-full-width" type="text" name="spousemiddleName" id="spousemiddleName" placeholder="Middle Name"></input>
-				</div>
-			</div>
 			<br>
 			<div class="row">
 				<div class="three columns">
