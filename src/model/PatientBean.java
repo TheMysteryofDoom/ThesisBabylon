@@ -47,9 +47,9 @@ public class PatientBean {
 //	private String fathersMiddleName;
 	
 	//spouse
-	private String spouseName;
-	private String spouselastName;
-	private String spousemiddleName;
+//	private String spouseName;
+//	private String spouselastName;
+//	private String spousemiddleName;
 	private String status;
 	public int getId() {
 		return id;
@@ -123,7 +123,6 @@ public class PatientBean {
 	public void setCivil(String civil) {
 		this.civil = civil;
 	}
-
 	public String getJob() {
 		return job;
 	}
@@ -153,25 +152,6 @@ public class PatientBean {
 	}
 	public void setEmployerNo(String employerNo) {
 		this.employerNo = employerNo;
-	}
-
-	public String getSpouseName() {
-		return spouseName;
-	}
-	public void setSpouseName(String spouseName) {
-		this.spouseName = spouseName;
-	}
-	public String getSpouselastName() {
-		return spouselastName;
-	}
-	public void setSpouselastName(String spouselastName) {
-		this.spouselastName = spouselastName;
-	}
-	public String getSpousemiddleName() {
-		return spousemiddleName;
-	}
-	public void setSpousemiddleName(String spousemiddleName) {
-		this.spousemiddleName = spousemiddleName;
 	}
 	public String getStatus() {
 		return status;
