@@ -26,11 +26,11 @@ public class PatientBean {
 	private String citizenship;
 	private String religion;
 	private String civil;
-	private String presentAddress;
-	private String permanentAddress;
-	private String cellno;
-	private String homeno;
-	private String email;
+//	private String presentAddress;
+//	private String permanentAddress;
+//	private String cellno;
+//	private String homeno;
+//	private String email;
 	//occupation
 	private String job;
 	private String employer;
@@ -38,13 +38,13 @@ public class PatientBean {
 	private String employersAddress;
 	private String employerNo;
 	//mothers name
-	private String mothersFirstName;
-	private String mothersLastName;
-	private String mothersMiddleName;
+//	private String mothersFirstName;
+//	private String mothersLastName;
+//	private String mothersMiddleName;
 	//fathers name
-	private String fathersFirstName;
-	private String fathersLastName;
-	private String fathersMiddleName;
+//	private String fathersFirstName;
+//	private String fathersLastName;
+//	private String fathersMiddleName;
 	
 	//spouse
 	private String spouseName;
@@ -123,36 +123,7 @@ public class PatientBean {
 	public void setCivil(String civil) {
 		this.civil = civil;
 	}
-	public String getPresentAddress() {
-		return presentAddress;
-	}
-	public void setPresentAddress(String presentAddress) {
-		this.presentAddress = presentAddress;
-	}
-	public String getPermanentAddress() {
-		return permanentAddress;
-	}
-	public void setPermanentAddress(String permanentAddress) {
-		this.permanentAddress = permanentAddress;
-	}
-	public String getCellno() {
-		return cellno;
-	}
-	public void setCellno(String cellno) {
-		this.cellno = cellno;
-	}
-	public String getHomeno() {
-		return homeno;
-	}
-	public void setHomeno(String homeno) {
-		this.homeno = homeno;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
+
 	public String getJob() {
 		return job;
 	}
@@ -183,42 +154,7 @@ public class PatientBean {
 	public void setEmployerNo(String employerNo) {
 		this.employerNo = employerNo;
 	}
-	public String getMothersFirstName() {
-		return mothersFirstName;
-	}
-	public void setMothersFirstName(String mothersFirstName) {
-		this.mothersFirstName = mothersFirstName;
-	}
-	public String getMothersLastName() {
-		return mothersLastName;
-	}
-	public void setMothersLastName(String mothersLastName) {
-		this.mothersLastName = mothersLastName;
-	}
-	public String getMothersMiddleName() {
-		return mothersMiddleName;
-	}
-	public void setMothersMiddleName(String mothersMiddleName) {
-		this.mothersMiddleName = mothersMiddleName;
-	}
-	public String getFathersFirstName() {
-		return fathersFirstName;
-	}
-	public void setFathersFirstName(String fathersFirstName) {
-		this.fathersFirstName = fathersFirstName;
-	}
-	public String getFathersLastName() {
-		return fathersLastName;
-	}
-	public void setFathersLastName(String fathersLastName) {
-		this.fathersLastName = fathersLastName;
-	}
-	public String getFathersMiddleName() {
-		return fathersMiddleName;
-	}
-	public void setFathersMiddleName(String fathersMiddleName) {
-		this.fathersMiddleName = fathersMiddleName;
-	}
+
 	public String getSpouseName() {
 		return spouseName;
 	}
