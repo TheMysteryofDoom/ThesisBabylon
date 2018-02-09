@@ -22,7 +22,17 @@
 		
 		<!-- Patient registration -->
 		<action name="registerPatient" class="controller.RegisterAction">  
-			<result name="success" >/portal.jsp</result>  
+			<result name="success" >/patientContact.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>  
+		<!-- Patient's Contact Details -->
+		<action name="registerContact.action" class="controller.RegisterContactAction">  
+			<result name="success" >/patientAddress.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>  
+		<!-- Patient's Address -->
+		<action name="registerContact.action" class="controller.RegisterContactAction">  
+			<result name="success" >/patientContact.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
 		

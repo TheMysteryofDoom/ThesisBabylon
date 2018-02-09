@@ -26,30 +26,13 @@ public class PatientBean {
 	private String citizenship;
 	private String religion;
 	private String civil;
-//	private String presentAddress;
-//	private String permanentAddress;
-//	private String cellno;
-//	private String homeno;
-//	private String email;
 	//occupation
 	private String job;
 	private String employer;
 	private String employerid;
 	private String employersAddress;
 	private String employerNo;
-	//mothers name
-//	private String mothersFirstName;
-//	private String mothersLastName;
-//	private String mothersMiddleName;
-	//fathers name
-//	private String fathersFirstName;
-//	private String fathersLastName;
-//	private String fathersMiddleName;
-	
-	//spouse
-//	private String spouseName;
-//	private String spouselastName;
-//	private String spousemiddleName;
+	//patients Status
 	private String status;
 	public int getId() {
 		return id;
