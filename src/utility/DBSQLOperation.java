@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+//JDBC will do Hibernate soon for retrieval, need to study hash and
 
 public class DBSQLOperation implements SQLCommand{
 	public static ResultSet retrievePatient(Connection connection){

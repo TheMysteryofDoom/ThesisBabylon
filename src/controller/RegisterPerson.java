@@ -1,6 +1,6 @@
 package controller;
 
-import model.PatientContactBean;
+import model.PatientPersonBean;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,11 +9,10 @@ import org.hibernate.cfg.Configuration;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+public class RegisterPerson extends ActionSupport implements ModelDriven<PatientPersonBean> {
 
-public class RegisterContact extends ActionSupport implements ModelDriven<PatientContactBean> {
-	
 	private static final long serialVersionUID = 1L;
-	private PatientContactBean pcb = new PatientContactBean();
+	private PatientPersonBean ppb = new PatientPersonBean();
 	
 	public String execute(){
 		String status = ERROR;
@@ -26,7 +25,7 @@ public class RegisterContact extends ActionSupport implements ModelDriven<Patien
 			session = sessionFactory.openSession();
 			 if(session!=null){
 				transaction = session.beginTransaction();
-				session.save(pcb); //insert into sql statement equivalent
+				session.save(ppb); //insert into sql statement equivalent
 				transaction.commit();
 			 }else{
 				 System.err.println("session is null");
@@ -39,8 +38,9 @@ public class RegisterContact extends ActionSupport implements ModelDriven<Patien
 	}
 	
 	@Override
-	public PatientContactBean getModel(){
-		return pcb;
-		
+	public PatientPersonBean getModel() {
+		// TODO Auto-generated method stub
+		return ppb;
 	}
+
 }
