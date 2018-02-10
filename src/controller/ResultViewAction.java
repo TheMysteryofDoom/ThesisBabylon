@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 
 import model.PatientBean;
+import model.ResultBean;
 import utility.DBSQLOperation;
 import utility.DBSingletonConnection;
 
@@ -25,7 +26,24 @@ public class ResultViewAction extends ActionSupport{
 			ResultSet emergency = DBSQLOperation.retrievePatientEmergancyContact(connection);
 			
 			while(patient.next()){
-				//p
+				ResultBean result1 = new ResultBean();
+				
+				result1.setFirstName(patient.getString("firstName"));
+				
+				
+			}
+			while(address.next()){
+				ResultBean result2 = new ResultBean();
+				
+				result2.setStreet(address.getString("street"));
+				
+			}
+			
+			while(contact.next()){
+				
+			}
+			
+			while(emergency.next()){
 				
 			}
 			
