@@ -25,6 +25,8 @@ public class ResultBean {
 	private String zipcode;
 	
 	//CONTACT
+	
+	
 	private int  contactId;
 	
 	private String contactNo1;
