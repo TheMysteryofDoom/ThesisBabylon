@@ -45,14 +45,16 @@ public class User {
 			System.err.println("SQL Exception "+ sqle.getMessage());
 		}
 		 return status; */ 
+		
 		  try{  
 		  Class.forName("com.mysql.jdbc.Driver");  
-			//  Class.forName("oracle.jdbc.driver.OracleDriver"); 
+			
 		   Connection con = DriverManager
 				   .getConnection("jdbc:mysql://localhost:3306/codersofbabylon","root","");  
 		     
 		   PreparedStatement ps=con.prepareStatement(  
-		     "SELECT * FROM login where username=? and password=?");  
+		     "SELECT * FROM login where username=? and password=?"); 
+	
 		   ps.setString(1,username);  
 		   ps.setString(2,password);  
 		   ResultSet rs = ps.executeQuery();  

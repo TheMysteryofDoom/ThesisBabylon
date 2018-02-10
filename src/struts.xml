@@ -14,6 +14,7 @@
 		<action name="logout" class="controller.Login" method="logout">
 			<result name="success">/index.jsp</result>
 		</action>
+		
 		<!-- Admin Profile -->
 		<action name="profile" class="controller.Profile">  
 			<result name="success" >/portal.jsp</result>  
