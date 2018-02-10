@@ -36,7 +36,7 @@ public class ResultViewAction extends ActionSupport{
 				ResultBean result2 = new ResultBean();
 				
 				result2.setStreet(address.getString("street"));
-				
+				///Need to fix bug, should be editable.
 			}
 			
 			while(contact.next()){
