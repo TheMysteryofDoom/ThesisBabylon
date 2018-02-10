@@ -32,6 +32,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 				transaction = session.beginTransaction();
 				session.save(pb); //insert into sql statement equivalent
 				transaction.commit();
+				status = SUCCESS;
 			 }else{
 				 System.err.println("session is null");
 			 }

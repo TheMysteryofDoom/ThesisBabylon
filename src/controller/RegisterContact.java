@@ -28,6 +28,7 @@ public class RegisterContact extends ActionSupport implements ModelDriven<Patien
 				transaction = session.beginTransaction();
 				session.save(pcb); //insert into sql statement equivalent
 				transaction.commit();
+				status = SUCCESS;
 			 }else{
 				 System.err.println("session is null");
 			 }
