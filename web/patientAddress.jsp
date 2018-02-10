@@ -90,13 +90,13 @@
 					<label>Country: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="street" id="street" placeholder="e.g. Philippines" required="required"></input>
+					<input class="u-full-width" type="text" name="country" id="country" placeholder="e.g. Philippines" required="required"></input>
 				</div>
 				<div class="three columns">
 					<label>Zipcode: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" onkeypress="return isNumberKey(event)" name="city" id="city" placeholder="e.g. 8867" required="required"></input>
+					<input class="u-full-width" type="text" onkeypress="return isNumberKey(event)" name="zipcode" id="zipcode" placeholder="e.g. 8867" required="required"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
