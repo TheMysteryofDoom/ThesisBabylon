@@ -28,10 +28,6 @@ public class PatientBean {
 	private String civil;
 	//occupation
 	private String job;
-	private String employer;
-	private String employerid;
-	private String employersAddress;
-	private String employerNo;
 	//patients Status
 	private String status;
 	public int getId() {
@@ -111,30 +107,6 @@ public class PatientBean {
 	}
 	public void setJob(String job) {
 		this.job = job;
-	}
-	public String getEmployer() {
-		return employer;
-	}
-	public void setEmployer(String employer) {
-		this.employer = employer;
-	}
-	public String getEmployerid() {
-		return employerid;
-	}
-	public void setEmployerid(String employerid) {
-		this.employerid = employerid;
-	}
-	public String getEmployersAddress() {
-		return employersAddress;
-	}
-	public void setEmployersAddress(String employersAddress) {
-		this.employersAddress = employersAddress;
-	}
-	public String getEmployerNo() {
-		return employerNo;
-	}
-	public void setEmployerNo(String employerNo) {
-		this.employerNo = employerNo;
 	}
 	public String getStatus() {
 		return status;

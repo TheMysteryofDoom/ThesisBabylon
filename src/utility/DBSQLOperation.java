@@ -10,6 +10,7 @@ import java.sql.SQLException;
 public class DBSQLOperation implements SQLCommand{
 	public static ResultSet retrievePatient(Connection connection){
 		ResultSet patient = null;
+		
 		if(connection != null){
 			try{
 				PreparedStatement pstmnt = connection.prepareStatement(GET_ALL_RECORDS);
