@@ -63,10 +63,10 @@
 	<form action="registerContact.action" method="post">
 			<div class ="row">
 				<div class="six columns">
-					<label>Patient: </label>[PatientName]
+					<label>Patient: </label>[PatientName] <s:property value = "firstName"/>
 				</div>
 				<div class="six columns">
-					<label>ID Number: </label>[PatientNumber]
+					<label>ID Number: </label>[PatientNumber] 
 				</div>
 			</div>
 			<br>

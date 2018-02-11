@@ -17,6 +17,8 @@ public class DBSQLOperation implements SQLCommand{
 				PreparedStatement pstmnt = connection.prepareStatement(GET_PATIENT);
 				
 				patient = pstmnt.executeQuery();
+				
+			
 			} catch(SQLException sqle){
 				System.err.println(sqle.getMessage());
 			}
