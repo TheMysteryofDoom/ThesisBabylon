@@ -164,7 +164,7 @@
 					<label>Citizenship:</label>
 				</div>
 				<div class="two columns">
-					<select id="citizenship" name="citizenship" >
+					<select class="u-full-width" id="citizenship" name="citizenship" >
 						  <option value="" selected="selected" disabled="disabled">Select One</option>
 						  <option value="afghan">Afghan</option>
 						  <option value="albanian">Albanian</option>
@@ -364,7 +364,7 @@
 					<label>Religion:</label>
 				</div>
 				<div class="two columns">
-					<select id="religion" name="religion">
+					<select class="u-full-width" id="religion" name="religion">
 					    <option value="" selected="selected" disabled="disabled">Select One</option>
 					    <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
 					    <option value="Agnostic">Agnostic</option>
