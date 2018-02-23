@@ -60,10 +60,18 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr>
+	<div class ="row">
+		<form action="returnToBasic.action" method="post">
+			<div class="two columns">
+			<input class="button u-pull-right" value="Back" type="submit"></input>
+			</div>
+		</form>
+	</div>
+	<br>
 	<form action="registerContact.action" method="post">
 			<div class ="row">
 				<div class="six columns">
-					<label>Patient: </label>[PatientName] <s:property value = "firstName"/>
+					<label>Patient: </label>[PatientName] <s:property value = "firstName"/> <s:property value = " middleName"/> <s:property value = "lastName"/>
 				</div>
 				<div class="six columns">
 					<label>ID Number: </label>[PatientNumber] 
@@ -131,7 +139,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row">
-				<div class="three columns">
+				<div class="two columns">
 				<input class="button-primary u-pull-right" value="Next" type="submit"></input>
 				</div>
 			</div>

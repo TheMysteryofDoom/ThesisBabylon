@@ -60,6 +60,14 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr>
+	<div class ="row">
+		<form action="returnToAddress.action" method="post">
+			<div class="two columns">
+			<input class="button u-pull-right" value="Back" type="submit"></input>
+			</div>
+		</form>
+	</div>
+	<br>
 	<form action="registerContactPerson.action" method="post">
 		<div class ="row">
 				<div class="six columns">
@@ -102,7 +110,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row">
-				<div class="three columns">
+				<div class="two columns">
 				<input class="button-primary u-pull-right" value="Finish" type="submit"></input>
 				</div>
 			</div>

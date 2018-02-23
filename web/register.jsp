@@ -72,7 +72,7 @@
 			    <input class="u-full-width" type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name" required="required"></input>
+			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name"></input>
 			</div>
 		</div>
 		<br>
