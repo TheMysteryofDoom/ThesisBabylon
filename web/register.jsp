@@ -164,7 +164,6 @@
 					<label>Citizenship:</label>
 				</div>
 				<div class="two columns">
-					<input class="u-full-width" type="text" name="citizenship" id="citizenship" placeholder="Nationality" required="required"></input>
 					<select id="citizenship" name="citizenship" >
 						  <option value="" selected="selected" disabled="disabled">Select One</option>
 						  <option value="afghan">Afghan</option>
