@@ -20,10 +20,10 @@
 
 <!-- Unlock this if the below isn't working at all.
 <s:form action="login.action" method="post">
-<s:textfield label="Username or Email" key="username"></s:textfield>
-<s:textfield label="Password" key="password"></s:textfield>
+<s:textfield label="Username or Email" key="username"/>
+<s:password label="Password" key="password"/>
 <s:submit value="Login"></s:submit>
-</s:form> 
+</s:form>
 -->
 
 <div class ="row">
