@@ -47,10 +47,5 @@
 			<result name = "success">/sampleview.jps</result>
 		</action>
 		
-		<!-- LOAD ACTION -->
-		<action name="loadAction" class="controller.LoadAction">
-			<result name = "success">/portal.jsp</result>
-		</action>
-		
 	</package>
 </struts>

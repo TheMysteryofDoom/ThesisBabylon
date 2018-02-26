@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix ="s" uri="/struts-tags"%>
-<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +10,6 @@
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
-
 <%@ include file="script/SessionCheck2.jsp" %>
 </head>
 <body>
@@ -33,7 +31,7 @@
 			<br>
 			<div class="row">
 				<div class="seven columns">
-					<form action="loadAction.action" method="post">
+					<form action="loadRecord.action" method="post">
 					<label for="patiendid">View Medical Records:</label>
 					<input type="text" onkeypress="return isNumberKey(event)" name="patientid" id="patientid" placeholder="Input Patient ID">
 					<input class="button" value="Submit" type="submit">
@@ -86,12 +84,10 @@
 	</div>
 	<div class="row">
 		<div class="six columns">
-		<textarea class="u-full-width dontresize textboxheight" disabled="disabled" name="patientDetails" placeholder="Basic Patient Information will show up here. Please input the patient ID number on top to see the data.">
-
-		</textarea>
+		<textarea class="u-full-width dontresize textboxheight" name="patientDetails" placeholder="Basic Patient Information will show up here. Please input the patient ID number on top to see the data."></textarea>
 		</div>
 		<div class="six columns">
-		<textarea class="u-full-width dontresize textboxheight" disabled="disabled" name="medicalRecords" placeholder="The Medical Data of the Patient will show up here. Please input the patient ID number on top to see the data."></textarea>
+		<textarea class="u-full-width dontresize textboxheight" name="medicalRecords" placeholder="The Medical Data of the Patient will show up here. Please input the patient ID number on top to see the data."></textarea>
 		</div>
 	</div>
 </div>
