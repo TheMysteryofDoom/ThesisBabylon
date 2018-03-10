@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Philippine Hospital System</title>
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="css/skeleton2.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/message.js"></script>
 
@@ -16,25 +16,18 @@
 <body>
 <div class="topbanner"></div>
 <div class="container">
-<h1>Philippine Hospital System</h1>
-
-<!-- Unlock this if the below isn't working at all.
-<s:form action="login.action" method="post">
-<s:textfield label="Username or Email" key="username"></s:textfield>
-<s:textfield label="Password" key="password"></s:textfield>
-<s:submit value="Login"></s:submit>
-</s:form> 
--->
-
 <div class ="row">
-	<div class="six columns"> <!-- First Six Columns of the First Row, the Input Block-->
+	<div class="one columns">
+	</div>
+	<div class="five columns"> <!-- First Six Columns of the First Row, the Input Block-->
+	<h1>Philippine Hospital System</h1>
 			<form action="login" method="post">
 				<div class="row">
 			    	<div class="three columns">
 			    		<label for="username">Username or Email:</label>
 			    	</div>
 			    	<div class="nine columns">
-			    		<input class="u-full-width" type="text" name="username" id="username" placeholder="Username"></input>
+			    		<input class="u-full-width" type="text" name="username" id="username" placeholder="Username" required="required"></input>
 			    	</div>
 				</div>
 				<div class="row">
@@ -42,7 +35,7 @@
 			    		<label for="password">Password:</label>
 			    	</div>
 			    	<div class="nine columns">
-			    		<input class="u-full-width" type="password" name="password" id="password" placeholder="Password"></input>
+			    		<input class="u-full-width" type="password" name="password" id="password" placeholder="Password" required="required"></input>
 			    	</div>
 				</div>
 				<div class="row">
@@ -54,6 +47,17 @@
 				</div>
 			</form>
 	</div> <!-- End of the First Six Columns of the First Row -->
+	<div class="six columns" align="center">
+		<br>
+		<div class="row">
+			<img src="images/babylon2.jpg" height="170px">
+		</div>
+		<div class="row">
+			<form action="about.jsp" method="post">
+				<input class="button" value="About" type="submit"></input>
+			</form>
+		</div>
+	</div>
 </div>
 </div>
 </body>

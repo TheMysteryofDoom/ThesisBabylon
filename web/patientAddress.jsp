@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Register New Patient</title>
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="css/skeleton2.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>
 <%@ include file="script/SessionCheck2.jsp" %>

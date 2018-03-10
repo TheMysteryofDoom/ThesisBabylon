@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Register New Patient</title>
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="css/skeleton2.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>
 <%@ include file="script/SessionCheck2.jsp" %>
@@ -134,7 +134,7 @@
 					<label>Email: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="email" id="email" placeholder="e.g. email@email.com" required="required"></input>
+					<input class="u-full-width" type="email" name="email" id="email" placeholder="e.g. email@email.com" required="required"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>

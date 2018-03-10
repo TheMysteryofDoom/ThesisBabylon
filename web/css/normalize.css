@@ -18,6 +18,9 @@ html {
 
 body {
   margin: 0;
+  background-image: url(../images/1WD.jpg);
+  background-attachment:fixed;
+  background-repeat: no-repeat;
 }
 
 /* HTML5 display definitions

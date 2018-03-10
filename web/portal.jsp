@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Medical Records Portal</title>
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+<link rel="stylesheet" type="text/css" href="css/skeleton2.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
 <%@ include file="script/SessionCheck2.jsp" %>
@@ -15,13 +15,12 @@
 <body>
 <div class="topbanner"></div>
 <div class = "container">
-	<br>
 	<div class ="row"> 														<!-- Tier 0 -->
 		<div class="seven columns"> 										<!-- Tier 1 -->
 			<div class="row">
 				<div class="three columns">									<!-- Tier 2 -->
 					<br>
-					<img src ="images/Blank75x75.png">
+					<img src ="images/babylon2.jpg" height="75px">
 				</div>														<!-- Tier 2 -->
 				<div class="nine columns">									<!-- Tier 2 -->
 					<br>
