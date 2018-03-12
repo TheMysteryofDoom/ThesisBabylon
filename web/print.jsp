@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Print Patient Information</title>
+<title>Print Patient Card</title>
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<%@ include file="script/SessionCheck2.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -22,7 +23,7 @@
 						</div>														<!-- Tier 2 -->
 						<div class="nine columns">									<!-- Tier 2 -->
 							<br>
-							<h4>Register New Patient</h4>
+							<h4>Print Patient Card</h4>
 						</div>												<!-- Tier 2 -->
 					</div>
 					<div class="row">
@@ -57,6 +58,19 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr>
+	<form action="printCard.action" method="post">
+	<div class="row">
+		<div class="three columns">
+			<p>Patient's Name: </p>
+			<p>ID Number: </p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="three columns">
+		<input class="button-primary u-pull-right" value="Save PDF(Demo Purposes)" type="submit"></input>
+		</div>
+	</div>
+	</form>
 </div>
 </body>
 </html>
