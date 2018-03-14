@@ -77,7 +77,8 @@
 			</form>	
 		</div>
 		<div class="four columns">
-			<form action="printRecord.action" method="post">
+			<form action="print.jsp" method="post">
+					<input name="id" id="id" type="hidden" value="<%= session.getAttribute("patientid") %>">
 					<input class="button u-pull-left" value="Print" type="submit">
 			</form>	
 		</div>
