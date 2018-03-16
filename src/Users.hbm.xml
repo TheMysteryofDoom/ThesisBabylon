@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC 
-   "-//Hibernate/Hibernate Configuration DTD//EN" 
-   "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
-
-<hibernate-configuration>
-  <session-factory>
-    
-    <property name="connection.provider_class">
-      org.jasypt.hibernate4.connectionprovider.EncryptedPasswordDriverManagerConnectionProvider
-    </property>
-    <property name="connection.encryptor_registered_name">
-      configurationHibernateEncryptor
-    </property>
-    
-    <property name="connection.url">jdbc:mysql://localhost/codersofbabylon</property>
-    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="connection.username">reportsUser</property>
-    <property name="connection.password">ENC(G6N718UuyPE5bHyWKyuLQSm02auQPUtm)</property>
-    <property name="connection.pool_size">12</property>
-
-    <property name="show_sql">true</property>
-    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-    
-    <!-- Mappings etc... -->
-        
-   </session-factory>
-</hibernate-configuration>
-    
-  
-
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="model.AccessBean" table="login" catalog="codersofbabylon" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="username" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="100" />
+        </property>
+       
+    </class>
+</hibernate-mapping>
