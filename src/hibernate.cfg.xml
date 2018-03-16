@@ -64,6 +64,8 @@
         <!-- Names the annotated entity class -->
 		<mapping class="model.PatientBean"/>
 			<!-- OTHER ENTITY CLASS -->
+			
+			<mapping class="model.AdminBean"/>
 			<mapping class="model.PatientAddressBean"/>
 			<mapping class="model.PatientContactBean"/>
 			<mapping class="model.EmergencyContactBean"/>
@@ -71,5 +73,6 @@
 			
 		
     </session-factory>
+    
 
 </hibernate-configuration>

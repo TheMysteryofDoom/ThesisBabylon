@@ -22,6 +22,11 @@
 			<result name="error" >/index.jsp</result>  
 		</action>  
 		
+		<action name="registerAdmin" class="controller.RegisterAdmin">
+			<result name="success">/portal.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		
 		<!-- Patient registration -->
 		<action name="registerPatient" class="controller.RegisterAction" method="addPatient">  
 			<result name="success" >/patientContact.jsp</result>  

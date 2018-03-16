@@ -21,11 +21,7 @@
 <br>
 	<div class="row">
 			<div class="seven columns"> 									<!-- Tier 1 -->	
-					<div class="row">
-						<div class="three columns">									<!-- Tier 2 -->
-							<br>
-							<img src ="images/Blank75x75.png">
-						</div>														<!-- Tier 2 -->
+					<div class="row">													<!-- Tier 2 -->
 						<div class="nine columns">									<!-- Tier 2 -->
 							<br>
 							<h4>Register New Admin</h4>
