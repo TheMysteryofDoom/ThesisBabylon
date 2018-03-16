@@ -27,7 +27,7 @@ public class PrintAction extends ActionSupport  implements ModelDriven<PatientBe
 			
 			document.open();
 			Paragraph p = new Paragraph();
-			//import here The Name of the User from Database.
+			//retrieve here The Name of the User from Database.
 			p.add("MARK LUIS GABRIEL V. TICZON");
 			
 			document.add(p);
@@ -35,7 +35,7 @@ public class PrintAction extends ActionSupport  implements ModelDriven<PatientBe
 			document.close(); 
 
 		
-			inputStream = new ByteArrayInputStream(buffer.toByteArray());
+			inputStream  =  new ByteArrayInputStream(buffer.toByteArray());
 			
 			
 		}catch(Exception e){
@@ -50,6 +50,12 @@ public class PrintAction extends ActionSupport  implements ModelDriven<PatientBe
 
 	public void setInputStream(InputStream inputStream) {
 		this.inputStream = inputStream;
+	}
+
+	@Override
+	public PatientBean getModel() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
