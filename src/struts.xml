@@ -47,5 +47,11 @@
 			<result name = "success">/sampleview.jps</result>
 		</action>
 		
+		<!-- PRINTING ID -->
+		<action name="printId" class="controller.PrintAction">
+			<result name = "success">/portal.jsp</result>
+			<result name = "error">/error.jsp</result>
+		</action>
+		
 	</package>
 </struts>
