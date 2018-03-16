@@ -48,7 +48,7 @@
 		</action>
 		
 		<!-- PRINTING ID -->
-		<action name="printId" class="controller.PrintAction">
+		<action name="printCard" class="controller.PrintAction">
 			<result name = "success">/portal.jsp</result>
 			<result name = "error">/error.jsp</result>
 		</action>
