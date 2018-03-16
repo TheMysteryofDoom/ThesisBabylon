@@ -5,7 +5,7 @@ import java.io.ByteArrayOutputStream;
 import org.apache.struts2.interceptor.ServletResponseAware;
 
 import com.opensymphony.xwork2.ActionSupport;
-
+//Medical Results
 public class ViewPDFAction extends ActionSupport
 	implements ServletResponseAware{
 	
