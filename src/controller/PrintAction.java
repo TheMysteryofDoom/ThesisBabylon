@@ -7,10 +7,13 @@ import java.io.FileOutputStream;
 //import java.sql.PreparedStatement;
 //import java.sql.ResultSet;
 
+
 import model.PatientBean;
 //import utility.SQLCommand;
 
+
 import com.itextpdf.text.Document;
+import com.itextpdf.text.Image;
 //import com.itextpdf.text.Image;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -62,8 +65,12 @@ public class PrintAction extends ActionSupport implements ModelDriven<PatientBea
 			
 			inputStream  =  new ByteArrayInputStream(buffer.toByteArray()); */
 			String firstName = pb.getFirstName();
-			PdfWriter.getInstance(document, new FileOutputStream("e:\\Sample_Output.pdf"));
+			PdfWriter.getInstance(document, new FileOutputStream("e:\\Sample_OutputIMAGE.pdf"));
 			document.open();
+			
+			//Change to retrieval from database, need to upload to DB (use Model).
+			Image image = Image.getInstance("e:\\38.jpg");
+			document.add(image);
 			document.add(new Paragraph("TEST PRINTING"));
 			document.add(new Paragraph(firstName));
 			document.close();
