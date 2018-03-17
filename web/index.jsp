@@ -7,6 +7,7 @@
 <%@ include file="script/SessionCheck.jsp" %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Philippine Hospital System</title>
+<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/basedesign.css" />
 <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
