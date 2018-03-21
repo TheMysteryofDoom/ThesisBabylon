@@ -52,6 +52,28 @@
 			<result name = "success">/portal.jsp</result>
 			<result name = "error">/error.jsp</result>
 		</action>
+		<!-- UPLOADING FILE -->
+		<action name="uploadAction" class="controller.FileUploadAction">
+	    <interceptor-ref name="exception"/>
+            <interceptor-ref name="i18n"/>
+            <interceptor-ref name="fileUpload">
+       		<param name="allowedTypes">text/plain</param>
+       		<param name="maximumSize">10240</param>
+  	    </interceptor-ref> 
+            <interceptor-ref name="params">
+                <param name="excludeParams">dojo\..*,^struts\..*</param>
+            </interceptor-ref>
+            <interceptor-ref name="validation">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+            <interceptor-ref name="workflow">
+                <param name="excludeMethods">input,back,cancel,browse</param>
+            </interceptor-ref>
+    
+	    <result name="success">pages/result.jsp</result>
+	    <result name="input">pages/fileupload.jsp</result>
+			
+	</action>
 		
 	</package>
 </struts>
