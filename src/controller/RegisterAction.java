@@ -29,7 +29,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	private PatientBean pb = new PatientBean();
 	@Override
 	public String execute(){
-		/*String status = ERROR;
+		/*           String status = ERROR;
 		SessionFactory sessionFactory = 
 				new Configuration().configure().buildSessionFactory();
 		
@@ -53,7 +53,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 			//transaction.rollback();
 			e.printStackTrace();
 		}
-		return status; */
+		return status;                                                   */
 	return SUCCESS;
 	}
 	@Override

@@ -27,21 +27,25 @@
 			<result name="success" >/patientContact.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
+		
 		<!-- Patient's Contact Details -->
 		<action name="registerContact" class="controller.RegisterContact">  
 			<result name="success" >/patientAddress.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
+		
 		<!-- Patient's Address -->
 		<action name="registerAddress" class="controller.RegisterAddress">  
 			<result name="success" >/patientContactPerson.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
+		
 		<!-- Emergency Contact -->
 		<action name="registerContactPerson" class="controller.EmergencyContactAction">  
 			<result name="success" >/portal.jsp</result>  
 			<result name="error" >/error.jsp</result>  
-		</action>  
+		</action>
+		  
 		<!-- VIEW -->
 		<action name="patientList" class="controller.RegisterAction" method="fetchPatient">
 			<result name = "success">/sampleview.jps</result>
@@ -52,6 +56,7 @@
 			<result name = "success">/portal.jsp</result>
 			<result name = "error">/error.jsp</result>
 		</action>
+		
 		<!-- UPLOADING FILE -->
 		<action name="uploadAction" class="controller.FileUploadAction">
 	    <interceptor-ref name="exception"/>

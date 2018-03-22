@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class PatientBean {
 	@Id
 	@GeneratedValue
-	private int id;
+	private int patientId;
 	
 	//form input values;
 	//Personal information 	
