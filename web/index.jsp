@@ -7,14 +7,8 @@
 <%@ include file="script/SessionCheck.jsp" %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Philippine Hospital System</title>
-<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/message.js"></script>
-
+<%@ include file="script/head.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>

@@ -5,13 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Medical Status</title>
-<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>
+<%@ include file="script/SessionCheck2.jsp" %>
+<%@ include file="script/head.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -166,12 +162,6 @@
 		<hr>
 		<div class ="row">
 			<div class="twelve columns" align="center">
-				<h5><b>Hospital Details</b></h5>
-			</div>
-		</div>
-		<hr>
-		<div class ="row">
-			<div class="twelve columns" align="center">
 				<h5><b>Medical History</b></h5>
 			</div>
 		</div>
@@ -195,6 +185,25 @@
 		<div class="row">
 			<div class="three columns">
 			<input class="button-primary u-pull-right" value="Update Patient" type="submit"></input>
+			</div>
+		</div>
+	</form>
+	<hr>
+	<form action="uploadAction" method="post">
+		<div class ="row">
+			<div class="twelve columns" align="center">
+				<h5><b>Upload a Patient File</b></h5>
+			</div>
+		</div>
+		<div class ="row">
+			<div class="twelve columns">
+				<input type="file" name="fileUpload">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="three columns">
+			<input class="button-primary u-pull-right" value="Update File" type="submit"></input>
 			</div>
 		</div>
 	</form>
