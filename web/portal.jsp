@@ -6,11 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Medical Records Portal</title>
-<link rel="stylesheet" type="text/css" href="css/basedesign.css" />
-<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
-<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>  
 <%@ include file="script/SessionCheck2.jsp" %>
+<%@ include file="script/head.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -34,6 +32,7 @@
 					<form action="loadRecord.action" method="post">
 					<label for="patiendid">View Medical Records:</label>
 					<input type="text" onkeypress="return isNumberKey(event)" name="patientid" id="patientid" placeholder="Input Patient ID">
+					<br>
 					<input class="button" value="Submit" type="submit">
 					</form>
 				</div>
@@ -72,7 +71,8 @@
 			</form>		
 		</div>
 		<div class="four columns" align="center">
-			<form action="addRecord.action" method="post">
+			<form action="medicalStatus.jsp" method="post">
+					<input name="id" id="id" type="hidden" value="<%= session.getAttribute("patientid") %>">
 					<input class="button" value="Update Medical Status" type="submit">
 			</form>	
 		</div>
