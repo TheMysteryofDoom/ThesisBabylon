@@ -71,8 +71,9 @@
                 <param name="excludeMethods">input,back,cancel,browse</param>
             </interceptor-ref>
     
-	    <result name="success">pages/result.jsp</result>
-	    <result name="input">pages/fileupload.jsp</result>
+	    <result name="success">/medicalStatus.jsp</result>
+	    <result name="input">/fileupload.jsp</result>
+	    <result name = "error">/error.jsp</result>
 			
 	</action>
 		
