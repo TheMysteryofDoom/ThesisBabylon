@@ -33,6 +33,7 @@
 					<label for="patiendid">View Medical Records:</label>
 					<input type="text" onkeypress="return isNumberKey(event)" name="patientid" id="patientid" placeholder="Input Patient ID">
 					<br>
+					<br>
 					<input class="button" value="Submit" type="submit">
 					</form>
 				</div>
