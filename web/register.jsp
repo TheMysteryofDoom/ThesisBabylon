@@ -163,7 +163,7 @@
 				</div>
 				<div class="two columns">
 					<select class="u-full-width" id="citizenship" name="citizenship" >
-						  <option value="" selected="selected" disabled="disabled">Select One</option>
+						  <option value="" disabled="disabled">Select One</option>
 						  <option value="afghan">Afghan</option>
 						  <option value="albanian">Albanian</option>
 						  <option value="algerian">Algerian</option>
@@ -225,7 +225,7 @@
 						  <option value="estonian">Estonian</option>
 						  <option value="ethiopian">Ethiopian</option>
 						  <option value="fijian">Fijian</option>
-						  <option value="filipino">Filipino</option>
+						  <option value="filipino" selected="selected">Filipino</option>
 						  <option value="finnish">Finnish</option>
 						  <option value="french">French</option>
 						  <option value="gabonese">Gabonese</option>
