@@ -66,15 +66,6 @@
 				<label>ID Number: </label>[PatientNumber]
 			</div>
 		</div>
-		<br>
-		<div class ="row">
-			<div class="three columns">
-				<label>Chief Complaint:</label>
-			</div>
-			<div class="nine columns">
-				<input type="text" name="complaint" id="complaint" placeholder="">
-			</div>
-		</div>
 		<hr>
 		<div class ="row">
 			<div class="twelve columns" align="center">
@@ -89,6 +80,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="bloodPressure" id="bloodPressure" placeholder="mm/HG"> (mm/HG)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>PR/CR:</label>
@@ -97,6 +89,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="prcr" id="prcr" placeholder="bpm"> (bpm)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Respiratory Rate:</label>
@@ -105,6 +98,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="respiratoryRate" id="respiratoryRate" placeholder="bpm"> (bpm)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Temperature:</label>
@@ -113,6 +107,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="temperature" id="temperature" placeholder="Celsius"> (Celsius)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Weight:</label>
@@ -121,6 +116,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="weight" id="weight" placeholder="kg"> (kg)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Height:</label>
@@ -135,6 +131,7 @@
 				<h5><b>Anthropometric Measurements</b></h5>
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Head Circumference:</label>
@@ -143,6 +140,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Chest Circumference:</label>
@@ -151,6 +149,7 @@
 				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
+		<br>
 		<div class ="row">
 			<div class="three columns">
 				<label>Abdominal:</label>
