@@ -25,7 +25,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	private static final long serialVersionUID = 1L;
 	
 	List<PatientBean> patientList = new ArrayList<>();
-	
+	//Will modify
 	private PatientBean pb = new PatientBean();
 	@Override
 	public String execute(){
