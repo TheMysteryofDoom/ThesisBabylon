@@ -1,23 +1,43 @@
 package model;
 
+import java.io.Serializable;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
-@Entity
-@Table (name ="patientregistry")
-public class PatientBean {
+@Entity(name = "ForeignKeyAssoEntity")
+@Table (name ="patientregistry", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID")
+})
+public class PatientBean implements Serializable{
 	@Id
-	@GeneratedValue
-	private int patientId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID", unique = true, nullable = false)
+	private int ID;
 	
 	//form input values;
 	//Personal information 	
 	//Person
+	@Column(name = "FIRST_NAME", unique = false, nullable = false, length = 100)
 	private String firstName;
+	
+	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
 	private String lastName;
+	
+	@Column(name = "MIDDLE_NAME", unique = false, nullable = false, length = 100)
 	private String middleName;
+	
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name="PATIENT_ID")
+	private Set<AccountEntity> accounts;
 	private String birthMonth;
 	private int birthDay;
 	private int birthYear;
@@ -30,12 +50,7 @@ public class PatientBean {
 	private String job;
 	//patients Status
 	private String status;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public String getFirstName() {
 		return firstName;
 	}
