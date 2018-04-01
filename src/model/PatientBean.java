@@ -41,10 +41,20 @@ public class PatientBean implements Serializable{
 	private String birthMonth;
 	private int birthDay;
 	private int birthYear;
+	
+	@Column(name = "GENDER", unique = false, nullable = false, length = 50)
 	private String gender;
+	
+	@Column(name = "BIRTH_PLACE", unique = false, nullable = false, length =100)
 	private String birthPlace;
+	
+	@Column(name = "CITIZENSHIP", unique = false, nullable = false, length = 50)
 	private String citizenship;
+	
+	@Column(name = "RELIGION", unique = false, nullable = false, length = 50)
 	private String religion;
+	
+	
 	private String civil;
 	//occupation
 	private String job;
