@@ -19,6 +19,11 @@ import javax.persistence.UniqueConstraint;
 		@UniqueConstraint(columnNames = "ID")
 })
 public class PatientBean implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3041691189736927433L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID", unique = true, nullable = false)
