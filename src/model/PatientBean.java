@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -37,8 +38,12 @@ public class PatientBean implements Serializable{
 	
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name="PATIENT_ID")
-	private Set<AccountEntity> accounts;
+	private Set<AccountEntity> account;
+	
+	@Column(name = "BIRTH_MONTH", unique = false, nullable = false, length = 50)
 	private String birthMonth;
+	
+	@Column(name = "BIRTHDAY", unique = false, nullable = false)
 	private int birthDay;
 	private int birthYear;
 	
@@ -54,11 +59,13 @@ public class PatientBean implements Serializable{
 	@Column(name = "RELIGION", unique = false, nullable = false, length = 50)
 	private String religion;
 	
-	
+	@Column(name = "CIVIL_STATUS", unique = false, nullable = false, length = 50)
 	private String civil;
-	//occupation
+
+	@Column(name = "OCCUPATION", unique = false, nullable = false, length = 50)
 	private String job;
 	//patients Status
+	@Column(name = "STATUS", unique = false, nullable = false, length = 10)
 	private String status;
 
 	public String getFirstName() {
