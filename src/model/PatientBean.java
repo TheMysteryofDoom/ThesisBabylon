@@ -14,13 +14,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-@Entity(name = "ForeignKeyAssoEntity")
+@Entity
 @Table (name ="patientregistry", uniqueConstraints = {
 		@UniqueConstraint(columnNames = "ID")
 })
 public class PatientBean implements Serializable{
 	/**
-	 * 
+	 * =-=-
 	 */
 	private static final long serialVersionUID = -3041691189736927433L;
 
@@ -150,6 +150,18 @@ public class PatientBean implements Serializable{
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	public int getID() {
+		return ID;
+	}
+	public void setID(int iD) {
+		ID = iD;
+	}
+	public Set<AccountEntity> getAccount() {
+		return account;
+	}
+	public void setAccount(Set<AccountEntity> account) {
+		this.account = account;
 	}
 	
 	

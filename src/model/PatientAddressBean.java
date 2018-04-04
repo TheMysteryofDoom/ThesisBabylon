@@ -1,23 +1,49 @@
 package model;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 
 @Entity
-@Table (name = "patientaddressregistry")
-public class PatientAddressBean {
+@Table (name = "patientaddressregistry", uniqueConstraints = {
+		@UniqueConstraint(columnNames = "ID")
+})
+public class PatientAddressBean implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3020316239526679608L;
+
 	@Id
-	@GeneratedValue
-	private int addressId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID", unique = true, nullable = false)
+	private Integer addressId;
 	
+	@Column(name = "STREET", unique = false, nullable = false, length = 50)
 	private String street;
+	
+	@Column(name = "CITY", unique = false, nullable = false, length = 50)
 	private String city;
+	
+	@Column(name = "COUNTRY", unique = false, nullable = false, length = 50)
 	private String country;
-	private String zipcode;
+	
+	@Column(name = "ZIPCODE", unique = false, nullable = false)
+	private int zipcode;
+	
+	@ManyToOne
+	private PatientBean pb;
+	
+	
 	public int getAddressId() {
 		return addressId;
 	}
@@ -42,11 +68,22 @@ public class PatientAddressBean {
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public String getZipcode() {
+	public int getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(String zipcode) {
+	public void setZipcode(int zipcode) {
 		this.zipcode = zipcode;
 	}
+	public void setAddressId(Integer addressId) {
+		this.addressId = addressId;
+	}
+	public PatientBean getPb() {
+		return pb;
+	}
+	public void setPb(PatientBean pb) {
+		this.pb = pb;
+	}
+	
+
 	
 }

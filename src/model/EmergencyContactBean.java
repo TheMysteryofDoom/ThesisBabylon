@@ -36,6 +36,15 @@ public class EmergencyContactBean implements Serializable{
 	@Column(name = "MIDDLE_NAME", unique = false, nullable = false, length = 100)
 	private String middleName;
 	
+	public PatientBean getPb() {
+		return pb;
+	}
+	public void setPb(PatientBean pb) {
+		this.pb = pb;
+	}
+	public void setEmergencyId(Integer emergencyId) {
+		this.emergencyId = emergencyId;
+	}
 	@Column(name = "TYPE", unique = false, nullable = false, length = 100)
 	private String type;
 	
