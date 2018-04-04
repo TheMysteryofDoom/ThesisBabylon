@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 
-@Entity(name = "ForeignKeyAssoAccountEntity")
+@Entity
 @Table (name ="patientemergencycontact", uniqueConstraints = {
 		@UniqueConstraint(columnNames = "ID")
 })

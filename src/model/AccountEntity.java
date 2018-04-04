@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-@Entity(name = "ForeignKeyAssoAccountEntity")
+@Entity
 @Table(name = "ACCOUNT", uniqueConstraints  = {
 		@UniqueConstraint(columnNames = "ID")
 })

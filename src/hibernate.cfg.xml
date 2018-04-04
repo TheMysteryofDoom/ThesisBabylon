@@ -58,6 +58,7 @@
 			<mapping class="model.PatientContactBean"/>
 			<mapping class="model.EmergencyContactBean"/>
 			<mapping class="model.MedicalDataBean"/>
+			<mapping class="model.AccountEntity"/>
 			
 			
 		
