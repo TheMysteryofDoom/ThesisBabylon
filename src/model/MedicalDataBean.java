@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "patientresults")
 public class MedicalDataBean {
+	
 	@Id
 	@GeneratedValue
 	private int fileId;
