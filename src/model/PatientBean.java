@@ -20,7 +20,7 @@ import javax.persistence.UniqueConstraint;
 })
 public class PatientBean implements Serializable{
 	/**
-	 * =-=-
+	 * 
 	 */
 	private static final long serialVersionUID = -3041691189736927433L;
 
@@ -38,7 +38,7 @@ public class PatientBean implements Serializable{
 	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
 	private String lastName;
 	
-	@Column(name = "MIDDLE_NAME", unique = false, nullable = false, length = 100)
+	@Column(name = "MIDDLE_NAME", unique = false, nullable = true, length = 100)
 	private String middleName;
 	
 	@OneToMany(cascade=CascadeType.ALL)
@@ -50,6 +50,8 @@ public class PatientBean implements Serializable{
 	
 	@Column(name = "BIRTHDAY", unique = false, nullable = false)
 	private int birthDay;
+	
+	@Column(name = "BIRTH_YEAR", unique = false, nullable = false)
 	private int birthYear;
 	
 	@Column(name = "GENDER", unique = false, nullable = false, length = 50)
