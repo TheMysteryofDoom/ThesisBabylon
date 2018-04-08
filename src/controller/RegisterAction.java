@@ -5,6 +5,7 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.AccountEntity;
 import model.PatientBean;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -62,6 +63,8 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		
 	}
 	
+	
+	
 	@SuppressWarnings("unchecked")
 	public String addPatient() {
 		String status = ERROR;
@@ -75,6 +78,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 			 if(session!=null){
 				//transaction = session.beginTransaction();
 				 session.beginTransaction();
+				 pb.setStatus("TRUE");
 				session.save(pb); //insert into sql statement equivalent
 				session.getTransaction().commit();
 				//transaction.commit();
