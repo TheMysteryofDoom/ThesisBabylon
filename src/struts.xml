@@ -30,14 +30,13 @@
 		
 				<!-- Patient registration -->
 		<action name="registerPatient" class="controller.RegisterAction" method="addPatient">  
-			<result type ="redirectAction">accountRegister</result>
+			<result name = "success">/patientContact.jsp</result>
+			<result name="error" >/error.jsp</result>  
 		</action>  
 		
 		<!-- ACCOUNT ENTITY -->
-		<action name = "accountRegister" class = "controller.AccountEntity">
-			<result name = "success">/patientContact.jsp</result>
-			<result name = "error">/error.jsp</result>
-		</action>
+		<!--   <action name = "accountRegister" class = "controller.AccountEntity">
+		</action>  -->
 		
 		<!-- Patient's Contact Details -->
 		<action name="registerContact" class="controller.RegisterContact">  

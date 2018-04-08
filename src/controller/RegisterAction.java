@@ -3,10 +3,14 @@ package controller;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
-import model.AccountEntity;
+
+import java.util.Set;
+
 import model.PatientBean;
+import model.PatientContactBean;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -14,8 +18,6 @@ import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.ServletActionContext;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-//import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import utility.HibernateListener;
 
@@ -28,6 +30,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	List<PatientBean> patientList = new ArrayList<>();
 	
 	private PatientBean pb = new PatientBean();
+	private PatientContactBean pcb = new PatientContactBean();
 	@Override
 	public String execute(){
 		/*           String status = ERROR;
@@ -79,9 +82,12 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 				//transaction = session.beginTransaction();
 				 session.beginTransaction();
 				 pb.setStatus("TRUE");
+				 Set<PatientContactBean> patientContact = new HashSet<PatientContactBean>();
+				patientContact.add(pcb);
 				session.save(pb); //insert into sql statement equivalent
 				session.getTransaction().commit();
 				//transaction.commit();
+				
 				patientList = null;
 				patientList = session.createQuery("from PatientBean").list();
 				status = SUCCESS;

@@ -1,79 +1,39 @@
 package model;
 
 import java.io.Serializable;
-import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 
-@Entity
-@Table (name ="patientregistry", uniqueConstraints = {
-		@UniqueConstraint(columnNames = "ID")
-})
+
 public class PatientBean implements Serializable{
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -3041691189736927433L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID", unique = true, nullable = false)
-	private int ID;
+
+	private int patientID;
 	
 	//form input values;
 	//Personal information 	
 	//Person
-	@Column(name = "FIRST_NAME", unique = false, nullable = false, length = 100)
-	private String firstName;
-	
-	@Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
-	private String lastName;
-	
-	@Column(name = "MIDDLE_NAME", unique = false, nullable = true, length = 100)
-	private String middleName;
-	
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="PATIENT_ID")
-	private Set<AccountEntity> account;
-	
-	@Column(name = "BIRTH_MONTH", unique = false, nullable = false, length = 50)
-	private String birthMonth;
-	
-	@Column(name = "BIRTHDAY", unique = false, nullable = false)
-	private int birthDay;
-	
-	@Column(name = "BIRTH_YEAR", unique = false, nullable = false)
-	private int birthYear;
-	
-	@Column(name = "GENDER", unique = false, nullable = false, length = 50)
-	private String gender;
-	
-	@Column(name = "BIRTH_PLACE", unique = false, nullable = false, length =100)
-	private String birthPlace;
-	
-	@Column(name = "CITIZENSHIP", unique = false, nullable = false, length = 50)
-	private String citizenship;
-	
-	@Column(name = "RELIGION", unique = false, nullable = false, length = 50)
-	private String religion;
-	
-	@Column(name = "CIVIL_STATUS", unique = false, nullable = false, length = 50)
-	private String civil;
 
-	@Column(name = "OCCUPATION", unique = false, nullable = false, length = 50)
+	private String firstName;
+	private String lastName;
+	private String middleName;
+	private String birthMonth;
+	private int birthDay;
+	private int birthYear;
+	private String gender;
+	private String birthPlace;
+	private String citizenship;
+	private String religion;
+	private String civil;
 	private String job;
 	//patients Status
-	@Column(name = "STATUS", unique = false, nullable = false, length = 10)
 	private String status;
+
+	
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -153,18 +113,14 @@ public class PatientBean implements Serializable{
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public int getID() {
-		return ID;
+	public int getPatientID() {
+		return patientID;
 	}
-	public void setID(int iD) {
-		ID = iD;
+	public void setPatientID(int patientID) {
+		this.patientID = patientID;
 	}
-	public Set<AccountEntity> getAccount() {
-		return account;
-	}
-	public void setAccount(Set<AccountEntity> account) {
-		this.account = account;
-	}
+
+
 	
 	
 	
