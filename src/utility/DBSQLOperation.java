@@ -5,9 +5,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.PatientBean;
+
 //JDBC will do Hibernate soon for retrieval, need to study hash and
 
 public class DBSQLOperation implements SQLCommand{
+	
+	public static boolean insertPatient(PatientBean pb, Connection connection){
+		boolean isSuccessful = false;
+		
+		if(connection != null){
+			
+		}
+	}
 	
 	public static ResultSet retrievePatient(Connection connection){
 		ResultSet patient = null;

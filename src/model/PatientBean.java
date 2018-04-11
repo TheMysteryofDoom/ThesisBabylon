@@ -119,6 +119,8 @@ public class PatientBean implements Serializable{
 	public void setPatientID(int patientID) {
 		this.patientID = patientID;
 	}
+	
+	
 
 
 	
