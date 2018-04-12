@@ -1,58 +1,57 @@
 package controller;
+import java.sql.Connection;
 import java.util.Map;
 
-import org.apache.struts2.dispatcher.SessionMap;
-import org.apache.struts2.interceptor.SessionAware;
-//import org.hibernate.Session;
+import model.User;
 
-//import model.AccessBean;
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ModelDriven;
 import utility.*;
 
 //import com.opensymphony.xwork2.ActionSupport;
 
-public class Login implements SessionAware{
-	SessionMap<String,String> sessionmap;  
+public class Login implements SessionAware, ModelDriven<User>{ 
 	
-	private String username;
-	private String password;  
-	public String getUsername() {  
-	    return username;  
-	}  
-	  
-	public void setUsername(String username) {  
-	    this.username = username;  
-	}  
-	  
-
-	  
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
+	User user = new User();
+	Connection connection = DBSingletonConnection.getConnection();
+	Map<String, Object> m;
 
 	public String execute(){  
-		System.out.println(username);
-	    sessionmap.put("username", username);
-	    if(User.validate(username, password)){  
-	        return "success";  
-	    }  
-	    else{  
-	        return "error";  
-	    }  
-	}  
-	
-	public void setSession(Map map) {  //This happens before execute
-	    sessionmap=(SessionMap)map;  
-	    sessionmap.put("login","true");
+		String status = "error";
+		
+		if(DBSQLOperation.loginAdmin(user, connection)){
+			
+			m.put("a", user.getUsername());
+			m.put("b", user.getPassword());
+			status = "success";
+			
+		}else{
+			
+		}
+	return status;
 	}  
 	  
 	public String logout(){  
-	    sessionmap.invalidate();  
+	   
 	    return "success";  
-	}  
+	}
+
+	@Override
+	public User getModel() {
+		// TODO Auto-generated method stub
+		return user;
+	}
+
+	
+
+	@Override
+	public void setSession(Map<String, Object> m) {
+		this.m = m;
+		
+	}
+
 	
 	
 }

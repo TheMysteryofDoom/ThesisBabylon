@@ -23,15 +23,15 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	Connection connection = DBSingletonConnection.getConnection();
 	@Override
 	public String execute(){
-		
+		String status = "error";
 		if(DBSQLOperation.insertPatient(pb, connection)){
 			System.out.println("Patient saved to database.");
-		
+			status = "success";
 		}else{
 			
 			System.err.println("Patient did not insert to database.");
 		}
-	return "success";
+	return status;
 	}
 
 

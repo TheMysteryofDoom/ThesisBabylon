@@ -1,6 +1,8 @@
 package utility;
 
 public interface SQLCommand {
+	String LOGIN_USER = "SELECT * FROM adminaccount WHERE username = ? AND password = ?";
+	
 	String INSERT_PATIENT = "INSERT INTO "
 			+ "patient(patientID, firstName, lastName, middleName,"
 			+ " birthMonth, birthDay, birthYear, gender, birthPlace, "

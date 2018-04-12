@@ -9,11 +9,28 @@ import model.EmergencyContactBean;
 import model.PatientAddressBean;
 import model.PatientBean;
 import model.PatientContactBean;
+import model.User;
 
 //Create encryption 
 
 public class DBSQLOperation implements SQLCommand{
 	
+	//Method for Login user.
+	public static boolean loginAdmin(User user, Connection connection){
+		boolean isSuccessful = false;
+		
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(LOGIN_USER);
+				
+				
+			}catch(SQLException sqle){
+				sqle.printStackTrace();
+			}
+		}
+		return isSuccessful;
+	}
 	
 	//Insert Patient to Database
 	public static boolean insertPatient(PatientBean pb, Connection connection){
