@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import model.PatientAddressBean;
 import model.PatientBean;
+import model.PatientContactBean;
 
 //Create encryption 
 
@@ -46,18 +47,45 @@ public class DBSQLOperation implements SQLCommand{
 		return isSuccessful;
 	}
 	
+	//method to save patients address to database.
 	public static boolean insertPatientAddress(PatientAddressBean pab, Connection connection){
 		boolean isSuccessful = false;
 		if(connection != null){
 			try{
 				PreparedStatement pstmnt = 
 						connection.prepareStatement(INSERT_PATIENT_ADDRESS);
-				
+				pstmnt.setInt(1, pab.getAddressId());
+				pstmnt.setString(2, pab.getStreet());
+				pstmnt.setString(3, pab.getCity());
+				pstmnt.setString(4, pab.getCountry());
+				pstmnt.setString(4, pab.getZipcode());
 				
 				pstmnt.executeQuery();
 			}catch(SQLException sqle){
 				System.err.println(sqle.getMessage());
 			}
+		}
+		return isSuccessful;
+	}
+	
+	//method to save patient contact to database.
+	public static boolean insertPatientContact(PatientContactBean pcb, Connection connection){
+		boolean isSuccessful = false;
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt =
+						connection.prepareStatement(GET_PATIENT_CONTACT);
+				pstmnt.setInt(1, pcb.getContactId());
+				pstmnt.setString(2, pcb.getContactNo1());
+				pstmnt.setString(3, pcb.getContactNo2());
+				pstmnt.setString(4, pcb.getContactNo3());
+				pstmnt.setString(5, pcb.getEmail());
+				pstmnt.executeQuery();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				System.err.println(sqle.getMessage());
+			}
+			
 		}
 		return isSuccessful;
 	}

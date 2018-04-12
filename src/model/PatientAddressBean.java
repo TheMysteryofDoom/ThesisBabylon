@@ -23,7 +23,7 @@ public class PatientAddressBean implements Serializable{
 	private String country;
 	
 
-	private int zipcode;
+	private String zipcode;
 	
 	
 	
@@ -51,15 +51,16 @@ public class PatientAddressBean implements Serializable{
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	public int getZipcode() {
-		return zipcode;
-	}
-	public void setZipcode(int zipcode) {
-		this.zipcode = zipcode;
-	}
 	public void setAddressId(Integer addressId) {
 		this.addressId = addressId;
 	}
+	public String getZipcode() {
+		return zipcode;
+	}
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+	
 
 
 	
