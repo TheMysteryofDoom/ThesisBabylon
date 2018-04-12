@@ -1,44 +1,34 @@
 package controller;
 
+import java.sql.Connection;
+
 import model.EmergencyContactBean;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+
+import utility.DBSQLOperation;
+import utility.DBSingletonConnection;
 
 public class EmergencyContactAction extends ActionSupport implements ModelDriven<EmergencyContactBean> {
 	private static final long serialVersionUID = 1L;
-	private EmergencyContactBean ecb = new EmergencyContactBean();
+	EmergencyContactBean ecb = new EmergencyContactBean();
+	Connection connection = DBSingletonConnection.getConnection();
 	
 	public String execute(){
-		String status = ERROR;
-		SessionFactory sessionFactory = 
-				new Configuration().configure().buildSessionFactory();
-		
-		Session session = null;
-		Transaction transaction = null;
-		try{
-			session = sessionFactory.openSession();
-			 if(session!=null){
-				transaction = session.beginTransaction();
-				session.save(ecb); //insert into sql statement equivalent
-				transaction.commit();
-			 }else{
-				 System.err.println("session is null");
-			 }
+		if(DBSQLOperation.insertPatientEmergenctContact(ecb, connection)){
+			System.out.println("Emergency contact inserted to db.");
 			
-		}catch(Exception e){
-			transaction.rollback();
+		}else{
+			System.err.println("Emergenct contact did not insert.");
 		}
-		return status;
+		
+		return SUCCESS;
 	}
 
 	@Override
 	public EmergencyContactBean getModel() {
-		// TODO Auto-generated method stub
+	
 		return ecb;
 	}
 }

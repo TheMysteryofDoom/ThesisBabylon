@@ -18,8 +18,5 @@
         <filter-name>struts2</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-    
-    <listener>
-    	<listener-class>utility.HibernateListener</listener-class>
-    </listener>
+
 </web-app>

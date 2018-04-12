@@ -1,41 +1,28 @@
 package controller;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+import java.sql.Connection;
 
+
+import utility.DBSQLOperation;
+import utility.DBSingletonConnection;
 import model.PatientAddressBean;
-
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 public class RegisterAddress extends ActionSupport implements ModelDriven<PatientAddressBean>{
 	private static final long serialVersionUID = 1L;
-	private PatientAddressBean pab = new PatientAddressBean();
+	
+	PatientAddressBean pab = new PatientAddressBean();
+	Connection connection = DBSingletonConnection.getConnection();
+	
 	public String execute(){
-		String status = ERROR;
-		SessionFactory sessionFactory = 
-				new Configuration().configure().buildSessionFactory();
-		
-		Session session = null;
-		Transaction transaction = null;
-		try{
-			session = sessionFactory.openSession();
-			 if(session!=null){
-				transaction = session.beginTransaction();
-				session.save(pab); //insert into sql statement equivalent
-				transaction.commit();
-				status = SUCCESS;
-			 }else{
-				 System.err.println("session is null");
-			 }
-			
-		}catch(Exception e){
-			transaction.rollback();
+		if(DBSQLOperation.insertPatientAddress(pab, connection)){
+			System.out.println("Address inserted to DB");
+		}else{
+			System.err.println("Address did not insert.");
 		}
-		return status;
+		return SUCCESS;
 	}
 	@Override
 	public PatientAddressBean getModel(){

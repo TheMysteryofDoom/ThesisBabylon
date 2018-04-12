@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.EmergencyContactBean;
 import model.PatientAddressBean;
 import model.PatientBean;
 import model.PatientContactBean;
@@ -74,7 +75,7 @@ public class DBSQLOperation implements SQLCommand{
 		if(connection != null){
 			try{
 				PreparedStatement pstmnt =
-						connection.prepareStatement(GET_PATIENT_CONTACT);
+						connection.prepareStatement(INSERT_PATEINT_CONTACT_INFO);
 				pstmnt.setInt(1, pcb.getContactId());
 				pstmnt.setString(2, pcb.getContactNo1());
 				pstmnt.setString(3, pcb.getContactNo2());
@@ -86,6 +87,28 @@ public class DBSQLOperation implements SQLCommand{
 				System.err.println(sqle.getMessage());
 			}
 			
+		}
+		return isSuccessful;
+	}
+	
+	//method to insert Patients Emergency Contact.
+	public static boolean insertPatientEmergenctContact(EmergencyContactBean ecb, Connection connection){
+		boolean isSuccessful = false;
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(INSERT_PATIENT_EMC);
+				
+				pstmnt.setInt(1, ecb.getEmergencyId());
+				pstmnt.setString(2, ecb.getFirstName());
+				pstmnt.setString(3, ecb.getLastName());
+				pstmnt.setString(2, ecb.getMiddleName());
+				
+				pstmnt.executeQuery();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				System.err.println(sqle.getMessage());
+			}
 		}
 		return isSuccessful;
 	}

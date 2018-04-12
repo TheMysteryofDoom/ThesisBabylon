@@ -19,11 +19,11 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SE31-HibernateLib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Struts2Lib">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SE31-HibernateLib"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
