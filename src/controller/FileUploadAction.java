@@ -6,6 +6,10 @@ import model.MedicalDataBean;
 
 
 public class FileUploadAction extends ActionSupport implements ModelDriven<MedicalDataBean>{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String status;
 	public String execute(){
 		try{

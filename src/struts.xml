@@ -16,6 +16,7 @@
 		</action>
 		
 		<!-- REGISTER -->
+		
 		<!-- Admin Profile -->
 		<action name="profile" class="controller.Profile">  
 			<result name="success" >/portal.jsp</result>  
@@ -23,28 +24,28 @@
 		</action>  
 		
 		<!-- Patient registration -->
-		<action name="registerPatient" class="controller.RegisterAction" method="addPatient">  
+		<action name="registerPatient" class="controller.RegisterAction">  
 			<result name="success" >/patientContact.jsp</result>  
 			<result name="error" >/error.jsp</result>  
-		</action>  
+		</action>   
+		
+		
 		<!-- Patient's Contact Details -->
 		<action name="registerContact" class="controller.RegisterContact">  
 			<result name="success" >/patientAddress.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
+		
 		<!-- Patient's Address -->
 		<action name="registerAddress" class="controller.RegisterAddress">  
 			<result name="success" >/patientContactPerson.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>  
+		
 		<!-- Emergency Contact -->
 		<action name="registerContactPerson" class="controller.EmergencyContactAction">  
 			<result name="success" >/portal.jsp</result>  
 			<result name="error" >/error.jsp</result>  
-		</action>  
-		<!-- VIEW -->
-		<action name="patientList" class="controller.RegisterAction" method="fetchPatient">
-			<result name = "success">/sampleview.jps</result>
 		</action>
 		
 		<!-- PRINTING ID -->

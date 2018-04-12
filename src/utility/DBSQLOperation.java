@@ -5,9 +5,113 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-//JDBC will do Hibernate soon for retrieval, need to study hash and
+import model.EmergencyContactBean;
+import model.PatientAddressBean;
+import model.PatientBean;
+import model.PatientContactBean;
+
+//Create encryption 
 
 public class DBSQLOperation implements SQLCommand{
+	
+	
+	//Insert Patient to Database
+	public static boolean insertPatient(PatientBean pb, Connection connection){
+		boolean isSuccessful = false;
+		
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(INSERT_PATIENT);
+				pstmnt.setInt(1, pb.getPatientID());
+				pstmnt.setString(2, pb.getFirstName());
+				pstmnt.setString(3, pb.getLastName());
+				pstmnt.setString(3, pb.getMiddleName());
+				pstmnt.setString(4, pb.getBirthMonth());
+				pstmnt.setInt(5, pb.getBirthDay());
+				pstmnt.setInt(6, pb.getBirthYear());
+				pstmnt.setString(7, pb.getGender());
+				pstmnt.setString(8, pb.getBirthPlace());
+				pstmnt.setString(8, pb.getCitizenship());
+				pstmnt.setString(9, pb.getReligion());
+				pstmnt.setString(10, pb.getCivil());
+				pstmnt.setString(11, pb.getStatus());
+				
+				
+				pstmnt.executeUpdate();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				System.err.println(sqle.getMessage());
+			}
+		}
+		
+		return isSuccessful;
+	}
+	
+	//method to save patients address to database.
+	public static boolean insertPatientAddress(PatientAddressBean pab, Connection connection){
+		boolean isSuccessful = false;
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(INSERT_PATIENT_ADDRESS);
+				pstmnt.setInt(1, pab.getAddressId());
+				pstmnt.setString(2, pab.getStreet());
+				pstmnt.setString(3, pab.getCity());
+				pstmnt.setString(4, pab.getCountry());
+				pstmnt.setString(4, pab.getZipcode());
+				
+				pstmnt.executeQuery();
+			}catch(SQLException sqle){
+				System.err.println(sqle.getMessage());
+			}
+		}
+		return isSuccessful;
+	}
+	
+	//method to save patient contact to database.
+	public static boolean insertPatientContact(PatientContactBean pcb, Connection connection){
+		boolean isSuccessful = false;
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt =
+						connection.prepareStatement(INSERT_PATEINT_CONTACT_INFO);
+				pstmnt.setInt(1, pcb.getContactId());
+				pstmnt.setString(2, pcb.getContactNo1());
+				pstmnt.setString(3, pcb.getContactNo2());
+				pstmnt.setString(4, pcb.getContactNo3());
+				pstmnt.setString(5, pcb.getEmail());
+				pstmnt.executeQuery();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				System.err.println(sqle.getMessage());
+			}
+			
+		}
+		return isSuccessful;
+	}
+	
+	//method to insert Patients Emergency Contact.
+	public static boolean insertPatientEmergenctContact(EmergencyContactBean ecb, Connection connection){
+		boolean isSuccessful = false;
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(INSERT_PATIENT_EMC);
+				
+				pstmnt.setInt(1, ecb.getEmergencyId());
+				pstmnt.setString(2, ecb.getFirstName());
+				pstmnt.setString(3, ecb.getLastName());
+				pstmnt.setString(2, ecb.getMiddleName());
+				
+				pstmnt.executeQuery();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				System.err.println(sqle.getMessage());
+			}
+		}
+		return isSuccessful;
+	}
 	
 	public static ResultSet retrievePatient(Connection connection){
 		ResultSet patient = null;

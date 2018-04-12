@@ -1,20 +1,22 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
-@Entity
-@Table (name ="patientregistry")
-public class PatientBean {
-	@Id
-	@GeneratedValue
-	private int id;
+
+
+public class PatientBean implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3041691189736927433L;
+
+
+	private int patientID;
 	
 	//form input values;
 	//Personal information 	
 	//Person
+
 	private String firstName;
 	private String lastName;
 	private String middleName;
@@ -26,16 +28,13 @@ public class PatientBean {
 	private String citizenship;
 	private String religion;
 	private String civil;
-	//occupation
 	private String job;
 	//patients Status
 	private String status;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
+	
+	
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -114,6 +113,16 @@ public class PatientBean {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public int getPatientID() {
+		return patientID;
+	}
+	public void setPatientID(int patientID) {
+		this.patientID = patientID;
+	}
+	
+	
+
+
 	
 	
 	

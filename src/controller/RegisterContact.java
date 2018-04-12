@@ -1,11 +1,10 @@
 package controller;
 
-import model.PatientContactBean;
+import java.sql.Connection;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
+import model.PatientContactBean;
+import utility.DBSQLOperation;
+import utility.DBSingletonConnection;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -13,30 +12,18 @@ import com.opensymphony.xwork2.ModelDriven;
 public class RegisterContact extends ActionSupport implements ModelDriven<PatientContactBean> {
 	
 	private static final long serialVersionUID = 1L;
-	private PatientContactBean pcb = new PatientContactBean();
+	
+	PatientContactBean pcb = new PatientContactBean();
+	Connection connection = DBSingletonConnection.getConnection();
 	
 	public String execute(){
-		String status = ERROR;
-		SessionFactory sessionFactory = 
-				new Configuration().configure().buildSessionFactory();
-		
-		Session session = null;
-		Transaction transaction = null;
-		try{
-			session = sessionFactory.openSession();
-			 if(session!=null){
-				transaction = session.beginTransaction();
-				session.save(pcb); //insert into sql statement equivalent
-				transaction.commit();
-				status = SUCCESS;
-			 }else{
-				 System.err.println("session is null");
-			 }
-			
-		}catch(Exception e){
-			transaction.rollback();
+		if(DBSQLOperation.insertPatientContact(pcb, connection)){
+			System.out.println("Contact inserted to db");
+		}else{
+			System.err.println("Contact did not insert,");
 		}
-		return status;
+		
+		return SUCCESS;
 	}
 	
 	@Override

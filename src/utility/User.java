@@ -16,36 +16,6 @@ public class User {
 	static PreparedStatement pstmt;
 	public static boolean validate(String username, String password){  
 		 boolean status=false;  
-		 /* Connection connection = null;
-		 try {
-				Class.forName("com.mysql.jdbc.Driver");
-				
-				connection = DriverManager
-						.getConnection("jdbc:mysql://localhost:3306/codersofbabylon","root","");
-				pstmt = connection.prepareStatement(  
-					     "SELECT * FROM login"); 
-			///	pstmt.setString(1,username);  
-			//	pstmt.setString(2,password); 
-				ResultSet rs = pstmt.executeQuery();
-			 
-				
-			//	   status = rs.next();  
-				while(rs.next()){
-					if(username.equals(rs.getString("username")) && password.equals(rs.getString("password"))){
-						status = rs.next();
-						break;
-
-					}else{
-						status = false;
-					}
-				}
-		}catch(ClassNotFoundException cnfe){
-			System.err.println("Class not found: "+cnfe.getMessage());
-		}catch(SQLException sqle){
-			System.err.println("SQL Exception "+ sqle.getMessage());
-		}
-		 return status; */ 
-		
 		  try{  
 		  Class.forName("com.mysql.jdbc.Driver");  
 			

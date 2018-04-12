@@ -1,23 +1,32 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
 
-@Entity
-@Table (name = "patientaddressregistry")
-public class PatientAddressBean {
+public class PatientAddressBean implements Serializable{
 	
-	@Id
-	@GeneratedValue
-	private int addressId;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3020316239526679608L;
+
 	
+	private Integer addressId;
+	
+
 	private String street;
+	
+
 	private String city;
+	
+
 	private String country;
+	
+
 	private String zipcode;
+	
+	
+	
 	public int getAddressId() {
 		return addressId;
 	}
@@ -42,11 +51,17 @@ public class PatientAddressBean {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+	public void setAddressId(Integer addressId) {
+		this.addressId = addressId;
+	}
 	public String getZipcode() {
 		return zipcode;
 	}
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
+	
+
+
 	
 }

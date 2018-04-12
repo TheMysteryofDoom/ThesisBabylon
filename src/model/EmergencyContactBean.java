@@ -1,23 +1,33 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
 
-@Entity
-@Table (name ="patientemergencycontact")
-public class EmergencyContactBean {
-	@Id
-	@GeneratedValue
+
+public class EmergencyContactBean implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8396694675075444441L;
+
+	private Integer emergencyId;
 	
-	private int emergencyId;
-	
+
 	private String firstName;
+	
+
 	private String lastName;
+	
+
 	private String middleName;
+	
+
+	public void setEmergencyId(Integer emergencyId) {
+		this.emergencyId = emergencyId;
+	}
+
 	private String type;
+
 	
 	public int getEmergencyId() {
 		return emergencyId;

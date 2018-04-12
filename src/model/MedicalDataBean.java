@@ -2,16 +2,10 @@ package model;
 
 import java.io.File;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "patientresults")
+
 public class MedicalDataBean {
-	@Id
-	@GeneratedValue
+
 	private int fileId;
 	
 	private File fileUpload;
