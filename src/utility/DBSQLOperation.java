@@ -26,16 +26,17 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setInt(1, pb.getPatientID());
 				pstmnt.setString(2, pb.getFirstName());
 				pstmnt.setString(3, pb.getLastName());
-				pstmnt.setString(3, pb.getMiddleName());
-				pstmnt.setString(4, pb.getBirthMonth());
-				pstmnt.setInt(5, pb.getBirthDay());
-				pstmnt.setInt(6, pb.getBirthYear());
-				pstmnt.setString(7, pb.getGender());
-				pstmnt.setString(8, pb.getBirthPlace());
-				pstmnt.setString(8, pb.getCitizenship());
-				pstmnt.setString(9, pb.getReligion());
-				pstmnt.setString(10, pb.getCivil());
-				pstmnt.setString(11, pb.getStatus());
+				pstmnt.setString(4, pb.getMiddleName());
+				pstmnt.setString(5, pb.getBirthMonth());
+				pstmnt.setInt(6, pb.getBirthDay());
+				pstmnt.setInt(7, pb.getBirthYear());
+				pstmnt.setString(8, pb.getGender());
+				pstmnt.setString(9, pb.getBirthPlace());
+				pstmnt.setString(10, pb.getCitizenship());
+				pstmnt.setString(11, pb.getReligion());
+				pstmnt.setString(12, pb.getCivil());
+				pstmnt.setString(13, pb.getJob());
+				pstmnt.setString(14, pb.getStatus());
 				
 				
 				pstmnt.executeUpdate();
@@ -59,7 +60,7 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(2, pab.getStreet());
 				pstmnt.setString(3, pab.getCity());
 				pstmnt.setString(4, pab.getCountry());
-				pstmnt.setString(4, pab.getZipcode());
+				pstmnt.setString(5, pab.getZipcode());
 				
 				pstmnt.executeQuery();
 			}catch(SQLException sqle){
@@ -102,7 +103,7 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setInt(1, ecb.getEmergencyId());
 				pstmnt.setString(2, ecb.getFirstName());
 				pstmnt.setString(3, ecb.getLastName());
-				pstmnt.setString(2, ecb.getMiddleName());
+				pstmnt.setString(4, ecb.getMiddleName());
 				
 				pstmnt.executeQuery();
 				isSuccessful = true;
