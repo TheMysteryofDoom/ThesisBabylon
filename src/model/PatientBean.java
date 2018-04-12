@@ -31,10 +31,13 @@ public class PatientBean implements Serializable{
 	private String job;
 	//patients Status
 	private String status;
-
 	
-	
-
+	public int getPatientID() {
+		return patientID;
+	}
+	public void setPatientID(int patientID) {
+		this.patientID = patientID;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
@@ -113,14 +116,6 @@ public class PatientBean implements Serializable{
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public int getPatientID() {
-		return patientID;
-	}
-	public void setPatientID(int patientID) {
-		this.patientID = patientID;
-	}
-	
-	
 
 
 	

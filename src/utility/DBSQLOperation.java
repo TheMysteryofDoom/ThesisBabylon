@@ -37,12 +37,10 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(12, pb.getCivil());
 				pstmnt.setString(13, pb.getJob());
 				pstmnt.setString(14, pb.getStatus());
-				
-				
 				pstmnt.executeUpdate();
 				isSuccessful = true;
 			}catch(SQLException sqle){
-				System.err.println(sqle.getMessage());
+				sqle.printStackTrace();
 			}
 		}
 		

@@ -426,6 +426,7 @@
 			<div class="row">
 				<div class="three columns">
 				<input class="button-primary u-pull-right" value="Next" type="submit"></input>
+				<input type="hidden" name="status" id="status" value="alive">
 				</div>
 			</div>
 	</form>

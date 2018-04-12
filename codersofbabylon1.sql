@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2018 at 05:23 AM
+-- Generation Time: Apr 12, 2018 at 10:02 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -51,10 +51,17 @@ CREATE TABLE `patient` (
   `birthPlace` varchar(100) NOT NULL,
   `citizenship` varchar(100) NOT NULL,
   `religion` varchar(100) NOT NULL,
-  `civilStatus` varchar(50) NOT NULL,
+  `civil` varchar(50) NOT NULL,
   `job` varchar(100) NOT NULL,
-  `patientStatus` tinyint(1) NOT NULL
+  `patientStatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthMonth`, `birthDay`, `birthYear`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `patientStatus`) VALUES
+(1, 'Mark Luis Gabriel', 'Ticzon', 'Velandres', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive');
 
 -- --------------------------------------------------------
 
@@ -145,7 +152,7 @@ ALTER TABLE `adminaccount`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `patientaddress`
 --
