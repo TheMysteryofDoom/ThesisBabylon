@@ -29,7 +29,7 @@ public class DBSQLOperation implements SQLCommand{
 				while(rs.next()){
 					dbUsername = rs.getString("username");
 					dbPassword = rs.getString("password");
-					if(dbPassword == user.getUsername() && dbPassword == user.getPassword()){
+					if(dbUsername == user.getUsername() && dbPassword == user.getPassword()){
 						System.out.println("OK");
 						isSuccessful = true;
 					}
