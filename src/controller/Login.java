@@ -16,20 +16,15 @@ public class Login implements SessionAware, ModelDriven<User>{
 	
 	User user = new User();
 	Connection connection = DBSingletonConnection.getConnection();
-	Map<String, Object> m;
+	
 
 	public String execute(){  
 		String status = "error";
-		
-		if(DBSQLOperation.loginAdmin(user, connection)){
+		try{
 			
-			m.put("a", user.getUsername());
-			m.put("b", user.getPassword());
-			status = "success";
-			
-		}else{
 			
 		}
+	
 	return status;
 	}  
 	  
