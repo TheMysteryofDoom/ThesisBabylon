@@ -2,7 +2,7 @@ package controller;
 import java.sql.Connection;
 import java.util.Map;
 
-import model.User;
+
 
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
@@ -14,57 +14,50 @@ import utility.*;
 //import com.opensymphony.xwork2.ActionSupport;
 
 
-public class Login implements SessionAware, ModelDriven<User>{ 
+public class Login implements SessionAware{ 
 	
-	private SessionMap<String,Object> sessionMap;
-	//SessionMap object is injected by Struts2
+SessionMap<String,String> sessionmap;  
 	
-	
-	User user = new User();
-	Connection connection = DBSingletonConnection.getConnection();
-	
-
-	public String execute(){  
-		String status = "error";
-
-			if(DBSQLOperation.loginAdmin(user, connection)){
-				System.out.println("USER LOGGED IN");
-				sessionMap.put("logined", "true");
-				status = "success";
-			}else{
-				System.err.println("Admin login failed");
-			}
-			return status;
-		}
-	
-	
+	private String username;
+	private String password;  
+	public String getUsername() {  
+	    return username;  
+	}  
+	  
+	public void setUsername(String username) {  
+	    this.username = username;  
+	}  
+	  
 
 	  
-	public String logout(){
-		try{
-			if(sessionMap!=null){
-				sessionMap.invalidate();
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-	   
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String execute(){  
+		System.out.println(username);
+	    sessionmap.put("username", username);
+	    if(User.validate(username, password)){  
+	        return "success";  
+	    }  
+	    else{  
+	        return "error";  
+	    }  
+	}  
+	
+	public void setSession(Map map) {  //This happens before execute
+	    sessionmap=(SessionMap)map;  
+	    sessionmap.put("login","true");
+	}  
+	  
+	public String logout(){  
+	    sessionmap.invalidate();  
 	    return "success";  
-	}
-
-	@Override
-	public User getModel() {
-		// TODO Auto-generated method stub
-		return user;
-	}
-
-
-
-
-	@Override
-	public void setSession(Map<String,Object>map){
-		sessionMap = (SessionMap<String, Object>)map;
-	}
+	}  
 
 	
 
