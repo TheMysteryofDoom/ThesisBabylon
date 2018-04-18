@@ -88,7 +88,7 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(4, pab.getCountry());
 				pstmnt.setString(5, pab.getZipcode());
 				
-				pstmnt.executeQuery();
+				pstmnt.executeUpdate();
 			}catch(SQLException sqle){
 				System.err.println(sqle.getMessage());
 			}
@@ -108,7 +108,7 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(3, pcb.getContactNo2());
 				pstmnt.setString(4, pcb.getContactNo3());
 				pstmnt.setString(5, pcb.getEmail());
-				pstmnt.executeQuery();
+				pstmnt.executeUpdate();
 				isSuccessful = true;
 			}catch(SQLException sqle){
 				System.err.println(sqle.getMessage());
@@ -131,7 +131,7 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(3, ecb.getLastName());
 				pstmnt.setString(4, ecb.getMiddleName());
 				
-				pstmnt.executeQuery();
+				pstmnt.executeUpdate();
 				isSuccessful = true;
 			}catch(SQLException sqle){
 				System.err.println(sqle.getMessage());
