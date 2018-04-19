@@ -17,12 +17,14 @@ public class RegisterAddress extends ActionSupport implements ModelDriven<Patien
 	Connection connection = DBSingletonConnection.getConnection();
 	
 	public String execute(){
+		String status = "error";
 		if(DBSQLOperation.insertPatientAddress(pab, connection)){
 			System.out.println("Address inserted to DB");
+			status = "success";
 		}else{
 			System.err.println("Address did not insert.");
 		}
-		return SUCCESS;
+		return status;
 	}
 	@Override
 	public PatientAddressBean getModel(){

@@ -16,14 +16,15 @@ public class EmergencyContactAction extends ActionSupport implements ModelDriven
 	Connection connection = DBSingletonConnection.getConnection();
 	
 	public String execute(){
+		String status = "error";
 		if(DBSQLOperation.insertPatientEmergenctContact(ecb, connection)){
 			System.out.println("Emergency contact inserted to db.");
-			
+			status = "success";
 		}else{
 			System.err.println("Emergenct contact did not insert.");
 		}
 		
-		return SUCCESS;
+		return status;
 	}
 
 	@Override

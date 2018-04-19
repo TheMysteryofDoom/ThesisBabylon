@@ -1,17 +1,22 @@
 package controller;
+import java.sql.Connection;
 import java.util.Map;
+
+
 
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
-//import org.hibernate.Session;
 
-//import model.AccessBean;
+import com.opensymphony.xwork2.ModelDriven;
+
 import utility.*;
 
 //import com.opensymphony.xwork2.ActionSupport;
 
-public class Login implements SessionAware{
-	SessionMap<String,String> sessionmap;  
+
+public class Login implements SessionAware{ 
+	
+SessionMap<String,String> sessionmap;  
 	
 	private String username;
 	private String password;  
@@ -53,6 +58,9 @@ public class Login implements SessionAware{
 	    sessionmap.invalidate();  
 	    return "success";  
 	}  
+
+	
+
 	
 	
 }

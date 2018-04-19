@@ -11,22 +11,13 @@ public class PatientAddressBean implements Serializable{
 	private static final long serialVersionUID = -3020316239526679608L;
 
 	
-	private Integer addressId;
-	
-
+	private int addressId;
 	private String street;
-	
-
 	private String city;
-	
-
 	private String country;
-	
-
 	private String zipcode;
 	
-	
-	
+		
 	public int getAddressId() {
 		return addressId;
 	}

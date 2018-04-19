@@ -1,6 +1,8 @@
 package utility;
 
 public interface SQLCommand {
+	String LOGIN_USER = "SELECT username, password FROM adminaccounts";
+	
 	String INSERT_PATIENT = "INSERT INTO "
 			+ "patient(patientID, firstName, lastName, middleName,"
 			+ " birthMonth, birthDay, birthYear, gender, birthPlace, "
@@ -8,8 +10,9 @@ public interface SQLCommand {
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
 	String INSERT_PATEINT_CONTACT_INFO = "INSERT INTO "
-			+ "patientcontactinfo(contactID, contactNo1, contactNo2,  contactNo3, email)"
-			+ "VALUES(?, ?, ?, ?, ?)";
+			+ "patientcontactinfo(contactID, contactNo1, contactNo2,  contactNo3,"
+			+ " type1, type2, type3, email)"
+			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
 	
 	String INSERT_PATIENT_ADDRESS = "INSERT INTO "
 			+ "patientaddress(addressID, street, city, country, zipcode) "

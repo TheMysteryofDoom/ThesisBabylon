@@ -17,13 +17,15 @@ public class RegisterContact extends ActionSupport implements ModelDriven<Patien
 	Connection connection = DBSingletonConnection.getConnection();
 	
 	public String execute(){
+		String status = "error";
 		if(DBSQLOperation.insertPatientContact(pcb, connection)){
 			System.out.println("Contact inserted to db");
+			status = "success";
 		}else{
 			System.err.println("Contact did not insert,");
 		}
 		
-		return SUCCESS;
+		return status;
 	}
 	
 	@Override
