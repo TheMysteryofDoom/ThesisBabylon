@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 12, 2018 at 10:02 AM
+-- Generation Time: Apr 19, 2018 at 09:37 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -33,6 +33,13 @@ CREATE TABLE `adminaccount` (
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `adminaccount`
+--
+
+INSERT INTO `adminaccount` (`accountID`, `username`, `password`, `email`) VALUES
+(1, 'admin', 'admin', 'admin@admin.com');
+
 -- --------------------------------------------------------
 
 --
@@ -61,7 +68,17 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthMonth`, `birthDay`, `birthYear`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `patientStatus`) VALUES
-(1, 'Mark Luis Gabriel', 'Ticzon', 'Velandres', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive');
+(2, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(3, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(4, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(5, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'May', 2, 2017, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(6, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Apr', 2, 2017, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(7, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Mar', 4, 2017, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(8, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Mar', 22, 2015, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(9, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Jan', 2, 2017, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(10, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Mar', 3, 2006, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(11, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'May', 2, 2016, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', 'alive'),
+(12, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Mar', 4, 2018, 'M', 'Quezon City', 'eritrean', 'Islam', 'single', 'Student', 'alive');
 
 -- --------------------------------------------------------
 
@@ -77,6 +94,16 @@ CREATE TABLE `patientaddress` (
   `zipcode` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `patientaddress`
+--
+
+INSERT INTO `patientaddress` (`addressID`, `street`, `city`, `country`, `zipcode`) VALUES
+(2, 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001'),
+(3, 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001'),
+(4, 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001'),
+(5, 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1550');
+
 -- --------------------------------------------------------
 
 --
@@ -85,11 +112,25 @@ CREATE TABLE `patientaddress` (
 
 CREATE TABLE `patientcontactinfo` (
   `contactID` int(11) NOT NULL,
-  `contactNo1` int(11) NOT NULL,
-  `contactNo2` int(11) NOT NULL,
-  `contactNo3` int(11) NOT NULL,
+  `contactNo1` varchar(50) NOT NULL,
+  `contactNo2` varchar(50) NOT NULL,
+  `contactNo3` varchar(50) NOT NULL,
+  `type1` varchar(50) NOT NULL,
+  `type2` varchar(50) NOT NULL,
+  `type3` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `patientcontactinfo`
+--
+
+INSERT INTO `patientcontactinfo` (`contactID`, `contactNo1`, `contactNo2`, `contactNo3`, `type1`, `type2`, `type3`, `email`) VALUES
+(2, '09159324417', '09159324456', '5318459', 'Cell', 'Work', 'Home', 'markvticzon@gmail.com'),
+(3, '09159324417', '09159324456', '5318459', 'Cell', 'Work', 'Home', 'markvticzon@gmail.com'),
+(4, '09159324417', '09159324456', '5318459', 'Cell', 'Work', 'Home', 'markvticzon@gmail.com'),
+(5, '09159324417', '09159324456', '5318459', 'Cell', 'Work', 'Home', 'markvticzon@gmail.com'),
+(6, '09159324417', '09159324456', '5318459', 'Cell', 'Work', 'Home', 'markvticzon@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -147,22 +188,22 @@ ALTER TABLE `patientemergencycontact`
 -- AUTO_INCREMENT for table `adminaccount`
 --
 ALTER TABLE `adminaccount`
-  MODIFY `accountID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `accountID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `patientaddress`
 --
 ALTER TABLE `patientaddress`
-  MODIFY `addressID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `addressID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `patientcontactinfo`
 --
 ALTER TABLE `patientcontactinfo`
-  MODIFY `contactID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `contactID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `patientemergencycontact`
 --
@@ -176,13 +217,19 @@ ALTER TABLE `patientemergencycontact`
 -- Constraints for table `patientaddress`
 --
 ALTER TABLE `patientaddress`
-  ADD CONSTRAINT `patientaddress_ibfk_1` FOREIGN KEY (`addressID`) REFERENCES `patient` (`patientID`);
+  ADD CONSTRAINT `patientaddress_ibfk_1` FOREIGN KEY (`addressID`) REFERENCES `patient` (`patientID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `patientcontactinfo`
 --
 ALTER TABLE `patientcontactinfo`
-  ADD CONSTRAINT `patientcontactinfo_ibfk_1` FOREIGN KEY (`contactID`) REFERENCES `patient` (`patientID`);
+  ADD CONSTRAINT `patientcontactinfo_ibfk_1` FOREIGN KEY (`contactID`) REFERENCES `patient` (`patientID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `patientemergencycontact`
+--
+ALTER TABLE `patientemergencycontact`
+  ADD CONSTRAINT `patientemergencycontact_ibfk_1` FOREIGN KEY (`emergencycontactID`) REFERENCES `patient` (`patientID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
