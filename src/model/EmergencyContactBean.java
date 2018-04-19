@@ -10,23 +10,19 @@ public class EmergencyContactBean implements Serializable{
 	 */
 	private static final long serialVersionUID = -8396694675075444441L;
 
-	private Integer emergencyId;
+	private int emergencyId;
 	
 
 	private String firstName;
-	
-
 	private String lastName;
-	
-
 	private String middleName;
-	
+	private String type;
 
 	public void setEmergencyId(Integer emergencyId) {
 		this.emergencyId = emergencyId;
 	}
 
-	private String type;
+	
 
 	
 	public int getEmergencyId() {
