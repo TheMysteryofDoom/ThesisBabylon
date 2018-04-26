@@ -29,8 +29,32 @@ public class PatientBean implements Serializable{
 	private String religion;
 	private String civil;
 	private String job;
+	
+	//patient contact information
+	private String contactNo1;
+	private String contactNo2;
+	private String contactNo3;
+	private String type1;
+	private String type2;
+	private String type3;
+	private String email;
+	
+	//patient address information
+	private String street;
+	private String city;
+	private String country;
+	private String zipcode;
+	
+	//patient emergency contact
+	private String emcFirstName;
+	private String emcLastName;
+	private String emcMiddleName;
+	private String relationship;
 	//patients Status
-	private String status;
+	private boolean isAlive;
+	
+	//Patient Card ID
+	private String patientCardID;
 	
 	public int getPatientID() {
 		return patientID;
@@ -110,15 +134,110 @@ public class PatientBean implements Serializable{
 	public void setJob(String job) {
 		this.job = job;
 	}
-	public String getStatus() {
-		return status;
-	}
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-
 	
+	
+	public String getContactNo1() {
+		return contactNo1;
+	}
+	public void setContactNo1(String contactNo1) {
+		this.contactNo1 = contactNo1;
+	}
+	public String getContactNo2() {
+		return contactNo2;
+	}
+	public void setContactNo2(String contactNo2) {
+		this.contactNo2 = contactNo2;
+	}
+	public String getContactNo3() {
+		return contactNo3;
+	}
+	public void setContactNo3(String contactNo3) {
+		this.contactNo3 = contactNo3;
+	}
+	public String getType1() {
+		return type1;
+	}
+	public void setType1(String type1) {
+		this.type1 = type1;
+	}
+	public String getType2() {
+		return type2;
+	}
+	public void setType2(String type2) {
+		this.type2 = type2;
+	}
+	public String getType3() {
+		return type3;
+	}
+	public void setType3(String type3) {
+		this.type3 = type3;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getZipcode() {
+		return zipcode;
+	}
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+	public String getEmcFirstName() {
+		return emcFirstName;
+	}
+	public void setEmcFirstName(String emcFirstName) {
+		this.emcFirstName = emcFirstName;
+	}
+	public String getEmcLastName() {
+		return emcLastName;
+	}
+	public void setEmcLastName(String emcLastName) {
+		this.emcLastName = emcLastName;
+	}
+	public String getEmcMiddleName() {
+		return emcMiddleName;
+	}
+	public void setEmcMiddleName(String emcMiddleName) {
+		this.emcMiddleName = emcMiddleName;
+	}
+	public String getRelationship() {
+		return relationship;
+	}
+	public void setRelationship(String relationship) {
+		this.relationship = relationship;
+	}
+	public boolean isAlive() {
+		return isAlive;
+	}
+	public void setAlive(boolean isAlive) {
+		this.isAlive = isAlive;
+	}
+	public String getPatientCardID() {
+		return patientCardID;
+	}
+	public void setPatientCardID(String patientCardID) {
+		this.patientCardID = patientCardID;
+	}
 	
 	
 }
