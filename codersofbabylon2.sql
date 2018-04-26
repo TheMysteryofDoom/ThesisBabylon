@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2018 at 06:17 AM
+-- Generation Time: Apr 26, 2018 at 09:10 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -73,6 +73,7 @@ CREATE TABLE `patient` (
   `gender` varchar(10) NOT NULL,
   `birthPlace` varchar(100) NOT NULL,
   `citizenship` int(50) NOT NULL,
+  `religion` varchar(100) NOT NULL,
   `civil` varchar(50) NOT NULL,
   `job` varchar(50) NOT NULL,
   `contactNo1` varchar(50) NOT NULL,
@@ -91,7 +92,8 @@ CREATE TABLE `patient` (
   `emcMiddleName` varchar(100) NOT NULL,
   `emcContactNo` varchar(100) NOT NULL,
   `relationship` varchar(100) NOT NULL,
-  `isAlive` tinyint(1) NOT NULL
+  `isAlive` tinyint(1) NOT NULL,
+  `patientCardID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
