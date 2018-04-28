@@ -67,7 +67,7 @@ public class Login extends ActionSupport implements SessionAware{
 		//    else{
 		//        return "error";
 	//	    }
-			
+			 
 			return returnResult;
 		}
 
