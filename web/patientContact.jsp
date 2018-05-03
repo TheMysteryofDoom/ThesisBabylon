@@ -59,9 +59,9 @@
 	</div> 							
 	<hr>
 	<div class ="row">
-		<form action="returnToBasic.action" method="post">
+		<form action="registerPatientBackButton.action" method="post">
 			<div class="two columns">
-			<input class="button u-pull-right" value="Back" type="submit"></input>
+			<input class="button-primary u-pull-right" value="Back" type="submit"></input>
 			</div>
 		</form>
 	</div>

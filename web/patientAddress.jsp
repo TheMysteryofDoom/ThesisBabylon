@@ -108,6 +108,9 @@
 			<br>
 			<div class="row">
 				<div class="two columns">
+				<input class="button-primary u-pull-right" value="Back" type="button" onclick=""></input>
+				</div>
+				<div class="two columns">
 				<input class="button-primary u-pull-right" value="Next" type="submit"></input>
 				</div>
 			</div>

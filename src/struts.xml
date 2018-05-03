@@ -24,8 +24,12 @@
 		</action>  
 		
 		<!-- Patient registration -->
-		<action name="registerPatient" class="controller.RegisterAction">  
+		<action name="registerPatient" class="controller.RegisterAction" method="part1To2">  
 			<result name="success" >/patientContact.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>
+		<action name="registerPatientBackButton" class="controller.RegisterAction" method="part2To1">  
+			<result name="success" >/register.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>   
 
