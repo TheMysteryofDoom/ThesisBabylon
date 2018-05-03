@@ -81,13 +81,13 @@
 				<label>Full Name:</label>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="firstName" id="firstName" placeholder="First Name" required="required"></input>
+			    <input class="u-full-width" type="text" name="EMCfirstName" id="EMCfirstName" placeholder="First Name" required="required"></input>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
+			    <input class="u-full-width" type="text" name="EMClastName" id="EMClastName" placeholder="Last Name" required="required"></input>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name"></input>
+			    <input class="u-full-width" type="text" name="EMCmiddleName" id="EMCmiddleName" placeholder="Mother's Maiden Name"></input>
 			</div>
 		</div>
 			<br>
@@ -96,7 +96,7 @@
 					<label>Type:</label>
 				</div>
 				<div class="three columns">
-					<select id="type" name="type" required="required" class="u-full-width">
+					<select id="EMCtype" name="EMCtype" required="required" class="u-full-width">
 					 <option selected="selected" disabled="disabled" value="none">Select Type</option>
 					 <option value="Mother">Mother</option>
 					 <option value="Father">Father</option>

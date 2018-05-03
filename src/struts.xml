@@ -29,6 +29,10 @@
 			<result name="error" >/error.jsp</result>  
 		</action>
 		<action name="registerContact" class="controller.RegisterAction" method="part2To3">  
+			<result name="success" >/patientAddress.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>
+		<action name="registerAddress" class="controller.RegisterAction" method="part3To4">  
 			<result name="success" >/patientContactPerson.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>
@@ -41,8 +45,12 @@
 			<result name="success" >/register.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>
-		<action name="registerContactPersonBackButton" class="controller.RegisterAction" method="part3To2">  
+		<action name="returnToContact" class="controller.RegisterAction" method="part3To2">  
 			<result name="success" >/patientContact.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action> 
+		<action name="registerContactPersonBackButton" class="controller.RegisterAction" method="part4To3">  
+			<result name="success" >/patientAddress.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>      
 

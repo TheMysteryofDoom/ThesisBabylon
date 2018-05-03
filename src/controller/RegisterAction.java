@@ -34,6 +34,53 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	@Override
 	public String execute(){
 		System.out.println("Register Full Patient Action is mapped here.");
+		// pb will be assembled year
+		pb.setFirstName(session.get("pFirstName").toString());
+		pb.setLastName(session.get("pLastName").toString());
+		pb.setMiddleName(session.get("pMiddleName").toString());
+		pb.setBirthMonth(session.get("pBirthMonth").toString());
+		pb.setBirthDay(Integer.parseInt(session.get("pBirthDay").toString()));
+		pb.setBirthYear(Integer.parseInt(session.get("pBirthYear").toString()));
+		pb.setBirthPlace(session.get("pBirthPlace").toString());
+		pb.setGender(session.get("pGender").toString());
+		pb.setCitizenship(session.get("pCitizenship").toString());
+		pb.setReligion(session.get("pReligion").toString());
+		System.out.println(session.get("pReligion").toString());
+		pb.setCivil(session.get("pCivil").toString());
+		pb.setJob(session.get("pJob").toString());
+		// =======================================================
+		pb.setContactNo1(session.get("pContactA").toString());
+		pb.setType1(session.get("pTypeA").toString());
+		pb.setContactNo2(session.get("pContactB").toString());
+		try{
+			pb.setType2(session.get("pTypeB").toString());
+		} catch (NullPointerException h){
+			pb.setType2("N/A");
+		}
+		pb.setContactNo3(session.get("pContactC").toString());
+		try{
+			pb.setType3(session.get("pTypeC").toString());
+		} catch (NullPointerException h){
+			pb.setType3("N/A");
+		}
+		pb.setEmail(session.get("pEmail").toString());
+		// =======================================================
+		pb.setStreet(session.get("pStreet").toString());
+		pb.setCity(session.get("pCity").toString());
+		pb.setCountry(session.get("pCountry").toString());
+		pb.setZipcode(session.get("pZip").toString());
+		// =======================================================
+		System.out.println(request.getParameter("EMCfirstName").toString());
+		System.out.println(request.getParameter("EMCmiddleName").toString());
+		System.out.println(request.getParameter("EMClastName").toString());
+		System.out.println(request.getParameter("EMCtype").toString());
+		// **************
+		pb.setEmcFirstName(request.getParameter("EMCfirstName").toString());
+		pb.setEmcMiddleName(request.getParameter("EMCmiddleName").toString());
+		pb.setEmcLastName(request.getParameter("EMClastName").toString());
+		pb.setRelationship(request.getParameter("EMCtype").toString());
+		pb.setAlive(true);
+		//===============================
 		String status = "error";
 		System.out.println(session.get("username"));
 		if(DBSQLOperation.insertPatient(pb, connection)){
@@ -55,7 +102,6 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		session.put("pBirthDay", request.getAttribute("birthDay"));
 		session.put("pBirthYear", request.getAttribute("birthYear"));
 		session.put("pGender", request.getAttribute("gender"));
-		//System.out.println(session.get("pGender"));
 		session.put("pBirthPlace", request.getAttribute("birthPlace"));
 		session.put("pCitizenship", request.getAttribute("citizenship"));
 		session.put("pReligion", request.getAttribute("religion"));
@@ -65,7 +111,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		return "success";
 	}
 	
-	public String part2To3(){ //Contact to Contact Person
+	public String part2To3(){ //Contact to Address
 		session.put("pContactA", request.getAttribute("contactNo1"));
 		session.put("pTypeA", request.getAttribute("type1"));
 		session.put("pContactB", request.getAttribute("contactNo2"));
@@ -76,12 +122,23 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	
 		return "success";
 	}
+	public String part3To4(){ //Address to Emergency Contact
+		session.put("pStreet", request.getAttribute("street"));
+		session.put("pCity", request.getAttribute("city"));
+		session.put("pCountry", request.getAttribute("country"));
+		session.put("pZip", request.getAttribute("zipcode"));
+		return "success";
+	}
 	
 	// Back Buttons
 	public String part2To1(){
 		return "success";
 	}
 	public String part3To2(){
+		return "success";
+	}
+	public String part4To3(){
+
 		return "success";
 	}
 
