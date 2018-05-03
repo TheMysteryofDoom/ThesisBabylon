@@ -69,7 +69,7 @@
 	<form action="registerContact.action" method="post">
 			<div class ="row">
 				<div class="six columns">
-					<label>Patient: </label>[PatientName] <s:property value = "firstName"/> <s:property value = " middleName"/> <s:property value = "lastName"/>
+					<label>Patient: </label><s:property value = "firstName"/> <s:property value = " middleName"/> <s:property value = "lastName"/>
 				</div>
 				<div class="six columns">
 					<label>ID Number: </label>[PatientNumber] 

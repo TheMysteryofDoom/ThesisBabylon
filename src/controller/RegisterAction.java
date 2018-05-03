@@ -45,7 +45,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	return status;
 	}
 	
-	public String part1To2(){
+	public String part1To2(){ // Base to Contact
 		
 		session.put("pFirstName", request.getAttribute("firstName"));
 		session.put("pLastName", request.getAttribute("lastName"));
@@ -63,8 +63,24 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 
 		return "success";
 	}
-	// Back Button
+	
+	public String part2To3(){ //Contact to Contact Person
+		session.put("pContactA", request.getAttribute("contactNo1"));
+		session.put("pTypeA", request.getAttribute("type1"));
+		session.put("pContactB", request.getAttribute("contactNo2"));
+		session.put("pTypeB", request.getAttribute("type2"));
+		session.put("pContactC", request.getAttribute("contactNo3"));
+		session.put("pTypeC", request.getAttribute("type3"));
+		session.put("pEmail", request.getAttribute("email"));
+	
+		return "success";
+	}
+	
+	// Back Buttons
 	public String part2To1(){
+		return "success";
+	}
+	public String part3To2(){
 		return "success";
 	}
 
