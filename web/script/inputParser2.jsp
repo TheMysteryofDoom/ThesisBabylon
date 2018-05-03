@@ -1,73 +1,43 @@
 <% 
-String month = "Select Month";
-String year = "Select Year";
-String day = "Select Day";
-String isMale = "checked='checked'";
-String isFemale = "";
-String citizenship = "Select One";
-String religion = "Select One";
-String civil = "Select One";
-String birthDayDisabled = "disabled='disabled'";
-String birthMonthDisabled = "disabled='disabled'";
-String birthYearDisabled = "disabled='disabled'";
-String civilDisabled = "disabled='disabled'";
-if (session.getAttribute("pFirstName") == null){
-	session.setAttribute("pFirstName", "");
-}
-if (session.getAttribute("pLastName") == null) {
-	session.setAttribute("pLastName", "");
-}
-if (session.getAttribute("pMiddleName") == null) {
-	session.setAttribute("pMiddleName", "");
-}
-if (session.getAttribute("pMiddleName") == null) {
-	session.setAttribute("pMiddleName", "");
-}
-if (session.getAttribute("pBirthMonth") == null) {
-	session.setAttribute("pBirthMonth", "");
+String typeA = "Select Type";
+String typeB = "Select Type";
+String typeC = "Select Type";
+String typeADisabled = "disabled='disabled'";
+String typeBDisabled = "disabled='disabled'";
+String typeCDisabled = "disabled='disabled'";
+
+if (session.getAttribute("pTypeA") == null){
+	session.setAttribute("pTypeA", "");
+	typeA = "Select Type";
 } else {
-	month = session.getAttribute("pBirthMonth").toString();
-	birthMonthDisabled = "";
+	typeA = session.getAttribute("pTypeA").toString();
+	typeADisabled = "";
 }
-if (session.getAttribute("pBirthDay") == null) {
-	session.setAttribute("pBirthDay", 0);
+if (session.getAttribute("pTypeB") == null || session.getAttribute("pTypeB").toString().equals("")){
+	session.setAttribute("pTypeB", "");
+	typeB = "Select Type";
 } else {
-	day = session.getAttribute("pBirthDay").toString();
-	birthDayDisabled = "";
+	typeB = session.getAttribute("pTypeB").toString();
+	typeBDisabled = "";
 }
-if (session.getAttribute("pBirthYear") == null) {
-	session.setAttribute("pBirthYear", 0);
+if (session.getAttribute("pTypeC") == null || session.getAttribute("pTypeC").toString().equals("")){
+	session.setAttribute("pTypeC", "");
+	typeC = "Select Type";
 } else {
-	year = session.getAttribute("pBirthYear").toString();
-	birthYearDisabled = "";
+	typeC = session.getAttribute("pTypeC").toString();
+	typeCDisabled = "";
 }
-if (session.getAttribute("pGender") == null) {
-	session.setAttribute("pGender", "");
-} else if (session.getAttribute("pGender").toString().equals("F")) {
-	isMale = "";
-	isFemale = "checked='checked'";
+if (session.getAttribute("pContactA") == null){
+	session.setAttribute("pContactA", "");
 }
-if (session.getAttribute("pBirthPlace") == null) {
-	session.setAttribute("pBirthPlace", "");
+if (session.getAttribute("pContactB") == null){
+	session.setAttribute("pContactB", "");
 }
-if (session.getAttribute("pCitizenship") == null) {
-	session.setAttribute("pCitizenship", "");
-} else {
-	citizenship = session.getAttribute("pCitizenship").toString();
+if (session.getAttribute("pContactC") == null){
+	session.setAttribute("pContactC", "");
 }
-if (session.getAttribute("pReligion") == null) {
-	session.setAttribute("pReligion", "");
-} else {
-	religion = session.getAttribute("pReligion").toString();
-}
-if (session.getAttribute("pCivil") == null) {
-	session.setAttribute("pCivil", "");
-} else {
-	civil = session.getAttribute("pCivil").toString();
-	civilDisabled = "";
-}
-if (session.getAttribute("pJob") == null) {
-	session.setAttribute("pJob", "");
+if (session.getAttribute("pEmail") == null){
+	session.setAttribute("pEmail", "");
 }
 
 %>

@@ -33,6 +33,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	
 	@Override
 	public String execute(){
+		System.out.println("Register Full Patient Action is mapped here.");
 		String status = "error";
 		System.out.println(session.get("username"));
 		if(DBSQLOperation.insertPatient(pb, connection)){

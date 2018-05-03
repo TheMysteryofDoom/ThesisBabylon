@@ -59,17 +59,17 @@
 	</div> 							
 	<hr>
 	<div class ="row">
-		<form action="returnToAddress.action" method="post">
+		<form action="registerContactPersonBackButton.action" method="post">
 			<div class="two columns">
 			<input class="button u-pull-right" value="Back" type="submit"></input>
 			</div>
 		</form>
 	</div>
 	<br>
-	<form action="registerContactPerson.action" method="post">
+	<form action="registerFullPatient.action" method="post">
 		<div class ="row">
 				<div class="six columns">
-					<label>Patient: </label>[PatientName] <s:property value = "firstName"/>
+					<label>Patient: </label><%= session.getAttribute("pFirstName") %> <%= session.getAttribute("pMiddleName") %> <%= session.getAttribute("pLastName") %>
 				</div>
 				<div class="six columns">
 					<label>ID Number: </label>[PatientNumber]
@@ -87,7 +87,7 @@
 			    <input class="u-full-width" type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name" required="required"></input>
+			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name"></input>
 			</div>
 		</div>
 			<br>

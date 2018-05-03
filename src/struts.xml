@@ -28,10 +28,23 @@
 			<result name="success" >/patientContact.jsp</result>  
 			<result name="error" >/error.jsp</result>  
 		</action>
+		<action name="registerContact" class="controller.RegisterAction" method="part2To3">  
+			<result name="success" >/patientContactPerson.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>
+		<action name="registerFullPatient" class="controller.RegisterAction">  
+			<result name="success" >/portal.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>
+		
 		<action name="registerPatientBackButton" class="controller.RegisterAction" method="part2To1">  
 			<result name="success" >/register.jsp</result>  
 			<result name="error" >/error.jsp</result>  
-		</action>   
+		</action>
+		<action name="registerContactPersonBackButton" class="controller.RegisterAction" method="part3To2">  
+			<result name="success" >/patientContact.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>      
 
 		
 		<!-- PRINTING ID -->

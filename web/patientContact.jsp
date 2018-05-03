@@ -9,6 +9,7 @@
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>
 <%@ include file="script/SessionCheck2.jsp" %>
 <%@ include file="script/head.jsp" %>
+<%@ include file="script/inputParser2.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -69,7 +70,7 @@
 	<form action="registerContact.action" method="post">
 			<div class ="row">
 				<div class="six columns">
-					<label>Patient: </label><s:property value = "firstName"/> <s:property value = " middleName"/> <s:property value = "lastName"/>
+					<label>Patient: </label><%= session.getAttribute("pFirstName") %> <%= session.getAttribute("pMiddleName") %> <%= session.getAttribute("pLastName") %>
 				</div>
 				<div class="six columns">
 					<label>ID Number: </label>[PatientNumber] 
@@ -81,12 +82,12 @@
 					<label>Contact Number 1: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo1" id="contactNo1" placeholder="e.g. 04799755545" required="required"></input>
+					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo1" id="contactNo1" placeholder="e.g. 04799755545" value="<%= session.getAttribute("pContactA") %>" required="required"></input>
 				</div>
 				<div class="three columns">
 					<select id="type1" name="type1" required="required" class="u-full-width">
-					 <option selected="selected" disabled="disabled" value="none">Select Type</option>
-					 <option value="Cell">Cellphone</option>
+					 <option selected="selected" <%= typeADisabled %> value="<%= session.getAttribute("pTypeA") %>"><%= typeA %></option>
+					 <option value="Cellphone">Cellphone</option>
 					 <option value="Home">Home</option>
 					 <option value="Work">Work</option>
 					</select>
@@ -98,12 +99,12 @@
 					<label>Contact Number 2: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo2" id="contactNo2" placeholder="e.g. 04799755545"></input>
+					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo2" id="contactNo2" placeholder="e.g. 04799755545" value="<%= session.getAttribute("pContactB") %>"></input>
 				</div>
 				<div class="three columns">
 					<select id="type2" name="type2" class="u-full-width">
-					 <option selected="selected" disabled="disabled" value="none">Select Type</option>
-					 <option value="Cell">Cellphone</option>
+					 <option selected="selected" <%= typeBDisabled %> value="<%= session.getAttribute("pTypeB") %>"><%= typeB %></option>
+					 <option value="Cellphone">Cellphone</option>
 					 <option value="Home">Home</option>
 					 <option value="Work">Work</option>
 					</select>
@@ -115,12 +116,12 @@
 					<label>Contact Number 3: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo3" id="contactNo3" placeholder="e.g. 04799755545"></input>
+					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo3" id="contactNo3" placeholder="e.g. 04799755545" value="<%= session.getAttribute("pContactC") %>"></input>
 				</div>
 				<div class="three columns">
 					<select id="type3" name="type3" class="u-full-width">
-					 <option selected="selected" disabled="disabled" value="none">Select Type</option>
-					 <option value="Cell">Cellphone</option>
+					 <option selected="selected" <%= typeCDisabled %> value="<%= session.getAttribute("pTypeC") %>"><%= typeC %></option>
+					 <option value="Cellphone">Cellphone</option>
 					 <option value="Home">Home</option>
 					 <option value="Work">Work</option>
 					</select>
@@ -132,7 +133,7 @@
 					<label>Email: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="email" id="email" placeholder="e.g. email@email.com" required="required"></input>
+					<input class="u-full-width" type="email" name="email" id="email" placeholder="e.g. email@email.com" required="required" value="<%= session.getAttribute("pEmail") %>"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
