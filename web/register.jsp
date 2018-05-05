@@ -141,7 +141,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row"> <!-- 1 Row -->
-				<div class="two columns">
+				<div class="three columns">
 					<label>Gender:</label>
 				</div>
 				<div class="two columns">
@@ -395,7 +395,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row"> <!-- 1 Row -->
-				<div class="two columns">
+				<div class="three columns">
 					<label>Civil Status:</label>
 				</div>
 				<div class="three columns">
@@ -411,7 +411,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row"> <!-- 1 Row -->
-				<div class="two columns">
+				<div class="three columns">
 					<label>Occupation: </label>
 				</div>
 				<div class="three columns">
