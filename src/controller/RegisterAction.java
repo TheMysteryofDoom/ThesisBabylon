@@ -89,13 +89,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		System.out.println(session.get("username"));
 		if(DBSQLOperation.insertPatient(pb, connection)){
 			System.out.println("Patient saved to database.");
-			if(userFile.mkdir()){
 				status = "success";
-			}else{
-				System.err.println("Did not create File.");
-				System.err.println("STATUS: ERROR");
-			}
-			
 		}else{
 			
 			System.err.println("Patient did not insert to database.");
