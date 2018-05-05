@@ -153,16 +153,19 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row"> <!-- 1 Row -->
-				<div class="two columns">
+				<div class="three columns">
 					<label>Birthplace:</label>
 				</div>
-				<div class="two columns">
+				<div class="three columns">
 					<input class="u-full-width" type="text" name="birthPlace" id="birthPlace" placeholder="Place of Birth" value="<%= session.getAttribute("pBirthPlace") %>" required="required"></input>
 				</div>
-				<div class="two columns">
+			</div>
+			<br>
+			<div class="row">
+				<div class="three columns">
 					<label>Citizenship:</label>
 				</div>
-				<div class="two columns">
+				<div class="three columns">
 					<select class="u-full-width" id="citizenship" name="citizenship" >
 						  <option value="<%= session.getAttribute("pCitizenship") %>" disabled="disabled"><%= citizenship %></option>
 						  <option value="afghan">Afghan</option>
@@ -359,10 +362,13 @@
 						  <option value="zimbabwean">Zimbabwean</option>
 						</select>
 				</div>
-				<div class="two columns">
+			</div>
+			<br>
+			<div class="row">
+				<div class="three columns">
 					<label>Religion:</label>
 				</div>
-				<div class="two columns">
+				<div class="three columns">
 					<select class="u-full-width" id="religion" name="religion">
 					    <option value="<%= session.getAttribute("pReligion") %>" selected="selected" <%= religionDisabled %>><%= religion %></option>
 					    <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
