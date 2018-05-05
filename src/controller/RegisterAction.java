@@ -14,6 +14,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import utility.DBSQLOperation;
 import utility.DBSingletonConnection;
+import utility.SessionCleaner;
 
 import org.apache.struts2.interceptor.SessionAware;
 import org.apache.struts2.interceptor.ServletRequestAware;
@@ -92,6 +93,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		//===============================
 		String status = "error";
 		System.out.println(session.get("username"));
+		SessionCleaner.clean(session);
 		if(DBSQLOperation.insertPatient(pb, connection)){
 			System.out.println("Patient saved to database.");
 				status = "success";
