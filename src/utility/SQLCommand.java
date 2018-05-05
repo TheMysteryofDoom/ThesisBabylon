@@ -9,9 +9,9 @@ public interface SQLCommand {
 			+ " citizenship, religion, civil, job, contactNo1, contactNo2,"
 			+ " contactNo3, type1, type2, type3, type3, street, city,"
 			+ " country, zipcode, emcFirstName, emcLastName, emcMiddleName,"
-			+ " emcContactNo, relationship)"
+			+ " emcContactNo, relationship, isAlive, patientCardID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
-			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
 	
 	String GET_PATIENT = "SELECT * "
