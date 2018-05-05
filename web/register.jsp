@@ -411,7 +411,7 @@
 			</div> <!-- 1 Row End -->
 			<br>
 			<div class="row"> <!-- 1 Row -->
-				<div class="three columns">
+				<div class="two columns">
 					<label>Occupation: </label>
 				</div>
 				<div class="three columns">
