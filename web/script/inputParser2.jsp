@@ -6,7 +6,7 @@ String typeADisabled = "disabled='disabled'";
 String typeBDisabled = "disabled='disabled'";
 String typeCDisabled = "disabled='disabled'";
 
-if (session.getAttribute("pTypeA") == null){
+if (session.getAttribute("pTypeA") == null || session.getAttribute("pTypeA").toString().equals("")){
 	session.setAttribute("pTypeA", "");
 	typeA = "Select Type";
 } else {
