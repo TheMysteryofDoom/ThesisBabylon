@@ -364,7 +364,7 @@
 				</div>
 				<div class="two columns">
 					<select class="u-full-width" id="religion" name="religion">
-					    <option value="<%= session.getAttribute("pReligion") %>" selected="selected" disabled="disabled"><%= religion %></option>
+					    <option value="<%= session.getAttribute("pReligion") %>" selected="selected" <%= religionDisabled %>><%= religion %></option>
 					    <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
 					    <option value="Agnostic">Agnostic</option>
 					    <option value="Atheist">Atheist</option>
