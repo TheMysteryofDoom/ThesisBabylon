@@ -44,8 +44,11 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		pb.setBirthPlace(session.get("pBirthPlace").toString());
 		pb.setGender(session.get("pGender").toString());
 		pb.setCitizenship(session.get("pCitizenship").toString());
-		pb.setReligion(session.get("pReligion").toString());
-		System.out.println(session.get("pReligion").toString());
+		try {
+			pb.setReligion(session.get("pReligion").toString());
+		} catch (NullPointerException h) {
+			pb.setReligion("Atheist");
+		}
 		pb.setCivil(session.get("pCivil").toString());
 		pb.setJob(session.get("pJob").toString());
 		// =======================================================
