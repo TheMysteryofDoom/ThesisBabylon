@@ -91,7 +91,7 @@
 			</div>
 		</div>
 			<br>
-			<div class="row"> <!-- 1 Row -->
+		<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
 					<label>Type:</label>
 				</div>
@@ -105,7 +105,16 @@
 					 <option value="Guardian">Guardian</option>
 					</select>
 				</div>
-			</div> <!-- 1 Row End -->
+		</div> <!-- 1 Row End -->
+			<br>
+		<div class="row"> <!-- 1 Row -->
+				<div class="three columns">
+					<label>Contact Number:</label>
+				</div>
+				<div class="three columns">
+					<input class="u-full-width" type="text" name="EMCContactNo" id="EMCContactNo" placeholder="Contact Number"></input>
+				</div>
+		</div> <!-- 1 Row End -->
 			<br>
 			<div class="row">
 				<div class="two columns">
