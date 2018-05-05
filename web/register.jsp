@@ -9,6 +9,7 @@
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>
 <%@ include file="script/SessionCheck2.jsp" %>
 <%@ include file="script/head.jsp" %>
+<%@ include file="script/inputParser.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -64,13 +65,13 @@
 				<label>Full Name:</label>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="firstName" id="firstName" placeholder="First Name" required="required"></input>
+			    <input class="u-full-width" type="text" name="firstName" id="firstName" placeholder="First Name" required="required" value="<%= session.getAttribute("pFirstName") %>"></input>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
+			    <input class="u-full-width" type="text" name="lastName" id="lastName" placeholder="Last Name" required="required" value="<%= session.getAttribute("pLastName") %>"></input>
 			</div>
 			<div class="three columns">
-			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name"></input>
+			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name" value="<%= session.getAttribute("pMiddleName") %>"></input>
 			</div>
 		</div>
 		<br>
@@ -80,7 +81,7 @@
 			</div>
 			<div class="three columns">
 				<select id="birthMonth" name="birthMonth" required="required" class="u-full-width">
-					 <option selected="selected" disabled="disabled" value="0">Select Month</option>
+					 <option selected="selected" <%= birthMonthDisabled %> value="<%= session.getAttribute("pBirthMonth") %>"><%= month %></option>
 					 <option value="Jan">January</option>
 					 <option value="Feb">February</option>
 					 <option value="Mar">March</option>
@@ -97,7 +98,7 @@
 			</div>
 			<div class="three columns">
 				<select id="birthDay" name="birthDay" required="required" class="u-full-width">
-					 <option selected="selected" disabled="disabled" value="0">Select Day</option>
+					 <option selected="selected" <%= birthDayDisabled %> value="<%= session.getAttribute("pBirthDay") %>"><%= day %></option>
 					 <option value="1">01</option>
 					 <option value="2">02</option>
 					 <option value="3">03</option>
@@ -133,7 +134,7 @@
 			</div>
 			<div class="three columns">
 				<select id="birthYear" name="birthYear" required="required" class="u-full-width">
-					<option selected="selected" disabled="disabled" value="0">Select Year</option>
+					<option selected="selected" <%= birthYearDisabled %> value="<%= session.getAttribute("pBirthYear") %>"><%= year %></option>
 					<jsp:include page="script/YearDropdown.jsp"></jsp:include>
 				</select>
 			</div>
@@ -144,10 +145,10 @@
 					<label>Gender:</label>
 				</div>
 				<div class="two columns">
-					<input type="radio" name ="gender" id="male" value="M" checked="checked"> Male
+					<input type="radio" name ="gender" id="male" value="M" <%= isMale %>> Male
 				</div>
 				<div class="two columns">
-					<input type="radio" name ="gender" id="female" value="F"> Female
+					<input type="radio" name ="gender" id="female" value="F" <%= isFemale %>> Female
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
@@ -156,14 +157,14 @@
 					<label>Birthplace:</label>
 				</div>
 				<div class="two columns">
-					<input class="u-full-width" type="text" name="birthPlace" id="birthPlace" placeholder="Place of Birth" required="required"></input>
+					<input class="u-full-width" type="text" name="birthPlace" id="birthPlace" placeholder="Place of Birth" value="<%= session.getAttribute("pBirthPlace") %>" required="required"></input>
 				</div>
 				<div class="two columns">
 					<label>Citizenship:</label>
 				</div>
 				<div class="two columns">
 					<select class="u-full-width" id="citizenship" name="citizenship" >
-						  <option value="" disabled="disabled">Select One</option>
+						  <option value="<%= session.getAttribute("pCitizenship") %>" disabled="disabled"><%= citizenship %></option>
 						  <option value="afghan">Afghan</option>
 						  <option value="albanian">Albanian</option>
 						  <option value="algerian">Algerian</option>
@@ -363,7 +364,7 @@
 				</div>
 				<div class="two columns">
 					<select class="u-full-width" id="religion" name="religion">
-					    <option value="" selected="selected" disabled="disabled">Select One</option>
+					    <option value="<%= session.getAttribute("pReligion") %>" selected="selected" disabled="disabled"><%= religion %></option>
 					    <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
 					    <option value="Agnostic">Agnostic</option>
 					    <option value="Atheist">Atheist</option>
@@ -397,20 +398,15 @@
 				<div class="two columns">
 					<label>Civil Status:</label>
 				</div>
-				<div class="two columns">
-					<input type="radio" name ="civil" id="single" value="single" checked="checked"> Single
-				</div>
-				<div class="two columns">
-					<input type="radio" name ="civil" id="married" value="married"> Married
-				</div>
-				<div class="two columns">
-					<input type="radio" name ="civil" id="widowed/widower" value="widow" > Widow/Widower
-				</div>
-				<div class="two columns">
-					<input type="radio" name ="civil" id="divorced" value="divorced" > Divorced
-				</div>
-				<div class="two columns">
-					<input type="radio" name ="civil" id="separated" value="separated" > Separated
+				<div class="three columns">
+					<select id="civil" name="civil" required="required" class="u-full-width">
+					 <option selected="selected" <%=civilDisabled %> value="<%= session.getAttribute("pCivil") %>"><%= civil %></option>
+					 <option value="single">Single</option>
+					 <option value="married">Married</option>
+					 <option value="widow">Widow</option>
+					 <option value="divorced">Divorced</option>
+					 <option value="separated">Separated</option>
+					</select>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
@@ -419,7 +415,7 @@
 					<label>Occupation: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="job" id="job" placeholder="e.g. Accountant"></input>
+					<input class="u-full-width" type="text" name="job" id="job" value="<%= session.getAttribute("pJob") %>" placeholder="e.g. Accountant"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>

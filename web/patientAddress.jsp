@@ -9,6 +9,7 @@
 <script type="text/javascript" src="javascript/isNumberKey.js"></script>
 <%@ include file="script/SessionCheck2.jsp" %>
 <%@ include file="script/head.jsp" %>
+<%@ include file="script/inputParser3.jsp" %>
 </head>
 <body>
 <div class="topbanner"></div>
@@ -69,7 +70,7 @@
 	<form action="registerAddress.action" method="post">
 			<div class ="row">
 					<div class="six columns">
-						<label>Patient: </label>[PatientName]<s:property value = "firstName"/>
+						<label>Patient: </label><%= session.getAttribute("pFirstName") %> <%= session.getAttribute("pMiddleName") %> <%= session.getAttribute("pLastName") %>
 					</div>
 					<div class="six columns">
 						<label>ID Number: </label>[PatientNumber]
@@ -81,13 +82,13 @@
 					<label>Street: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="street" id="street" placeholder="e.g. Blue Street" required="required"></input>
+					<input class="u-full-width" type="text" name="street" id="street" placeholder="e.g. Blue Street" required="required" value="<%= session.getAttribute("pStreet") %>"></input>
 				</div>
 				<div class="three columns">
 					<label>City: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="city" id="city" placeholder="e.g. Manila" required="required"></input>
+					<input class="u-full-width" type="text" name="city" id="city" placeholder="e.g. Manila" required="required" value="<%= session.getAttribute("pCity") %>"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>
@@ -96,13 +97,13 @@
 					<label>Country: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" name="country" id="country" placeholder="e.g. Philippines" required="required"></input>
+					<input class="u-full-width" type="text" name="country" id="country" placeholder="e.g. Philippines" required="required" value="<%= session.getAttribute("pCountry") %>"></input>
 				</div>
 				<div class="three columns">
 					<label>Zipcode: </label>
 				</div>
 				<div class="three columns">
-					<input class="u-full-width" type="text" onkeypress="return isNumberKey(event)" name="zipcode" id="zipcode" placeholder="e.g. 8867" required="required"></input>
+					<input class="u-full-width" type="text" onkeypress="return isNumberKey(event)" name="zipcode" id="zipcode" placeholder="e.g. 8867" required="required" value="<%= session.getAttribute("pZip") %>"></input>
 				</div>
 			</div> <!-- 1 Row End -->
 			<br>

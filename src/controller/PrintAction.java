@@ -12,11 +12,11 @@ import model.PatientBean;
 //import utility.SQLCommand;
 
 
-import com.itextpdf.text.Document;
-import com.itextpdf.text.Image;
+//import com.itextpdf.text.Document;
 //import com.itextpdf.text.Image;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.pdf.PdfWriter;
+//import com.itextpdf.text.Image;
+//import com.itextpdf.text.Paragraph;
+//import com.itextpdf.text.pdf.PdfWriter;
 //import com.itextpdf.text.pdf.codec.Base64.InputStream;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -33,7 +33,7 @@ public class PrintAction extends ActionSupport implements ModelDriven<PatientBea
 	@Override
 	public String execute(){
 		String status = ERROR;
-		Document document = new Document(); 
+		//Document document = new Document(); 
 		//ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 		//Connection conn = null;
 		
@@ -65,15 +65,15 @@ public class PrintAction extends ActionSupport implements ModelDriven<PatientBea
 			
 			inputStream  =  new ByteArrayInputStream(buffer.toByteArray()); */
 			String firstName = pb.getFirstName();
-			PdfWriter.getInstance(document, new FileOutputStream("e:\\Sample_OutputIMAGE.pdf"));
-			document.open();
+			//PdfWriter.getInstance(document, new FileOutputStream("e:\\Sample_OutputIMAGE.pdf"));
+			//document.open();
 			
 			//Change to retrieval from database, need to upload to DB (use Model).
-			Image image = Image.getInstance("e:\\38.jpg");
-			document.add(image);
-			document.add(new Paragraph("TEST PRINTING"));
-			document.add(new Paragraph(firstName));
-			document.close();
+			//Image image = Image.getInstance("e:\\38.jpg");
+			//document.add(image);
+			//document.add(new Paragraph("TEST PRINTING"));
+			//document.add(new Paragraph(firstName));
+			//document.close();
 			
 			status = SUCCESS;
 			
