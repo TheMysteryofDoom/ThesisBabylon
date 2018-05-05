@@ -49,6 +49,7 @@ public class PatientBean implements Serializable{
 	private String emcFirstName;
 	private String emcLastName;
 	private String emcMiddleName;
+	private String emcContactNo;
 	private String relationship;
 	//patients Status
 	private boolean isAlive;
@@ -220,6 +221,12 @@ public class PatientBean implements Serializable{
 	public void setEmcMiddleName(String emcMiddleName) {
 		this.emcMiddleName = emcMiddleName;
 	}
+	public String getEmcContactNo() {
+		return emcContactNo;
+	}
+	public void setEmcContactNo(String emcContactNo) {
+		this.emcContactNo = emcContactNo;
+	}
 	public String getRelationship() {
 		return relationship;
 	}
@@ -238,6 +245,7 @@ public class PatientBean implements Serializable{
 	public void setPatientCardID(String patientCardID) {
 		this.patientCardID = patientCardID;
 	}
+	
 	
 	
 }

@@ -75,6 +75,7 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(25, pb.getEmcFirstName());
 				pstmnt.setString(26, pb.getEmcLastName());
 				pstmnt.setString(27, pb.getEmcMiddleName());
+				pstmnt.setString(28, pb.getEmcContactNo());
 				pstmnt.setString(28, pb.getRelationship());
 				pstmnt.setBoolean(29, pb.isAlive());
 				pstmnt.setString(30, pb.getPatientCardID());

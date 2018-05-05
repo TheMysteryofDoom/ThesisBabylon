@@ -14,10 +14,10 @@ public class User {
 			  Class.forName("com.mysql.jdbc.Driver");  
 				
 			   Connection con = DriverManager
-					   .getConnection("jdbc:mysql://localhost:3306/codersofbabylon","root","");  
+					   .getConnection("jdbc:mysql://localhost:3306/codersofbabylon2","root","");  
 			     
-			   PreparedStatement ps=con.prepareStatement(  
-			     "SELECT * FROM login where username=? and password=?"); 
+			   PreparedStatement ps = con.prepareStatement(  
+			     "SELECT * FROM admin WHERE username=? and password=?"); 
 		
 			   ps.setString(1,username);  
 			   ps.setString(2,password);  
