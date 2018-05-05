@@ -11,6 +11,7 @@ String birthDayDisabled = "disabled='disabled'";
 String birthMonthDisabled = "disabled='disabled'";
 String birthYearDisabled = "disabled='disabled'";
 String civilDisabled = "disabled='disabled'";
+String religionDisabled = "disabled='disabled'";
 if (session.getAttribute("pFirstName") == null){
 	session.setAttribute("pFirstName", "");
 }
@@ -59,6 +60,7 @@ if (session.getAttribute("pReligion") == null) {
 	session.setAttribute("pReligion", "");
 } else {
 	religion = session.getAttribute("pReligion").toString();
+	religionDisabled = "";
 }
 if (session.getAttribute("pCivil") == null) {
 	session.setAttribute("pCivil", "");
