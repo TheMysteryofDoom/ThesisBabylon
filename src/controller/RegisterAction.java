@@ -84,6 +84,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		pb.setEmcMiddleName(request.getParameter("EMCmiddleName").toString());
 		pb.setEmcLastName(request.getParameter("EMClastName").toString());
 		pb.setRelationship(request.getParameter("EMCtype").toString());
+		pb.setEmcContactNo(request.getParameter("EMCContactNo").toString());
 		pb.setAlive(true);
 		//===============================
 		// An SQLException will be generated because patientCardID and PatientID are missing.
@@ -95,6 +96,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		System.out.println(session.get("username"));
 		SessionCleaner.clean(session);
 		if(DBSQLOperation.insertPatient(pb, connection)){
+		
 			System.out.println("Patient saved to database.");
 				status = "success";
 		}else{

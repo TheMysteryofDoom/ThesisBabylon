@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 26, 2018 at 03:58 PM
+-- Generation Time: May 08, 2018 at 08:39 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -34,6 +34,13 @@ CREATE TABLE `admin` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`adminID`, `firstName`, `lastName`, `middleName`, `username`, `password`) VALUES
+(1, 'Mark', 'Ticzon', 'Velandres', 'markticzon', '**123**');
 
 -- --------------------------------------------------------
 
@@ -74,7 +81,7 @@ CREATE TABLE `patient` (
   `birthYear` int(11) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `birthPlace` varchar(100) NOT NULL,
-  `citizenship` int(50) NOT NULL,
+  `citizenship` varchar(50) NOT NULL,
   `religion` varchar(100) NOT NULL,
   `civil` varchar(50) NOT NULL,
   `job` varchar(50) NOT NULL,
@@ -95,8 +102,15 @@ CREATE TABLE `patient` (
   `emcContactNo` varchar(100) NOT NULL,
   `relationship` varchar(100) NOT NULL,
   `isAlive` tinyint(1) NOT NULL,
-  `patientCardID` int(11) NOT NULL
+  `patientCardID` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthMonth`, `birthDay`, `birthYear`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `contactNo1`, `contactNo2`, `contactNo3`, `type1`, `type2`, `type3`, `email`, `street`, `city`, `country`, `zipcode`, `emcFirstName`, `emcLastName`, `emcMiddleName`, `emcContactNo`, `relationship`, `isAlive`, `patientCardID`) VALUES
+(1, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '09494334663', '', 'Cellphone', 'Home', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128');
 
 --
 -- Indexes for dumped tables
@@ -134,7 +148,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `adminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `icd`
 --
@@ -149,7 +163,7 @@ ALTER TABLE `medicalresults`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

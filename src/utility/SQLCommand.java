@@ -7,7 +7,7 @@ public interface SQLCommand {
 			+ "patient(patientID, firstName, lastName, middleName,"
 			+ " birthMonth, birthDay, birthYear, gender, birthPlace, "
 			+ " citizenship, religion, civil, job, contactNo1, contactNo2,"
-			+ " contactNo3, type1, type2, type3, type3, street, city,"
+			+ " contactNo3, type1, type2, type3, email, street, city,"
 			+ " country, zipcode, emcFirstName, emcLastName, emcMiddleName,"
 			+ " emcContactNo, relationship, isAlive, patientCardID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
