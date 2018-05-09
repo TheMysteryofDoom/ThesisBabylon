@@ -6,29 +6,16 @@ import java.io.File;
 
 public class MedicalDataBean {
 
-	private int fileId;
-	
 	private File fileUpload;
-	private String fileUploadContentType;
-	private String fileUploadFileName;
-	
-	public int getFileId() {
-		return fileId;
-	}
-	public void setFileId(int fileId) {
-		this.fileId = fileId;
-	}
+    private String fileUploadFileName;
+    private String fileUploadContentType;
+    private String filePathToSaveInDB;
+    
 	public File getFileUpload() {
 		return fileUpload;
 	}
 	public void setFileUpload(File fileUpload) {
 		this.fileUpload = fileUpload;
-	}
-	public String getFileUploadContentType() {
-		return fileUploadContentType;
-	}
-	public void setFileUploadContentType(String fileUploadContentType) {
-		this.fileUploadContentType = fileUploadContentType;
 	}
 	public String getFileUploadFileName() {
 		return fileUploadFileName;
@@ -36,6 +23,19 @@ public class MedicalDataBean {
 	public void setFileUploadFileName(String fileUploadFileName) {
 		this.fileUploadFileName = fileUploadFileName;
 	}
-
+	public String getFileUploadContentType() {
+		return fileUploadContentType;
+	}
+	public void setFileUploadContentType(String fileUploadContentType) {
+		this.fileUploadContentType = fileUploadContentType;
+	}
+	public String getFilePathToSaveInDB() {
+		return filePathToSaveInDB;
+	}
+	public void setFilePathToSaveInDB(String filePathToSaveInDB) {
+		this.filePathToSaveInDB = filePathToSaveInDB;
+	}
+	
+	
 	
 }

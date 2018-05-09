@@ -13,6 +13,11 @@ public interface SQLCommand {
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
 			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
+	String INSERT_UPLOAD = "INSERT INTO "
+			+"upload"
+			+ "(filePath)"
+			+ "VALUES(?)";
+	
 	
 	String GET_PATIENT = "SELECT * "
 			+ "patientregistry";
