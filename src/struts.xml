@@ -75,8 +75,8 @@
  			<interceptor-ref name="scopedModelDriven" />
  			<interceptor-ref name="modelDriven" />
  			<interceptor-ref name="fileUpload">
- 			<param name="maximumSize">10240</param>
- 			<param name="allowedTypes">text/plain</param>
+ 			<param name="maximumSize">2102840</param>
+ 			<param name="fileUpload.allowedTypes">application/pdf,application/octet-stream</param>
  		</interceptor-ref>
  		<interceptor-ref name="checkbox" />
  			<interceptor-ref name="staticParams" />

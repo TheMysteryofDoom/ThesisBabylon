@@ -99,7 +99,7 @@ public class DBSQLOperation implements SQLCommand{
 			try{
 				PreparedStatement pstmnt = 
 						connection.prepareStatement(INSERT_UPLOAD);
-				pstmnt.setString(1, md.getFilePathToSaveInDB());
+				pstmnt.setString(1, md.getFilePathToSaveInDB().toString());
 			
 				//insert
 				pstmnt.executeUpdate();

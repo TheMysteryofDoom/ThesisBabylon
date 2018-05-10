@@ -205,7 +205,7 @@
 		<div class="row">
 			<div class="three columns">
 			<s:submit value="Upload File" name="submit" />
-</input>
+		</input>
 			</div>
 		</div>
 	</s:form>

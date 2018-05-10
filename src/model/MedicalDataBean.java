@@ -5,11 +5,22 @@ import java.io.File;
 
 
 public class MedicalDataBean {
-
+	
+	//private int fileID;
 	private File fileUpload;
     private String fileUploadFileName;
     private String fileUploadContentType;
-    private String filePathToSaveInDB;
+    private File filePathToSaveInDB;
+    
+    
+    
+	//public int getFileID() {
+		//return fileID;
+	//}
+	//public void setFileID(int fileID) {
+	//	this.fileID = fileID;
+//	}
+	
     
 	public File getFileUpload() {
 		return fileUpload;
@@ -29,13 +40,13 @@ public class MedicalDataBean {
 	public void setFileUploadContentType(String fileUploadContentType) {
 		this.fileUploadContentType = fileUploadContentType;
 	}
-	public String getFilePathToSaveInDB() {
+	public File getFilePathToSaveInDB() {
 		return filePathToSaveInDB;
 	}
-	public void setFilePathToSaveInDB(String filePathToSaveInDB) {
+	public void setFilePathToSaveInDB(File filePathToSaveInDB) {
 		this.filePathToSaveInDB = filePathToSaveInDB;
 	}
-	
+
 	
 	
 }

@@ -25,34 +25,40 @@ public class FileUploadAction extends ActionSupport implements ModelDriven<Medic
     
 	MedicalDataBean md = new MedicalDataBean();
 	Connection connection = DBSingletonConnection.getConnection();
-    public String execute()
-	 {
-    	 
-	 try{
-		 	String filePath = "C:/Users/glenn_ailen/Desktop/My Private Property/3rd yr 1st term/entjava/thesis-ws/Upload";  // Path where uploaded file will be stored
+    public String execute(){
+    	String Status = "error";
+				
+    	try{
+    		String filePath = "C:/Users/glenn_ailen/Desktop/My Private Property/3rd yr 1st term/entjava/thesis-ws/Upload";  // Path where uploaded file will be stored
 	        System.out.println("Server path:" + filePath); // check your path in console
 	        File fileToCreate = new File(filePath,md.getFileUploadFileName());// Create file name  same as original
 	        FileUtils.copyFile(md.getFileUpload(), fileToCreate); // Just copy temp file content tos this file
+	        System.out.println("Before: ");
+	        md.setFilePathToSaveInDB(fileToCreate);
+	        System.out.println(md.getFileUploadFileName());
+	        if (DBSQLOperation.insertUpload(md, connection)) {
+				System.out.println("Upload inserted to db successfully");
+				System.out.println("After: ");
+				System.out.println(md.getFileUploadFileName());
+				System.out.println("-----------------------");
+				System.out.println("Filepath " + fileToCreate);
+			} else {
+				System.out.println("After: ");
+				System.out.println(md.getFileUploadFileName());
+				System.err.println("Upload did not insert");
+			}  
 	        
-}catch(Exception e)
-	 {
-	 e.printStackTrace();
-	            addActionError(e.getMessage());
-	            return INPUT ;
-	 
-	 }
-	 return SUCCESS;
-	 }
+		}catch(Exception e)
+			 {
+			 e.printStackTrace();
+			            addActionError(e.getMessage());
+			            return INPUT ;
+			 
+			 }
+			 return SUCCESS;
+			 }   
     
-    	
-    	
-	 
-
-   
-   
-
-
-	@Override
+  @Override
 	public void setServletRequest(HttpServletRequest arg0) {
 		// TODO Auto-generated method stub
 		
