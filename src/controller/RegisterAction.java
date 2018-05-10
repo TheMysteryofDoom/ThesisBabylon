@@ -97,7 +97,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		System.out.println(session.get("username"));
 		SessionCleaner.clean(session);
 		if(DBSQLOperation.insertPatient(pb, connection)){
-			f = new File("E:/"+ pb.getPatientID());
+			f = new File("E:/Patient Medical Data/"+ pb.getPatientID());
 			bool = f.mkdir();
 			System.out.println("Directory created" + bool);
 			System.out.println("Patient saved to database.");
