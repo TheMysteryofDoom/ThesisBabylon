@@ -29,7 +29,8 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	protected HttpServletRequest request;
 	
 	PatientBean pb = new PatientBean();
-	File userFile = new File("E:\\"+pb.getPatientID());
+	File f = null;
+	boolean bool = false;
 	Connection connection = DBSingletonConnection.getConnection();
 
 	
@@ -89,18 +90,20 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		//===============================
 		// An SQLException will be generated because patientCardID and PatientID are missing.
 		// Those values are not provided by the form.
-		pb.setPatientID(0001);
+		pb.setPatientID(002);
 		pb.setPatientCardID("2785382128");
 		//===============================
 		String status = "error";
 		System.out.println(session.get("username"));
 		SessionCleaner.clean(session);
 		if(DBSQLOperation.insertPatient(pb, connection)){
-		
+			f = new File("E:/"+ pb.getPatientID());
+			bool = f.mkdir();
+			System.out.println("Directory created" + bool);
 			System.out.println("Patient saved to database.");
 				status = "success";
 		}else{
-			
+			System.out.println("Directory did not create");
 			System.err.println("Patient did not insert to database.");
 		}
 	return status;
