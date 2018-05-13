@@ -8,12 +8,12 @@ public class IDGenUtility {
 	private static AtomicLong atomicCounter = new AtomicLong();
 	PatientBean pb = new PatientBean();
 	
-	pb.
-	public static String createID(){
-		String currentCounter = String.valueOf(atomicCounter.getAndIncrement());
-		String pb. = UUID.randomUUID().toString();
+	//pb.
+	//public static String createID(){
+		//String currentCounter = String.valueOf(atomicCounter.getAndIncrement());
+		//String pb. = UUID.randomUUID().toString();
 		
-		return uniqueId + "-" + currentCounter;
-	}
+	//	return uniqueId + "-" + currentCounter;
+	//}
 
 }
