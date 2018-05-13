@@ -4,10 +4,13 @@ package model;
 public class AdminBean {
 
 	
-	private int adminId;
+private int adminId;
 	
 	private String userName;
 	private String password;
+	private String emaill;
+	private int contactNo;
+	private String role;
 	private String gender;
 	
 	public int getAdminId() {
@@ -27,6 +30,25 @@ public class AdminBean {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getEmaill() {
+		return emaill;
+	}
+	public void setEmaill(String emaill) {
+		this.emaill = emaill;
+	}
+	public int getContactNumber() {
+		return contactNo;
+	}
+	public void setContactNumber(int contactNumber) {
+		this.contactNo = contactNumber;
+	}
+	public String getAdminRole() {
+		return role;
+	}
+	public void setAdminRole(String role) {
+		this.role = role;
 	}
 	public String getGender() {
 		return gender;

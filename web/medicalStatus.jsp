@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -188,7 +190,7 @@
 		</div>
 	</form>
 	<hr>
-	<form action="uploadAction" method="post">
+	<s:form action="uploadAction" id="uploadAction" enctype="multipart/form-data" method="post">
 		<div class ="row">
 			<div class="twelve columns" align="center">
 				<h5><b>Upload a Patient File</b></h5>
@@ -196,16 +198,17 @@
 		</div>
 		<div class ="row">
 			<div class="twelve columns">
-				<input type="file" name="fileUpload">
+				<s:file name="fileUpload" label="Select a file to upload" size="30"/>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="three columns">
-			<input class="button-primary u-pull-right" value="Update File" type="submit"></input>
+			<s:submit value="Upload File" name="submit" />
+		</input>
 			</div>
 		</div>
-	</form>
+	</s:form>
 </div>
 </body>
 </html>

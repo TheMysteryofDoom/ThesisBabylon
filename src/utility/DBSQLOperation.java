@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.MedicalDataBean;
 import model.PatientBean;
 import model.User;
 
@@ -79,6 +80,27 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(29, pb.getRelationship());
 				pstmnt.setBoolean(30, pb.isAlive());
 				pstmnt.setString(31, pb.getPatientCardID());
+				//insert
+				pstmnt.executeUpdate();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				sqle.printStackTrace();
+			}
+		}
+		
+		return isSuccessful;
+	}
+	
+	//insert uploadFile
+	public static boolean insertUpload(MedicalDataBean md, Connection connection){
+		boolean isSuccessful = false;
+		
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(INSERT_UPLOAD);
+				pstmnt.setString(1, md.getFilePathToSaveInDB().toString());
+			
 				//insert
 				pstmnt.executeUpdate();
 				isSuccessful = true;

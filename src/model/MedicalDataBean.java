@@ -5,30 +5,28 @@ import java.io.File;
 
 
 public class MedicalDataBean {
-
-	private int fileId;
 	
+	//private int fileID;
 	private File fileUpload;
-	private String fileUploadContentType;
-	private String fileUploadFileName;
+    private String fileUploadFileName;
+    private String fileUploadContentType;
+    private File filePathToSaveInDB;
+    
+    
+    
+	//public int getFileID() {
+		//return fileID;
+	//}
+	//public void setFileID(int fileID) {
+	//	this.fileID = fileID;
+//	}
 	
-	public int getFileId() {
-		return fileId;
-	}
-	public void setFileId(int fileId) {
-		this.fileId = fileId;
-	}
+    
 	public File getFileUpload() {
 		return fileUpload;
 	}
 	public void setFileUpload(File fileUpload) {
 		this.fileUpload = fileUpload;
-	}
-	public String getFileUploadContentType() {
-		return fileUploadContentType;
-	}
-	public void setFileUploadContentType(String fileUploadContentType) {
-		this.fileUploadContentType = fileUploadContentType;
 	}
 	public String getFileUploadFileName() {
 		return fileUploadFileName;
@@ -36,6 +34,19 @@ public class MedicalDataBean {
 	public void setFileUploadFileName(String fileUploadFileName) {
 		this.fileUploadFileName = fileUploadFileName;
 	}
+	public String getFileUploadContentType() {
+		return fileUploadContentType;
+	}
+	public void setFileUploadContentType(String fileUploadContentType) {
+		this.fileUploadContentType = fileUploadContentType;
+	}
+	public File getFilePathToSaveInDB() {
+		return filePathToSaveInDB;
+	}
+	public void setFilePathToSaveInDB(File filePathToSaveInDB) {
+		this.filePathToSaveInDB = filePathToSaveInDB;
+	}
 
+	
 	
 }
