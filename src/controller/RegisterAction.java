@@ -4,6 +4,7 @@ package controller;
 
 import java.io.File;
 import java.sql.Connection;
+import java.util.Calendar;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +13,7 @@ import model.PatientBean;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+
 import utility.DBSQLOperation;
 import utility.DBSingletonConnection;
 import utility.SessionCleaner;
@@ -90,7 +92,13 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		//===============================
 		// An SQLException will be generated because patientCardID and PatientID are missing.
 		// Those values are not provided by the form.
-		pb.setPatientID(003);
+		
+		//Generate Unique Patient ID;
+		int year = Calendar.getInstance().get(Calendar.YEAR);
+		int randomPatientID = (int)(Math.random()*9000)+1000;
+		String patientID = String.valueOf(year)+String.valueOf(randomPatientID);
+		
+		pb.setPatientID(Integer.parseInt(patientID));
 		pb.setPatientCardID("2785382128");
 		pb.setPinID("4451");
 		//===============================
