@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2018 at 08:39 AM
+-- Generation Time: May 16, 2018 at 06:03 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -102,15 +102,20 @@ CREATE TABLE `patient` (
   `emcContactNo` varchar(100) NOT NULL,
   `relationship` varchar(100) NOT NULL,
   `isAlive` tinyint(1) NOT NULL,
-  `patientCardID` varchar(10) NOT NULL
+  `patientCardID` varchar(10) NOT NULL,
+  `pinID` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthMonth`, `birthDay`, `birthYear`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `contactNo1`, `contactNo2`, `contactNo3`, `type1`, `type2`, `type3`, `email`, `street`, `city`, `country`, `zipcode`, `emcFirstName`, `emcLastName`, `emcMiddleName`, `emcContactNo`, `relationship`, `isAlive`, `patientCardID`) VALUES
-(1, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '09494334663', '', 'Cellphone', 'Home', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128');
+INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthMonth`, `birthDay`, `birthYear`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `contactNo1`, `contactNo2`, `contactNo3`, `type1`, `type2`, `type3`, `email`, `street`, `city`, `country`, `zipcode`, `emcFirstName`, `emcLastName`, `emcMiddleName`, `emcContactNo`, `relationship`, `isAlive`, `patientCardID`, `pinID`) VALUES
+(1, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '09494334663', '', 'Cellphone', 'Home', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', ''),
+(2, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', ''),
+(3, 'Mark Luis Gabriel', 'Ticzon', 'Velandres', 'Oct', 6, 2015, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09494334664', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong', 'Philippines', '1550', 'Melody', 'Ticzon', 'Velandres', '09494334663', 'Mother', 1, '2785382128', '4451'),
+(20181722, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Cellphone', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', '4694'),
+(20188411, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Feb', 29, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', '4451');
 
 --
 -- Indexes for dumped tables
@@ -163,7 +168,17 @@ ALTER TABLE `medicalresults`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20188412;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `medicalresults`
+--
+ALTER TABLE `medicalresults`
+  ADD CONSTRAINT `medicalresults_ibfk_1` FOREIGN KEY (`fileID`) REFERENCES `patient` (`patientID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

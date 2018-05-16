@@ -97,10 +97,12 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		int year = Calendar.getInstance().get(Calendar.YEAR);
 		int randomPatientID = (int)(Math.random()*9000)+1000;
 		String patientID = String.valueOf(year)+String.valueOf(randomPatientID);
-		
 		pb.setPatientID(Integer.parseInt(patientID));
+		//
 		pb.setPatientCardID("2785382128");
-		pb.setPinID("4451");
+		//Pin generator.
+		int randomPin = (int)(Math.random()*9000)+1000;
+		pb.setPinID(String.valueOf(randomPin));
 		//===============================
 		String status = "error";
 		System.out.println(session.get("username"));
