@@ -110,7 +110,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		if(DBSQLOperation.insertPatient(pb, connection)){
 			f = new File("E:/Patient Medical Data/"+ pb.getPatientID());
 			bool = f.mkdir();
-			System.out.println("Directory created" + bool);
+			System.out.println("Directory created " + bool);
 			System.out.println("Patient saved to database.");
 				status = "success";
 		}else{
