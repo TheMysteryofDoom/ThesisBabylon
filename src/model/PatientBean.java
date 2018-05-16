@@ -56,6 +56,7 @@ public class PatientBean implements Serializable{
 	
 	//Patient Card ID
 	private String patientCardID;
+	private String pinID;
 	
 	public int getPatientID() {
 		return patientID;
@@ -245,6 +246,13 @@ public class PatientBean implements Serializable{
 	public void setPatientCardID(String patientCardID) {
 		this.patientCardID = patientCardID;
 	}
+	public String getPinID() {
+		return pinID;
+	}
+	public void setPinID(String pinID) {
+		this.pinID = pinID;
+	}
+	
 	
 	
 	

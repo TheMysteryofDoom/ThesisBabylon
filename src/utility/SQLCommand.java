@@ -9,9 +9,9 @@ public interface SQLCommand {
 			+ " citizenship, religion, civil, job, contactNo1, contactNo2,"
 			+ " contactNo3, type1, type2, type3, email, street, city,"
 			+ " country, zipcode, emcFirstName, emcLastName, emcMiddleName,"
-			+ " emcContactNo, relationship, isAlive, patientCardID)"
+			+ " emcContactNo, relationship, isAlive, patientCardID, pinID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
-			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
 	//String INSERT_MEDICALRECORDS = "INSERT INTO"
 			//+"medicalresults(fileID,fileUploadFileName,filePath)"

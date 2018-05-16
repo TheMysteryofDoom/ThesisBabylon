@@ -90,8 +90,9 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		//===============================
 		// An SQLException will be generated because patientCardID and PatientID are missing.
 		// Those values are not provided by the form.
-		pb.setPatientID(002);
+		pb.setPatientID(003);
 		pb.setPatientCardID("2785382128");
+		pb.setPinID("4451");
 		//===============================
 		String status = "error";
 		System.out.println(session.get("username"));

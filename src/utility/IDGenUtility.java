@@ -6,7 +6,6 @@ import model.PatientBean;
 
 public class IDGenUtility {
 	private static AtomicLong atomicCounter = new AtomicLong();
-	PatientBean pb = new PatientBean();
 	
 	//pb.
 	//public static String createID(){
