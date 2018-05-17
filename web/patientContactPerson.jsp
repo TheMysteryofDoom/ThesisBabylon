@@ -19,7 +19,7 @@
 					<div class="row">
 						<div class="three columns">									<!-- Tier 2 -->
 							<br>
-							<img src ="images/Blank75x75.png">
+							<img src ="images/logoBabylon.jpg" height="75px">
 						</div>														<!-- Tier 2 -->
 						<div class="nine columns">									<!-- Tier 2 -->
 							<br>
@@ -47,7 +47,7 @@
 			</div> 															<!-- Tier 2 -->
 			<div class="five columns"> 										<!-- Tier 2 -->
 				<div class="row" align="center"> 							<!-- Tier 3 -->
-					<img src ="images/BlankProfile.png">
+					<img src ="images/logoBabylon.jpg" height="150px">
 				</div>														<!-- Tier 3 -->
 				<div class="row" align="center"> 							<!-- Tier 3 -->
 					<form action="logout.action" method="post">
