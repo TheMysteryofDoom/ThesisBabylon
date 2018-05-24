@@ -23,6 +23,12 @@
 			<result name="error" >/index.jsp</result>  
 		</action>  
 		
+		<!-- Search Patient using patient ID -->
+		<action name ="loadRecord" class="controller.loadRecordAction">
+			<result name="success">/portal.jsp</result>
+		
+		</action>
+		
 		<!-- Patient registration -->
 		<action name="registerPatient" class="controller.RegisterAction" method="part1To2">  
 			<result name="success" >/patientContact.jsp</result>  

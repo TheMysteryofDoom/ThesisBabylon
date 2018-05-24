@@ -5,13 +5,13 @@ public interface SQLCommand {
 	
 	String INSERT_PATIENT = "INSERT INTO "
 			+ "patient(patientID, firstName, lastName, middleName,"
-			+ " birthMonth, birthDay, birthYear, gender, birthPlace, "
+			+ " birthDay, gender, birthPlace, "
 			+ " citizenship, religion, civil, job, contactNo1, contactNo2,"
 			+ " contactNo3, type1, type2, type3, email, street, city,"
 			+ " country, zipcode, emcFirstName, emcLastName, emcMiddleName,"
 			+ " emcContactNo, relationship, isAlive, patientCardID, pinID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
-			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
 	//String INSERT_MEDICALRECORDS = "INSERT INTO"
 			//+"medicalresults(fileID,fileUploadFileName,filePath)"
@@ -22,8 +22,8 @@ public interface SQLCommand {
 			+"upload(filePath) VALUES(?)";
 	
 	
-	String GET_PATIENT = "SELECT * "
-			+ "patientregistry";
+	String GET_PATIENT = "select * from"
+			+ "patient where patientID=?";
 	
 	String GET_PATIENT_ADDRESS = "SELECT *"
 			+ "patientaddewssregistry";

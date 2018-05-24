@@ -53,34 +53,34 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setString(2, pb.getFirstName());
 				pstmnt.setString(3, pb.getLastName());
 				pstmnt.setString(4, pb.getMiddleName());
-				pstmnt.setString(5, pb.getBirthMonth());
-				pstmnt.setInt(6, pb.getBirthDay());
-				pstmnt.setInt(7, pb.getBirthYear());
-				pstmnt.setString(8, pb.getGender());
-				pstmnt.setString(9, pb.getBirthPlace());
-				pstmnt.setString(10, pb.getCitizenship());
-				pstmnt.setString(11, pb.getReligion());
-				pstmnt.setString(12, pb.getCivil());
-				pstmnt.setString(13, pb.getJob());
-				pstmnt.setString(14, pb.getContactNo1());
-				pstmnt.setString(15, pb.getContactNo2());
-				pstmnt.setString(16, pb.getContactNo3());
-				pstmnt.setString(17, pb.getType1());
-				pstmnt.setString(18, pb.getType2());
-				pstmnt.setString(19, pb.getType3());
-				pstmnt.setString(20, pb.getEmail());
-				pstmnt.setString(21, pb.getStreet());
-				pstmnt.setString(22, pb.getCity());
-				pstmnt.setString(23, pb.getCountry());
-				pstmnt.setString(24, pb.getZipcode());
-				pstmnt.setString(25, pb.getEmcFirstName());
-				pstmnt.setString(26, pb.getEmcLastName());
-				pstmnt.setString(27, pb.getEmcMiddleName());
-				pstmnt.setString(28, pb.getEmcContactNo());
-				pstmnt.setString(29, pb.getRelationship());
-				pstmnt.setBoolean(30, pb.isAlive());
-				pstmnt.setString(31, pb.getPatientCardID());
-				pstmnt.setString(32, pb.getPinID());
+		//		pstmnt.setString(5, pb.getBirthMonth());
+				pstmnt.setString(5, pb.getBirthDay());
+		//		pstmnt.setInt(7, pb.getBirthYear());
+				pstmnt.setString(6, pb.getGender());
+				pstmnt.setString(7, pb.getBirthPlace());
+				pstmnt.setString(8, pb.getCitizenship());
+				pstmnt.setString(9, pb.getReligion());
+				pstmnt.setString(10, pb.getCivil());
+				pstmnt.setString(11, pb.getJob());
+				pstmnt.setString(12, pb.getContactNo1());
+				pstmnt.setString(13, pb.getContactNo2());
+				pstmnt.setString(14, pb.getContactNo3());
+				pstmnt.setString(15, pb.getType1());
+				pstmnt.setString(16, pb.getType2());
+				pstmnt.setString(17, pb.getType3());
+				pstmnt.setString(18, pb.getEmail());
+				pstmnt.setString(19, pb.getStreet());
+				pstmnt.setString(20, pb.getCity());
+				pstmnt.setString(21, pb.getCountry());
+				pstmnt.setString(22, pb.getZipcode());
+				pstmnt.setString(23, pb.getEmcFirstName());
+				pstmnt.setString(24, pb.getEmcLastName());
+				pstmnt.setString(25, pb.getEmcMiddleName());
+				pstmnt.setString(26, pb.getEmcContactNo());
+				pstmnt.setString(27, pb.getRelationship());
+				pstmnt.setBoolean(28, pb.isAlive());
+				pstmnt.setString(29, pb.getPatientCardID());
+				pstmnt.setString(30, pb.getPinID());
 				//insert
 				pstmnt.executeUpdate();
 				isSuccessful = true;
@@ -119,6 +119,7 @@ public class DBSQLOperation implements SQLCommand{
 		if(connection != null){
 			try{
 				PreparedStatement pstmnt = connection.prepareStatement(GET_PATIENT);
+				
 				
 				patient = pstmnt.executeQuery();
 				

@@ -20,9 +20,9 @@ public class PatientBean implements Serializable{
 	private String firstName;
 	private String lastName;
 	private String middleName;
-	private String birthMonth;
-	private int birthDay;
-	private int birthYear;
+	//private String birthMonth;
+	private String birthDay;
+	//private int birthYear;
 	private String gender;
 	private String birthPlace;
 	private String citizenship;
@@ -82,23 +82,12 @@ public class PatientBean implements Serializable{
 	public void setMiddleName(String middleName) {
 		this.middleName = middleName;
 	}
-	public String getBirthMonth() {
-		return birthMonth;
-	}
-	public void setBirthMonth(String birthMonth) {
-		this.birthMonth = birthMonth;
-	}
-	public int getBirthDay() {
+	
+	public String getBirthDay() {
 		return birthDay;
 	}
-	public void setBirthDay(int birthDay) {
+	public void setBirthDay(String birthDay) {
 		this.birthDay = birthDay;
-	}
-	public int getBirthYear() {
-		return birthYear;
-	}
-	public void setBirthYear(int birthYear) {
-		this.birthYear = birthYear;
 	}
 	public String getGender() {
 		return gender;

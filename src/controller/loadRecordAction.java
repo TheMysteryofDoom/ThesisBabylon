@@ -1,4 +1,9 @@
 package controller;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -6,8 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
+import utility.DBSQLOperation;
+import utility.DBSingletonConnection;
+import utility.Search;
 import model.PatientBean;
-//import utility.SQLCommand;
+import model.FetchDataBean;
 
 
 
@@ -28,20 +36,50 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
 	protected Map<String,Object> session;
 	protected HttpServletRequest request;
-	
+	Connection connection = DBSingletonConnection.getConnection();
 	private PatientBean pb = new PatientBean();
+	 ResultSet resultSet = null;
 	@Override
 	public String execute(){
-		String status = SUCCESS;
-		
+		String status = null;
 		try{
 			System.out.println(request.getParameter("patientid")); //Gets the PatientID Input
 			String patientid = request.getParameter("patientid");
 			System.out.println(patientid);
 			//Perform Database operations here based on patientID
+			
+			if(request.getParameter("patientid")!=null){
+				if(Search.validate(patientid)){
+					
+					String query = "select * from patient where patientid = '"+patientid+"'";
+					
+					try{
+						 PreparedStatement pstmt = connection.prepareStatement(query);
+						 pstmt.setInt(1, pb.getPatientID());
+						 resultSet = pstmt.executeQuery();
+						 while(resultSet.next()){
+							 pb.setFirstName("firstName");
+							
+							 System.out.println(pb.getFirstName());
+							 return status = "success";
+						 }
+						 
+						 
+					}catch(Exception e){
+						e.printStackTrace();
+					}
+					
+					
+				}else{
+					return status= "error";
+				}
+			}
+			
+				
+			
 		
 			
 		}catch(Exception e){
