@@ -54,6 +54,11 @@
 			<result name="error" >/error.jsp</result>  
 		</action>      
 
+		<!-- LOAD RECORDS INTO PORTAL -->
+		<action name="loadRecord" class="controller.loadRecordAction">  
+			<result name="success" >/portal.jsp</result>  
+			<result name="error" >/error.jsp</result>  
+		</action>
 		
 		<!-- PRINTING ID -->
 		<action name="printCard" class="controller.PrintAction">
