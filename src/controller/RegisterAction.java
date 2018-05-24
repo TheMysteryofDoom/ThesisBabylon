@@ -46,9 +46,9 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		pb.setFirstName(session.get("pFirstName").toString());
 		pb.setLastName(session.get("pLastName").toString());
 		pb.setMiddleName(session.get("pMiddleName").toString());
-		pb.setBirthMonth(session.get("pBirthMonth").toString());
+		//pb.setBirthMonth(session.get("pBirthMonth").toString());
 		pb.setBirthDay(Integer.parseInt(session.get("pBirthDay").toString()));
-		pb.setBirthYear(Integer.parseInt(session.get("pBirthYear").toString()));
+		//pb.setBirthYear(Integer.parseInt(session.get("pBirthYear").toString()));
 		pb.setBirthPlace(session.get("pBirthPlace").toString());
 		pb.setGender(session.get("pGender").toString());
 		pb.setCitizenship(session.get("pCitizenship").toString());
