@@ -38,7 +38,8 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 		String status = SUCCESS;
 		
 		try{
-			System.out.println(request.getAttribute("patientid"));
+			System.out.println(request.getParameter("patientid")); //Gets the PatientID Input
+			//Perform Database operations here based on patientID
 		
 			
 		}catch(Exception e){
