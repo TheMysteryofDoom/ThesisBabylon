@@ -7,9 +7,6 @@ String isFemale = "";
 String citizenship = "Select One";
 String religion = "Select One";
 String civil = "Select One";
-String birthDayDisabled = "disabled='disabled'";
-String birthMonthDisabled = "disabled='disabled'";
-String birthYearDisabled = "disabled='disabled'";
 String civilDisabled = "disabled='disabled'";
 String religionDisabled = "disabled='disabled'";
 if (session.getAttribute("pFirstName") == null){
@@ -24,23 +21,10 @@ if (session.getAttribute("pMiddleName") == null) {
 if (session.getAttribute("pMiddleName") == null) {
 	session.setAttribute("pMiddleName", "");
 }
-if (session.getAttribute("pBirthMonth") == null) {
-	session.setAttribute("pBirthMonth", "");
-} else {
-	month = session.getAttribute("pBirthMonth").toString();
-	birthMonthDisabled = "";
-}
 if (session.getAttribute("pBirthDay") == null) {
-	session.setAttribute("pBirthDay", 0);
+	session.setAttribute("pBirthDay", 2015-06-07);
 } else {
 	day = session.getAttribute("pBirthDay").toString();
-	birthDayDisabled = "";
-}
-if (session.getAttribute("pBirthYear") == null) {
-	session.setAttribute("pBirthYear", 0);
-} else {
-	year = session.getAttribute("pBirthYear").toString();
-	birthYearDisabled = "";
 }
 if (session.getAttribute("pGender") == null) {
 	session.setAttribute("pGender", "");

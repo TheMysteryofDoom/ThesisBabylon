@@ -4,7 +4,10 @@ package controller;
 
 import java.io.File;
 import java.sql.Connection;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -120,14 +123,19 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	return status;
 	}
 	
-	public String part1To2(){ // Base to Contact
+	public String part1To2() throws ParseException{ // Base to Contact
 		
 		session.put("pFirstName", request.getAttribute("firstName"));
 		session.put("pLastName", request.getAttribute("lastName"));
 		session.put("pMiddleName", request.getAttribute("middleName"));
-		session.put("pBirthMonth", request.getAttribute("birthMonth"));
-		session.put("pBirthDay", request.getAttribute("birthDay"));
-		session.put("pBirthYear", request.getAttribute("birthYear"));
+		//session.put("pBirthMonth", request.getAttribute("birthMonth"));
+		//session.put("pBirthDay", request.getAttribute("birthDay2"));
+		String startDateStr = request.getParameter("birthDay2");
+		session.put("pBirthDay", startDateStr);
+		//SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		//Date startDate = sdf.parse(startDateStr);
+		System.out.println(startDateStr);
+		//session.put("pBirthYear", request.getAttribute("birthYear"));
 		session.put("pGender", request.getAttribute("gender"));
 		session.put("pBirthPlace", request.getAttribute("birthPlace"));
 		session.put("pCitizenship", request.getAttribute("citizenship"));

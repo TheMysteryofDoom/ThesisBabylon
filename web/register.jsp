@@ -80,7 +80,7 @@
 				<label>Birthday:</label>
 			</div>
 			<div class="three columns">
-				<input type="date" id="birthDay" name="birthDay" required="required" class="u-full-width">
+				<input type="date" id="birthDay2" name="birthDay2" value="<%= day %>" required="required" class="u-full-width">
 			</div>
 			</div> <!-- 1 Row End -->
 			<br>
