@@ -6,7 +6,7 @@ import java.util.Map;
 import org.apache.struts2.dispatcher.SessionMap;
 import org.apache.struts2.interceptor.SessionAware;
 
-import utility.*;
+import utility.User;
 
 //import com.opensymphony.xwork2.ActionSupport;
 
@@ -37,8 +37,12 @@ SessionMap<String,String> sessionmap;
 
 	public String execute(){  
 		System.out.println(username);
-	    sessionmap.put("username", username);
-	    if(User.validate(username, password)){  
+		
+	    if(User.validate(username, password)){ 
+	    	
+	    	//Now it tracks the session while checking in the database
+	    	//and still using the SessionChecker(jsp) under the script folder(web).
+	    	sessionmap.put("username", username);
 	        return "success";  
 	    }  
 	    else{  
