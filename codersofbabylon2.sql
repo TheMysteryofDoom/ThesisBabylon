@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 16, 2018 at 06:03 PM
+-- Generation Time: May 25, 2018 at 05:13 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -76,9 +76,7 @@ CREATE TABLE `patient` (
   `firstName` varchar(100) NOT NULL,
   `lastName` varchar(100) NOT NULL,
   `middleName` varchar(1000) NOT NULL,
-  `birthMonth` varchar(50) NOT NULL,
-  `birthDay` int(11) NOT NULL,
-  `birthYear` int(11) NOT NULL,
+  `birthDay` varchar(30) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `birthPlace` varchar(100) NOT NULL,
   `citizenship` varchar(50) NOT NULL,
@@ -110,12 +108,16 @@ CREATE TABLE `patient` (
 -- Dumping data for table `patient`
 --
 
-INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthMonth`, `birthDay`, `birthYear`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `contactNo1`, `contactNo2`, `contactNo3`, `type1`, `type2`, `type3`, `email`, `street`, `city`, `country`, `zipcode`, `emcFirstName`, `emcLastName`, `emcMiddleName`, `emcContactNo`, `relationship`, `isAlive`, `patientCardID`, `pinID`) VALUES
-(1, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '09494334663', '', 'Cellphone', 'Home', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', ''),
-(2, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', ''),
-(3, 'Mark Luis Gabriel', 'Ticzon', 'Velandres', 'Oct', 6, 2015, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09494334664', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong', 'Philippines', '1550', 'Melody', 'Ticzon', 'Velandres', '09494334663', 'Mother', 1, '2785382128', '4451'),
-(20181722, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Oct', 20, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Cellphone', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', '4694'),
-(20188411, 'Mark Luis Gabriel', 'Ticzon', 'V.', 'Feb', 29, 1998, 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', '4451');
+INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birthDay`, `gender`, `birthPlace`, `citizenship`, `religion`, `civil`, `job`, `contactNo1`, `contactNo2`, `contactNo3`, `type1`, `type2`, `type3`, `email`, `street`, `city`, `country`, `zipcode`, `emcFirstName`, `emcLastName`, `emcMiddleName`, `emcContactNo`, `relationship`, `isAlive`, `patientCardID`, `pinID`) VALUES
+(1, 'Mark Luis Gabriel', 'Ticzon', 'V.', '20', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '09494334663', '', 'Cellphone', 'Home', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', ''),
+(2, 'Mark Luis Gabriel', 'Ticzon', 'V.', '20', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', ''),
+(3, 'Mark Luis Gabriel', 'Ticzon', 'Velandres', '6', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09494334664', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong', 'Philippines', '1550', 'Melody', 'Ticzon', 'Velandres', '09494334663', 'Mother', 1, '2785382128', '4451'),
+(20181722, 'Mark Luis Gabriel', 'Ticzon', 'V.', '20', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Cellphone', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', '4694'),
+(20186572, 'Isaac Glenn', 'Jaranilla', 'Defiesta', '12', 'M', 'Saudi Arabia', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Cellphone', 'N/A', 'N/A', 'isaacglenn.jaranilla@yaho.com', 'Lot 2 Block 5, Camia', 'Pasig City', 'Philippines', '1800', 'Aileen', 'Jaranilla', 'Defiesta', '09158562992', 'Mother', 1, '2785382128', '8680'),
+(20187589, 'Juan', 'Dela Cruz', 'Zero', '12', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09088883208', '', '', 'Cellphone', 'N/A', 'N/A', 'juan.delacruz@email.com', 'H.V Dela Costa', 'Makati City', 'Philippines', '1630', 'Felipe', 'Ocampo', 'N/A', '09158562992', 'Guardian', 1, '2785287632', '2176'),
+(20188411, 'Mark Luis Gabriel', 'Ticzon', 'V.', '29', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Home', 'N/A', 'N/A', 'markvticzon@gmail.com', 'San Joaquin', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'Velandres', '09158562992', 'Mother', 1, '2785382128', '4451'),
+(20188485, 'Mark Luis Gabriel', 'Ticzon', 'V.', '1998-02-17', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Cellphone', 'N/A', 'N/A', 'markvticzon@gmail.com', 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'V.', '09158562992', 'Mother', 1, '2785382128', '7556'),
+(20188838, 'Gabriel', 'Ticzon', 'Zero', '7', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09494334664', '', '', 'Cellphone', 'N/A', 'N/A', 'gabriel@email.com', 'San Joaquin', 'Mandaluyong', 'Philippines', '1550', 'Charlie', 'Zero', 'One', '09494334663', 'Sibling', 1, '2785382128', '4815');
 
 --
 -- Indexes for dumped tables
@@ -168,7 +170,7 @@ ALTER TABLE `medicalresults`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20188412;
+  MODIFY `patientID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20188839;
 --
 -- Constraints for dumped tables
 --
