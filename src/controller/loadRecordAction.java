@@ -1,5 +1,6 @@
 package controller;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
@@ -16,6 +18,8 @@ import utility.DBSingletonConnection;
 import utility.Search;
 import model.PatientBean;
 import model.FetchDataBean;
+
+
 
 
 
@@ -41,50 +45,40 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 	protected HttpServletRequest request;
 	Connection connection = DBSingletonConnection.getConnection();
 	private PatientBean pb = new PatientBean();
-	 ResultSet resultSet = null;
+	ResultSet resultSet = null;
+	 
 	@Override
 	public String execute(){
 		String status = null;
-		try{
-			System.out.println(request.getParameter("patientid")); //Gets the PatientID Input
-			String patientid = request.getParameter("patientid");
-			System.out.println(patientid);
-			//Perform Database operations here based on patientID
-			
-			if(request.getParameter("patientid")!=null){
-				if(Search.validate(patientid)){
-					
-					String query = "select * from patient where patientid = '"+patientid+"'";
-					
-					try{
-						 PreparedStatement pstmt = connection.prepareStatement(query);
-						 pstmt.setInt(1, pb.getPatientID());
-						 resultSet = pstmt.executeQuery();
-						 while(resultSet.next()){
-							 pb.setFirstName("firstName");
-							
-							 System.out.println(pb.getFirstName());
-							 return status = "success";
-						 }
-						 
-						 
-					}catch(Exception e){
-						e.printStackTrace();
-					}
-					
-					
-				}else{
-					return status= "error";
-				}
-			}
-			
+		if(request.getParameter("patientid")!=null){
+			try{
+				System.out.println(request.getParameter("patientid")); //Gets the PatientID Input
+				String patientid = request.getParameter("patientid");
+				System.out.println(patientid);
+				//Perform Database operations here based on patientID
 				
-			
-		
-			
-		}catch(Exception e){
-			status = ERROR;
-			e.printStackTrace();
+				
+				Class.forName("com.mysql.jdbc.Driver");
+				connection = DriverManager
+						.getConnection("jdbc:mysql://localhost:3306/codersofbabylon2","root","");
+				ArrayList al = null;
+	            ArrayList pid_list = new ArrayList();
+				String query = "select * from patient where patientid = '"+patientid+"'";
+				 PreparedStatement pstmt = connection.prepareStatement(query);
+				// pstmt.setInt(1, pb.getPatientID());
+				 resultSet = pstmt.executeQuery();
+				 while(resultSet.next()){
+					System.out.println("Printing values.....");
+					System.out.println(resultSet.getString(1));
+					System.out.println(resultSet.getString(2));
+					System.out.println(resultSet.getString(3));
+					 
+					 return status = "success";
+				 }
+			}catch(Exception e){
+				status = ERROR;
+				e.printStackTrace();
+			}
 		}
 		return status;
 	}
@@ -96,6 +90,8 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 	public void setInputStream(InputStream inputStream) {
 		this.inputStream = inputStream;
 	} */
+	
+	
 
 	@Override
 	public PatientBean getModel() {
@@ -113,7 +109,6 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 		// TODO Auto-generated method stub
 		this.request = req;
 	}
-	
 	
 	
 }
