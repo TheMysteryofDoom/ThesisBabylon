@@ -37,8 +37,9 @@ SessionMap<String,String> sessionmap;
 
 	public String execute(){  
 		System.out.println(username);
-	    sessionmap.put("username", username);
+	   
 	    if(User.validate(username, password)){  
+	    	sessionmap.put("username", username);
 	        return "success";  
 	    }  
 	    else{  
