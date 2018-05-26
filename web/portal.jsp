@@ -76,8 +76,18 @@
 		</div>
 		<div class="four columns" align="center">
 			<form action="medicalStatus.jsp" method="post">
+					<% 
+					String disabled = "";
+					if (session.getAttribute("patientid")==null){
+						disabled="disabled='disabled'";
+						}else{
+						disabled = "";
+						}
+					%>
+					
 					<input name="id" id="id" type="hidden" value="<%= session.getAttribute("patientid") %>">
-					<input class="button" value="Update Medical Status" type="submit">
+					<input class="button" <%= disabled %> value="Update Medical Status" type="submit">
+					<%session.setAttribute("didRegister", ""); %>
 			</form>	
 		</div>
 		<div class="four columns">
