@@ -2,7 +2,7 @@ package model;
 
 
 public class MedicalDataBean {
-	
+	//Will upload the DB (LEFT at NEXUS LAB).
 	//Vital Signs
 	private int medicalStatusid;
 	private float bloodPressure;
