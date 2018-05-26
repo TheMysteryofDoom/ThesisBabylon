@@ -6,7 +6,7 @@ public class MedicalDataBean {
 	//Vital Signs
 	private int medicalStatusid;
 	private float bloodPressure;
-	private String prcr;
+	private float prcr;
 	private float repiratoryRate;
 	private float temperature;
 	private float weight;
@@ -30,10 +30,11 @@ public class MedicalDataBean {
 	public void setBloodPressure(float bloodPressure) {
 		this.bloodPressure = bloodPressure;
 	}
-	public String getPrcr() {
+	
+	public float getPrcr() {
 		return prcr;
 	}
-	public void setPrcr(String prcr) {
+	public void setPrcr(float prcr) {
 		this.prcr = prcr;
 	}
 	public float getRepiratoryRate() {
