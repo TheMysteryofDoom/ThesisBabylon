@@ -29,6 +29,12 @@
 		
 		</action>
 		
+		<!-- Update medical status action -->
+		<action name = "updateMedical" class="controller.UpdateMedicalStatusAction">
+			<result name="success">/mediclaStatus.jsp</result>
+		
+		</action>
+		
 		<!-- Patient registration -->
 		<action name="registerPatient" class="controller.RegisterAction" method="part1To2">  
 			<result name="success" >/patientContact.jsp</result>  
