@@ -1,52 +1,85 @@
 package model;
 
-import java.io.File;
-
-
 
 public class MedicalDataBean {
 	
-	//private int fileID;
-	private File fileUpload;
-    private String fileUploadFileName;
-    private String fileUploadContentType;
-    private File filePathToSaveInDB;
-    
-    
-    
-	//public int getFileID() {
-		//return fileID;
-	//}
-	//public void setFileID(int fileID) {
-	//	this.fileID = fileID;
-//	}
+	//Vital Signs
+	private int medicalStatusid;
+	private float bloodPressure;
+	private String prcr;
+	private float repiratoryRate;
+	private float temperature;
+	private float weight;
+	private float height;
 	
-    
-	public File getFileUpload() {
-		return fileUpload;
+	//AnthropometricMeasurementsBean
+	private float headCircumference;
+	private float chestCircumference;
+	private float Abdominal;
+	
+	
+	public int getMedicalStatusid() {
+		return medicalStatusid;
 	}
-	public void setFileUpload(File fileUpload) {
-		this.fileUpload = fileUpload;
+	public void setMedicalStatusid(int medicalStatusid) {
+		this.medicalStatusid = medicalStatusid;
 	}
-	public String getFileUploadFileName() {
-		return fileUploadFileName;
+	public float getBloodPressure() {
+		return bloodPressure;
 	}
-	public void setFileUploadFileName(String fileUploadFileName) {
-		this.fileUploadFileName = fileUploadFileName;
+	public void setBloodPressure(float bloodPressure) {
+		this.bloodPressure = bloodPressure;
 	}
-	public String getFileUploadContentType() {
-		return fileUploadContentType;
+	public String getPrcr() {
+		return prcr;
 	}
-	public void setFileUploadContentType(String fileUploadContentType) {
-		this.fileUploadContentType = fileUploadContentType;
+	public void setPrcr(String prcr) {
+		this.prcr = prcr;
 	}
-	public File getFilePathToSaveInDB() {
-		return filePathToSaveInDB;
+	public float getRepiratoryRate() {
+		return repiratoryRate;
 	}
-	public void setFilePathToSaveInDB(File filePathToSaveInDB) {
-		this.filePathToSaveInDB = filePathToSaveInDB;
+	public void setRepiratoryRate(float repiratoryRate) {
+		this.repiratoryRate = repiratoryRate;
 	}
-
+	public float getTemperature() {
+		return temperature;
+	}
+	public void setTemperature(float temperature) {
+		this.temperature = temperature;
+	}
+	public float getWeight() {
+		return weight;
+	}
+	public void setWeight(float weight) {
+		this.weight = weight;
+	}
+	public float getHeight() {
+		return height;
+	}
+	public void setHeight(float height) {
+		this.height = height;
+	}
+	public float getHeadCircumference() {
+		return headCircumference;
+	}
+	public void setHeadCircumference(float headCircumference) {
+		this.headCircumference = headCircumference;
+	}
+	public float getChestCircumference() {
+		return chestCircumference;
+	}
+	public void setChestCircumference(float chestCircumference) {
+		this.chestCircumference = chestCircumference;
+	}
+	public float getAbdominal() {
+		return Abdominal;
+	}
+	public void setAbdominal(float abdominal) {
+		Abdominal = abdominal;
+	}
+	
 	
 	
 }
+
