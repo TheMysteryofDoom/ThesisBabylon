@@ -1,5 +1,8 @@
 package controller;
 
+import utility.DBSQLOperation;
+import utility.DBSingletonConnection;
+
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -13,7 +16,7 @@ public class UpdateMedicalStatusAction extends ActionSupport implements ModelDri
 	public String execute(){
 		System.out.println("Medical Status is mapped here.");
 		// get the patientID here from search.
-		
+
 		
 		return SUCCESS;
 		
