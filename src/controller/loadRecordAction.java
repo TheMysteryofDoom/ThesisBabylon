@@ -55,6 +55,7 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 				System.out.println(request.getParameter("patientid")); //Gets the PatientID Input
 				String patientid = request.getParameter("patientid");
 				System.out.println(patientid);
+				session.put("patientid",request.getParameter("patientid"));
 				//Perform Database operations here based on patientID
 				
 				
@@ -64,9 +65,11 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 				ArrayList al = null;
 	            ArrayList pid_list = new ArrayList();
 				String query = "select * from patient where patientid = '"+patientid+"'";
-				 PreparedStatement pstmt = connection.prepareStatement(query);
+				PreparedStatement pstmt = connection.prepareStatement(query);
 				// pstmt.setInt(1, pb.getPatientID());
-				 resultSet = pstmt.executeQuery();
+				resultSet = pstmt.executeQuery();
+				session.put("patientDetails", resultSet);
+				 //==============================
 				 while(resultSet.next()){
 					System.out.println("Printing values.....");
 					System.out.println(resultSet.getString(1));

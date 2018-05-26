@@ -40,6 +40,7 @@ SessionMap<String,String> sessionmap;
 	   
 	    if(User.validate(username, password)){  
 	    	sessionmap.put("username", username);
+	    	sessionmap.put("didRegister","");
 	        return "success";  
 	    }  
 	    else{  
