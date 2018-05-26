@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import model.MedicalDataBean;
+import model.Upload;
 import model.PatientBean;
 import model.User;
 
@@ -93,7 +93,7 @@ public class DBSQLOperation implements SQLCommand{
 	}
 	
 	//insert uploadFile
-	public static boolean insertUpload(MedicalDataBean md, Connection connection){
+	public static boolean insertUpload(Upload md, Connection connection){
 		boolean isSuccessful = false;
 		
 		if(connection != null){

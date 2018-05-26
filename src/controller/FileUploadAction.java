@@ -12,7 +12,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-import model.MedicalDataBean;
+import model.Upload;
 import model.PatientBean;
 import utility.DBSQLOperation;
 import utility.DBSingletonConnection;
@@ -21,9 +21,9 @@ import utility.DBSingletonConnection;
 
 
 
-public class FileUploadAction extends ActionSupport implements ModelDriven<MedicalDataBean>,SessionAware,ServletRequestAware{	
+public class FileUploadAction extends ActionSupport implements ModelDriven<Upload>,SessionAware,ServletRequestAware{	
     
-	MedicalDataBean md = new MedicalDataBean();
+	Upload md = new Upload();
 	Connection connection = DBSingletonConnection.getConnection();
     public String execute(){
     	String Status = "error";
@@ -71,7 +71,7 @@ public class FileUploadAction extends ActionSupport implements ModelDriven<Medic
 	}
 
 	@Override
-	public MedicalDataBean getModel() {
+	public Upload getModel() {
 		// TODO Auto-generated method stub
 		return md;
 	}
