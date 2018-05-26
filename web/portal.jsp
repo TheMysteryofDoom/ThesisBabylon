@@ -87,6 +87,7 @@
 					
 					<input name="id" id="id" type="hidden" value="<%= session.getAttribute("patientid") %>">
 					<input class="button" <%= disabled %> value="Update Medical Status" type="submit">
+					<%session.setAttribute("didRegister", ""); %>
 			</form>	
 		</div>
 		<div class="four columns">
