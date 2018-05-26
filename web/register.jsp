@@ -62,7 +62,7 @@
 	<form action="registerPatient.action" method="post">
 		<div class="row">
 			<div class="three columns">
-				<label>Full Name:</label>
+				<label>Full Name<font color="red">*</font>:</label>
 			</div>
 			<div class="three columns">
 			    <input class="u-full-width" type="text" name="firstName" id="firstName" placeholder="First Name" required="required" value="<%= session.getAttribute("pFirstName") %>"></input>
@@ -77,7 +77,7 @@
 		<br>
 		<div class="row"> <!-- 1 Row -->
 			<div class="three columns">
-				<label>Birthday:</label>
+				<label>Birthday<font color="red">*</font>:</label>
 			</div>
 			<div class="three columns">
 				<input type="date" id="birthDay2" name="birthDay2" value="<%= day %>" required="required" class="u-full-width">
@@ -86,7 +86,7 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Gender:</label>
+					<label>Gender<font color="red">*</font>:</label>
 				</div>
 				<div class="two columns">
 					<input type="radio" name ="gender" id="male" value="M" <%= isMale %>> Male
@@ -98,7 +98,7 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Birthplace:</label>
+					<label>Birthplace<font color="red">*</font>:</label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" type="text" name="birthPlace" id="birthPlace" placeholder="Place of Birth" value="<%= session.getAttribute("pBirthPlace") %>" required="required"></input>
@@ -310,7 +310,7 @@
 			<br>
 			<div class="row">
 				<div class="three columns">
-					<label>Religion:</label>
+					<label>Religion<font color="red">*</font>:</label>
 				</div>
 				<div class="three columns">
 					<select class="u-full-width" id="religion" name="religion">
@@ -346,7 +346,7 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Civil Status:</label>
+					<label>Civil Status<font color="red">*</font>:</label>
 				</div>
 				<div class="three columns">
 					<select id="civil" name="civil" required="required" class="u-full-width">

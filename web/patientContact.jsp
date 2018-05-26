@@ -79,7 +79,7 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Contact Number 1: </label>
+					<label>Contact Number 1</font color="red">*</font>: </label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" onkeypress="return isNumberKey(event)" type="text" name="contactNo1" id="contactNo1" placeholder="e.g. 04799755545" value="<%= session.getAttribute("pContactA") %>" required="required"></input>
@@ -130,7 +130,7 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Email: </label>
+					<label>Email<font color="red">*</font>: </label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" type="email" name="email" id="email" placeholder="e.g. email@email.com" required="required" value="<%= session.getAttribute("pEmail") %>"></input>

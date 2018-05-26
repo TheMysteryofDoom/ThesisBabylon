@@ -118,6 +118,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 			bool = f.mkdir();
 			System.out.println("Directory created " + bool);
 			System.out.println("Patient saved to database.");
+			session.put("didRegister", "Patient has been successfully Registered");
 				status = "success";
 		}else{
 			System.out.println("Directory did not create");
@@ -127,7 +128,7 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 	}
 	
 	public String part1To2() throws ParseException{ // Base to Contact
-		
+		session.put("didRegister", "");
 		session.put("pFirstName", request.getAttribute("firstName"));
 		session.put("pLastName", request.getAttribute("lastName"));
 		session.put("pMiddleName", request.getAttribute("middleName"));

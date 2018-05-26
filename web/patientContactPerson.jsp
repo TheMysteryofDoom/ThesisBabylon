@@ -78,7 +78,7 @@
 		<br>
 		<div class="row">
 			<div class="three columns">
-				<label>Full Name:</label>
+				<label>Full Name<font color="red">*</font>:</label>
 			</div>
 			<div class="three columns">
 			    <input class="u-full-width" type="text" name="EMCfirstName" id="EMCfirstName" placeholder="First Name" required="required"></input>
@@ -93,7 +93,7 @@
 			<br>
 		<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Type:</label>
+					<label>Type<font color="red">*</font>:</label>
 				</div>
 				<div class="three columns">
 					<select id="EMCtype" name="EMCtype" required="required" class="u-full-width">
