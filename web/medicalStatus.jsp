@@ -65,10 +65,11 @@
 				<label>Patient: </label>[PatientName]
 			</div>
 			<div class="six columns">
-				<label>ID Number: </label>[PatientNumber]
+				<label>ID Number: </label><%= session.getAttribute("patientid") %>
 			</div>
 		</div>
 		<hr>
+		<input type="hidden" name="patientID" id="patientID" value="<%=session.getAttribute("patientid") %>">
 		<div class ="row">
 			<div class="twelve columns" align="center">
 				<h5><b>Vital Signs</b></h5>
