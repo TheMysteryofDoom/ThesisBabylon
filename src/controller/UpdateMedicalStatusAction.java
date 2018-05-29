@@ -16,15 +16,18 @@ public class UpdateMedicalStatusAction extends ActionSupport implements ModelDri
 
 	MedicalDataBean mdb = new MedicalDataBean();
 	Connection connection = DBSingletonConnection.getConnection();
+	String status = "error";
 	public String execute(){
 		System.out.println("Medical Status is mapped here.");
+		
 		if(DBSQLOperation.insertMedicalStatus(mdb, connection)){
 			System.out.println("Medical status updated");
-			
-			return SUCCESS;
+			status = "success";
+			return status;
 		}else{
 			System.err.println("Medical Satus did not insert.");
-			return ERROR;
+			status= "error";
+			return status;
 		}
 
 		

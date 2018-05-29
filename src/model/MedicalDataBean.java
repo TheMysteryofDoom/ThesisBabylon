@@ -4,6 +4,7 @@ package model;
 public class MedicalDataBean {
 	//Will upload the DB (LEFT at NEXUS LAB).
 	//Vital Signs
+	private int patientId;
 	private int medicalStatusid;
 	private float bloodPressure;
 	private float prcr;
@@ -18,6 +19,12 @@ public class MedicalDataBean {
 	private float Abdominal;
 	
 	
+	public int getPatientId() {
+		return patientId;
+	}
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
+	}
 	public int getMedicalStatusid() {
 		return medicalStatusid;
 	}

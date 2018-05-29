@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2018 at 05:13 PM
+-- Generation Time: May 29, 2018 at 06:57 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -63,6 +63,26 @@ CREATE TABLE `medicalresults` (
   `fileUpload` tinyblob NOT NULL,
   `fileUploadContentType` varchar(255) NOT NULL,
   `fileUploadFileName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `medicalstatus`
+--
+
+CREATE TABLE `medicalstatus` (
+  `patientID` int(11) NOT NULL,
+  `medicalStatusid` int(11) NOT NULL,
+  `bloodPressure` float NOT NULL,
+  `prcr` float NOT NULL,
+  `repiratoryRate` float NOT NULL,
+  `temperature` float NOT NULL,
+  `weight` float NOT NULL,
+  `height` float NOT NULL,
+  `headCircumference` float NOT NULL,
+  `chestCircumference` float NOT NULL,
+  `Abdominal` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -142,6 +162,12 @@ ALTER TABLE `medicalresults`
   ADD PRIMARY KEY (`fileID`);
 
 --
+-- Indexes for table `medicalstatus`
+--
+ALTER TABLE `medicalstatus`
+  ADD PRIMARY KEY (`medicalStatusid`);
+
+--
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
@@ -166,6 +192,11 @@ ALTER TABLE `icd`
 --
 ALTER TABLE `medicalresults`
   MODIFY `fileID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `medicalstatus`
+--
+ALTER TABLE `medicalstatus`
+  MODIFY `medicalStatusid` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `patient`
 --

@@ -17,10 +17,10 @@ public interface SQLCommand {
 			//+"medicalresults(fileID,fileUploadFileName,filePath)"
 			//+ "VALUES(?,?,?)";
 	String INSERT_MEDICAL_STATUS = "INSERT INTO "
-			+ "medicalstatus(medicalStatusid, bloodPressure, prcr,"
+			+ "medicalstatus(patientID, medicalStatusid, bloodPressure, prcr,"
 			+ " repiratoryRate, temperature, weight, height,"
 			+ " headCircumference, chestCircumference, Abdominal)"
-			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
+			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
 	
 	String INSERT_UPLOAD = "INSERT INTO "
 			+"upload(filePath) VALUES(?)";

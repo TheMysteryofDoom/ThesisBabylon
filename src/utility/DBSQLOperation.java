@@ -102,16 +102,17 @@ public class DBSQLOperation implements SQLCommand{
 				PreparedStatement pstmnt = 
 						connection.prepareStatement(INSERT_MEDICAL_STATUS);
 				
-				pstmnt.setInt(1, mdb.getMedicalStatusid());
-				pstmnt.setFloat(2, mdb.getBloodPressure());
-				pstmnt.setFloat(3, mdb.getPrcr());
-				pstmnt.setFloat(3, mdb.getRepiratoryRate());
-				pstmnt.setFloat(4, mdb.getTemperature());
-				pstmnt.setFloat(5, mdb.getWeight());
-				pstmnt.setFloat(6, mdb.getHeight());
-				pstmnt.setFloat(7, mdb.getHeadCircumference());
-				pstmnt.setFloat(8, mdb.getChestCircumference());
-				pstmnt.setFloat(9, mdb.getAbdominal());
+				pstmnt.setInt(1, mdb.getPatientId());
+				pstmnt.setInt(2, mdb.getMedicalStatusid());
+				pstmnt.setFloat(3, mdb.getBloodPressure());
+				pstmnt.setFloat(4, mdb.getPrcr());
+				pstmnt.setFloat(5, mdb.getRepiratoryRate());
+				pstmnt.setFloat(6, mdb.getTemperature());
+				pstmnt.setFloat(7, mdb.getWeight());
+				pstmnt.setFloat(8, mdb.getHeight());
+				pstmnt.setFloat(9, mdb.getHeadCircumference());
+				pstmnt.setFloat(10, mdb.getChestCircumference());
+				pstmnt.setFloat(11, mdb.getAbdominal());
 				
 				
 				pstmnt.executeUpdate();

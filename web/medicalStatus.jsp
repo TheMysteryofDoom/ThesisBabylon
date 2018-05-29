@@ -59,7 +59,7 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr> <!-- End of Header -->
-	<form action="updateMedical" method="post">
+	<form action="updateMedicalStatus" method="post">
 		<div class ="row">
 			<div class="six columns">
 				<label>Patient: </label>[PatientName]
