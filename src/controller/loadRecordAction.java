@@ -4,28 +4,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
-import utility.DBSQLOperation;
 import utility.DBSingletonConnection;
-import utility.Search;
 import model.PatientBean;
-import model.FetchDataBean;
-
-
-
-
-
-
-
-
 //import com.itextpdf.text.Document;
 //import com.itextpdf.text.Image;
 //import com.itextpdf.text.Image;

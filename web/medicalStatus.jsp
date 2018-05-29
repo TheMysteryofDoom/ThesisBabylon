@@ -158,7 +158,7 @@
 				<label>Abdominal:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="abdCirc" id="abdCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<hr>
