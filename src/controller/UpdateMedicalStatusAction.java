@@ -39,15 +39,8 @@ public class UpdateMedicalStatusAction extends ActionSupport implements ModelDri
 		mdb.setHeadCircumference(Float.parseFloat(request.getParameter("headCirc")));
 		mdb.setChestCircumference(Float.parseFloat(request.getParameter("chestCirc")));
 		mdb.setAbdominal(Float.parseFloat(request.getParameter("abdCirc")));
-		//System.out.println(request.getParameter("bloodPressure"));
-		//System.out.println(request.getParameter("prcr"));
-		//System.out.println(request.getParameter("respiratoryRate"));
-		//System.out.println(request.getParameter("temperature"));
-		//System.out.println(request.getParameter("weight"));
-		//System.out.println(request.getParameter("height"));
-		//System.out.println(request.getParameter("headCirc"));
-		//System.out.println(request.getParameter("chestCirc"));
-		//System.out.println(request.getParameter("abdCirc"));
+
+		//=============================================================
 		System.out.println(request.getParameter("medHistory"));
 		System.out.println(request.getParameter("treatmentPlan"));
 		//===================

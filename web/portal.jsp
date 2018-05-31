@@ -52,7 +52,8 @@
 			<div class="seven columns"> 									<!-- Tier 2 -->
 				<p><br>
 				<%= session.getAttribute("username") %><br>
-				[Med Liscence No. Goes Here]
+				Hospital: <%= session.getAttribute("hospitalName") %><br>
+				Hospital ID: <%= session.getAttribute("hospitalID") %><br>
 				</p>
 			</div> 															<!-- Tier 2 -->
 			<div class="five columns"> 										<!-- Tier 2 -->

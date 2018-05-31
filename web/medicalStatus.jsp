@@ -43,7 +43,8 @@
 			<div class="seven columns"> 									<!-- Tier 2 -->
 				<p><br>
 				<%= session.getAttribute("username") %><br>
-				[ID No. Goes Here]
+				Hospital: <%= session.getAttribute("hospitalName") %><br>
+				Hospital ID: <%= session.getAttribute("hospitalID") %><br>
 				</p>
 			</div> 															<!-- Tier 2 -->
 			<div class="five columns"> 										<!-- Tier 2 -->
@@ -70,6 +71,7 @@
 		</div>
 		<hr>
 		<input type="hidden" name="patientID" id="patientID" value="<%=session.getAttribute("patientid") %>">
+		<input type="hidden" name="hospitalID" id="hospitalID" value="<%=session.getAttribute("hospitalID") %>">
 		<div class ="row">
 			<div class="twelve columns" align="center">
 				<h5><b>Vital Signs</b></h5>
