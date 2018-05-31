@@ -137,7 +137,17 @@
 			ResultSet medicalData = (ResultSet)session.getAttribute("medicalHistory");
 			StringBuilder medicalDataBuilder = new StringBuilder();
 			if (medicalData.next()){
-				medicalDataBuilder.append("Blood Pressure: "+medicalData.getString(3)+"\n");
+				medicalDataBuilder.append("Blood Pressure: "+medicalData.getString(3)+"mm/HG \n");
+				medicalDataBuilder.append("PR/CR: "+medicalData.getString(4)+" bpm \n");
+				medicalDataBuilder.append("Respiratory Rate: "+medicalData.getString(5)+" bpm \n");
+				medicalDataBuilder.append("Temperature: "+medicalData.getString(6)+" Celsius \n");
+				medicalDataBuilder.append("Weight: "+medicalData.getString(7)+"kg \n");
+				medicalDataBuilder.append("Height: "+medicalData.getString(8)+"cm \n");
+				medicalDataBuilder.append("Head Circumference: "+medicalData.getString(9)+"cm \n");
+				medicalDataBuilder.append("Chest Circumference: "+medicalData.getString(10)+"cm \n");
+				medicalDataBuilder.append("Abdominal Circumference: "+medicalData.getString(11)+"cm \n");
+				medicalDataBuilder.append("Medical History: "+medicalData.getString(12)+"\n");
+				medicalDataBuilder.append("Treatment Plans: "+medicalData.getString(13)+"\n");
 			}
 			medData = medicalDataBuilder.toString();
 		} catch (Exception e) {
