@@ -152,7 +152,7 @@
 			medData = medicalDataBuilder.toString();
 		} catch (Exception e) {
 			session.setAttribute("medicalHistory", "Exception");
-			medData = e.getMessage();
+			medData = "No Medical Data yet";
 		}
 		%>
 		<div class="six columns">

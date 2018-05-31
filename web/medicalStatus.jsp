@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
+<%@ page import="java.sql.ResultSet" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -70,6 +70,30 @@
 			</div>
 		</div>
 		<hr>
+		<%
+		String medData = "";
+		try{
+			ResultSet medicalData = (ResultSet)session.getAttribute("medicalHistory");
+			StringBuilder medicalDataBuilder = new StringBuilder();
+			if (medicalData.next()){
+				medicalDataBuilder.append("Blood Pressure: "+medicalData.getString(3)+"mm/HG \n");
+				medicalDataBuilder.append("PR/CR: "+medicalData.getString(4)+" bpm \n");
+				medicalDataBuilder.append("Respiratory Rate: "+medicalData.getString(5)+" bpm \n");
+				medicalDataBuilder.append("Temperature: "+medicalData.getString(6)+" Celsius \n");
+				medicalDataBuilder.append("Weight: "+medicalData.getString(7)+"kg \n");
+				medicalDataBuilder.append("Height: "+medicalData.getString(8)+"cm \n");
+				medicalDataBuilder.append("Head Circumference: "+medicalData.getString(9)+"cm \n");
+				medicalDataBuilder.append("Chest Circumference: "+medicalData.getString(10)+"cm \n");
+				medicalDataBuilder.append("Abdominal Circumference: "+medicalData.getString(11)+"cm \n");
+				medicalDataBuilder.append("Medical History: "+medicalData.getString(12)+"\n");
+				medicalDataBuilder.append("Treatment Plans: "+medicalData.getString(13)+"\n");
+			}
+			medData = medicalDataBuilder.toString();
+		} catch (Exception e) {
+			session.setAttribute("medicalHistory", "Exception");
+			medData = "No Medical Data yet";
+		}
+		%>
 		<input type="hidden" name="patientID" id="patientID" value="<%=session.getAttribute("patientid") %>">
 		<input type="hidden" name="hospitalID" id="hospitalID" value="<%=session.getAttribute("hospitalID") %>">
 		<div class ="row">
