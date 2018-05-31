@@ -1,5 +1,7 @@
 package controller;
+import java.util.HashMap;
 import java.util.Map;
+
 
 
 
@@ -16,7 +18,11 @@ public class Login implements SessionAware{
 SessionMap<String,String> sessionmap;  
 	
 	private String username;
-	private String password;  
+	private String password; 
+	//==============
+	private static String hospitalID;
+	//==============
+	
 	public String getUsername() {  
 	    return username;  
 	}  
@@ -36,10 +42,27 @@ SessionMap<String,String> sessionmap;
 	}
 
 	public String execute(){  
+		Map<String, String> hospitalNames = new HashMap<String, String>();
+		hospitalNames.put("666", "Saint Somethings");
+		hospitalNames.put("20010001", "Near Western University");
+		
 		System.out.println(username);
 	   
 	    if(User.validate(username, password)){  
 	    	sessionmap.put("username", username);
+	    	sessionmap.put("didRegister","");
+	    	//===========================================
+	    	System.out.println(hospitalID);
+	    	sessionmap.put("hospitalID", hospitalID);
+	    	/*Notes
+	    	 * use session.get("hospitalID") to retrieve the current hospital ID in any class that's Session Aware
+	    	*/
+	    	try{
+	    		sessionmap.put("hospitalName", hospitalNames.get(hospitalID));
+	    	} catch (Exception f){
+	    		sessionmap.put("hospitalName", "Heavenly Host Hospital");
+	    	}
+	    	//===========================================
 	        return "success";  
 	    }  
 	    else{  
@@ -55,6 +78,14 @@ SessionMap<String,String> sessionmap;
 	public String logout(){  
 	    sessionmap.invalidate();  
 	    return "success";  
+	}
+
+	public static String getHospitalID() {
+		return hospitalID;
+	}
+
+	public static void setHospitalID(String hospitalID) {
+		Login.hospitalID = hospitalID;
 	}  
 
 	

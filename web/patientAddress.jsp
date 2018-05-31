@@ -43,7 +43,8 @@
 			<div class="seven columns"> 									<!-- Tier 2 -->
 				<p><br>
 				<%= session.getAttribute("username") %><br>
-				[ID No. Goes Here]
+				Hospital: <%= session.getAttribute("hospitalName") %><br>
+				Hospital ID: <%= session.getAttribute("hospitalID") %><br>
 				</p>
 			</div> 															<!-- Tier 2 -->
 			<div class="five columns"> 										<!-- Tier 2 -->
@@ -79,13 +80,13 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Street: </label>
+					<label>Street<font color="red">*</font>: </label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" type="text" name="street" id="street" placeholder="e.g. Blue Street" required="required" value="<%= session.getAttribute("pStreet") %>"></input>
 				</div>
 				<div class="three columns">
-					<label>City: </label>
+					<label>City<font color="red">*</font>: </label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" type="text" name="city" id="city" placeholder="e.g. Manila" required="required" value="<%= session.getAttribute("pCity") %>"></input>
@@ -94,13 +95,13 @@
 			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="three columns">
-					<label>Country: </label>
+					<label>Country<font color="red">*</font>: </label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" type="text" name="country" id="country" placeholder="e.g. Philippines" required="required" value="<%= session.getAttribute("pCountry") %>"></input>
 				</div>
 				<div class="three columns">
-					<label>Zipcode: </label>
+					<label>Zipcode<font color="red">*</font>: </label>
 				</div>
 				<div class="three columns">
 					<input class="u-full-width" type="text" onkeypress="return isNumberKey(event)" name="zipcode" id="zipcode" placeholder="e.g. 8867" required="required" value="<%= session.getAttribute("pZip") %>"></input>

@@ -19,7 +19,19 @@ public interface SQLCommand {
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
 			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
+<<<<<<< HEAD
 
+=======
+	//String INSERT_MEDICALRECORDS = "INSERT INTO"
+			//+"medicalresults(fileID,fileUploadFileName,filePath)"
+			//+ "VALUES(?,?,?)";
+	String INSERT_MEDICAL_STATUS = "INSERT INTO "
+			+ "medicalstatus(patientID, medicalStatusid, bloodPressure, prcr,"
+			+ " repiratoryRate, temperature, weight, height,"
+			+ " headCircumference, chestCircumference, Abdominal, medHistory,"
+			+ " treatmentPlan)"
+			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
+>>>>>>> ac0455ba3963c6dd49d0f16553191d4381c84afd
 	
 	String INSERT_UPLOAD = "INSERT INTO "
 			+"upload(fileID, filePath, FileUploadFileName ) VALUES(?, ?, ?)";

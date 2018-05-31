@@ -2,11 +2,12 @@ package model;
 
 
 public class MedicalDataBean {
-	
+	//Will upload the DB (LEFT at NEXUS LAB).
 	//Vital Signs
+	private int patientId;
 	private int medicalStatusid;
 	private float bloodPressure;
-	private String prcr;
+	private float prcr;
 	private float repiratoryRate;
 	private float temperature;
 	private float weight;
@@ -16,8 +17,16 @@ public class MedicalDataBean {
 	private float headCircumference;
 	private float chestCircumference;
 	private float Abdominal;
+	private String medHistory;
+	private String treatmentPlan;
 	
 	
+	public int getPatientId() {
+		return patientId;
+	}
+	public void setPatientId(int patientId) {
+		this.patientId = patientId;
+	}
 	public int getMedicalStatusid() {
 		return medicalStatusid;
 	}
@@ -30,10 +39,11 @@ public class MedicalDataBean {
 	public void setBloodPressure(float bloodPressure) {
 		this.bloodPressure = bloodPressure;
 	}
-	public String getPrcr() {
+	
+	public float getPrcr() {
 		return prcr;
 	}
-	public void setPrcr(String prcr) {
+	public void setPrcr(float prcr) {
 		this.prcr = prcr;
 	}
 	public float getRepiratoryRate() {
@@ -78,6 +88,19 @@ public class MedicalDataBean {
 	public void setAbdominal(float abdominal) {
 		Abdominal = abdominal;
 	}
+	public String getMedHistory() {
+		return medHistory;
+	}
+	public void setMedHistory(String medHistory) {
+		this.medHistory = medHistory;
+	}
+	public String getTreatmentPlan() {
+		return treatmentPlan;
+	}
+	public void setTreatmentPlan(String treatmentPlan) {
+		this.treatmentPlan = treatmentPlan;
+	}
+	
 	
 	
 	

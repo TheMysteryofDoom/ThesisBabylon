@@ -43,7 +43,8 @@
 			<div class="seven columns"> 									<!-- Tier 2 -->
 				<p><br>
 				<%= session.getAttribute("username") %><br>
-				[ID No. Goes Here]
+				Hospital: <%= session.getAttribute("hospitalName") %><br>
+				Hospital ID: <%= session.getAttribute("hospitalID") %><br>
 				</p>
 			</div> 															<!-- Tier 2 -->
 			<div class="five columns"> 										<!-- Tier 2 -->
@@ -59,16 +60,18 @@
 		</div> 																<!-- Tier 1 -->	
 	</div> 							
 	<hr> <!-- End of Header -->
-	<form action="updateMedical.action" method="post">
+	<form action="updateMedicalStatus" method="post">
 		<div class ="row">
 			<div class="six columns">
 				<label>Patient: </label>[PatientName]
 			</div>
 			<div class="six columns">
-				<label>ID Number: </label>[PatientNumber]
+				<label>ID Number: </label><%= session.getAttribute("patientid") %>
 			</div>
 		</div>
 		<hr>
+		<input type="hidden" name="patientID" id="patientID" value="<%=session.getAttribute("patientid") %>">
+		<input type="hidden" name="hospitalID" id="hospitalID" value="<%=session.getAttribute("hospitalID") %>">
 		<div class ="row">
 			<div class="twelve columns" align="center">
 				<h5><b>Vital Signs</b></h5>
@@ -157,7 +160,7 @@
 				<label>Abdominal:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="abdCirc" id="abdCirc" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<hr>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2018 at 05:13 PM
+-- Generation Time: May 31, 2018 at 08:12 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `adminID` int(11) NOT NULL,
+  `hospitalID` int(11) NOT NULL,
   `firstName` varchar(100) NOT NULL,
   `lastName` varchar(100) NOT NULL,
   `middleName` varchar(100) NOT NULL,
@@ -39,8 +40,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`adminID`, `firstName`, `lastName`, `middleName`, `username`, `password`) VALUES
-(1, 'Mark', 'Ticzon', 'Velandres', 'markticzon', '**123**');
+INSERT INTO `admin` (`adminID`, `hospitalID`, `firstName`, `lastName`, `middleName`, `username`, `password`) VALUES
+(1, 20010001, 'Mark', 'Ticzon', 'Velandres', 'markticzon', '**123**');
 
 -- --------------------------------------------------------
 
@@ -64,6 +65,36 @@ CREATE TABLE `medicalresults` (
   `fileUploadContentType` varchar(255) NOT NULL,
   `fileUploadFileName` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `medicalstatus`
+--
+
+CREATE TABLE `medicalstatus` (
+  `patientID` int(11) NOT NULL,
+  `medicalStatusid` int(11) NOT NULL,
+  `bloodPressure` float NOT NULL,
+  `prcr` float NOT NULL,
+  `repiratoryRate` float NOT NULL,
+  `temperature` float NOT NULL,
+  `weight` float NOT NULL,
+  `height` float NOT NULL,
+  `headCircumference` float NOT NULL,
+  `chestCircumference` float NOT NULL,
+  `Abdominal` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `medicalstatus`
+--
+
+INSERT INTO `medicalstatus` (`patientID`, `medicalStatusid`, `bloodPressure`, `prcr`, `repiratoryRate`, `temperature`, `weight`, `height`, `headCircumference`, `chestCircumference`, `Abdominal`) VALUES
+(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -142,6 +173,12 @@ ALTER TABLE `medicalresults`
   ADD PRIMARY KEY (`fileID`);
 
 --
+-- Indexes for table `medicalstatus`
+--
+ALTER TABLE `medicalstatus`
+  ADD PRIMARY KEY (`medicalStatusid`);
+
+--
 -- Indexes for table `patient`
 --
 ALTER TABLE `patient`
@@ -166,6 +203,11 @@ ALTER TABLE `icd`
 --
 ALTER TABLE `medicalresults`
   MODIFY `fileID` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `medicalstatus`
+--
+ALTER TABLE `medicalstatus`
+  MODIFY `medicalStatusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `patient`
 --

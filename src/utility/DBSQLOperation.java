@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import model.MedicalDataBean;
 import model.Upload;
 import model.PatientBean;
 import model.User;
@@ -90,6 +91,39 @@ public class DBSQLOperation implements SQLCommand{
 			}
 		}
 		
+		return isSuccessful;
+	}
+	
+	//insert medical status
+	public static boolean insertMedicalStatus(MedicalDataBean mdb, Connection connection){
+		boolean isSuccessful = false;
+		
+		if(connection != null){
+			try{
+				PreparedStatement pstmnt = 
+						connection.prepareStatement(INSERT_MEDICAL_STATUS);
+				
+				pstmnt.setInt(1, mdb.getPatientId());
+				pstmnt.setInt(2, mdb.getMedicalStatusid());
+				pstmnt.setFloat(3, mdb.getBloodPressure());
+				pstmnt.setFloat(4, mdb.getPrcr());
+				pstmnt.setFloat(5, mdb.getRepiratoryRate());
+				pstmnt.setFloat(6, mdb.getTemperature());
+				pstmnt.setFloat(7, mdb.getWeight());
+				pstmnt.setFloat(8, mdb.getHeight());
+				pstmnt.setFloat(9, mdb.getHeadCircumference());
+				pstmnt.setFloat(10, mdb.getChestCircumference());
+				pstmnt.setFloat(11, mdb.getAbdominal());
+				pstmnt.setString(12, mdb.getMedHistory());
+				pstmnt.setString(13, mdb.getTreatmentPlan());
+				
+				
+				pstmnt.executeUpdate();
+				isSuccessful = true;
+			}catch(SQLException sqle){
+				sqle.printStackTrace();
+			}
+		}
 		return isSuccessful;
 	}
 	
