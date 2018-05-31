@@ -87,7 +87,7 @@
 		try{
 			ResultSet medicalData = (ResultSet)session.getAttribute("medicalHistory");
 			//StringBuilder medicalDataBuilder = new StringBuilder();
-			if (medicalData.next()){
+			//if (medicalData.next()){
 				bldPressure = medicalData.getString(3);
 				prcr = medicalData.getString(4);
 				resrate = medicalData.getString(5);
@@ -99,7 +99,7 @@
 				abdCirc = medicalData.getString(11);
 				medHistory = medicalData.getString(12);
 				treatmentPlans = medicalData.getString(13);
-			}
+			//}
 			//medData = medicalDataBuilder.toString();
 		} catch (Exception e) {
 			session.setAttribute("medicalHistory", "Exception");
