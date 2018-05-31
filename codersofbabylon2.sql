@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2018 at 06:57 AM
+-- Generation Time: May 31, 2018 at 08:12 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `adminID` int(11) NOT NULL,
+  `hospitalID` int(11) NOT NULL,
   `firstName` varchar(100) NOT NULL,
   `lastName` varchar(100) NOT NULL,
   `middleName` varchar(100) NOT NULL,
@@ -39,8 +40,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`adminID`, `firstName`, `lastName`, `middleName`, `username`, `password`) VALUES
-(1, 'Mark', 'Ticzon', 'Velandres', 'markticzon', '**123**');
+INSERT INTO `admin` (`adminID`, `hospitalID`, `firstName`, `lastName`, `middleName`, `username`, `password`) VALUES
+(1, 20010001, 'Mark', 'Ticzon', 'Velandres', 'markticzon', '**123**');
 
 -- --------------------------------------------------------
 
@@ -84,6 +85,16 @@ CREATE TABLE `medicalstatus` (
   `chestCircumference` float NOT NULL,
   `Abdominal` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `medicalstatus`
+--
+
+INSERT INTO `medicalstatus` (`patientID`, `medicalStatusid`, `bloodPressure`, `prcr`, `repiratoryRate`, `temperature`, `weight`, `height`, `headCircumference`, `chestCircumference`, `Abdominal`) VALUES
+(0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+(0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -196,7 +207,7 @@ ALTER TABLE `medicalresults`
 -- AUTO_INCREMENT for table `medicalstatus`
 --
 ALTER TABLE `medicalstatus`
-  MODIFY `medicalStatusid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `medicalStatusid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `patient`
 --

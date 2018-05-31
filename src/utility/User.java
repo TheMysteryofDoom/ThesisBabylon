@@ -20,9 +20,19 @@ public class User {
 			     "SELECT * FROM admin WHERE username=? and password=?"); 
 		
 			   ps.setString(1,username);  
-			   ps.setString(2,password);  
+			   ps.setString(2,password);     
 			   ResultSet rs = ps.executeQuery();  
 			   status = rs.next();  
+			   String query = "select hospitalID from admin where username = '"+username+"' and password = '"+password+"'";
+				PreparedStatement pstmt = con.prepareStatement(query);
+				ResultSet resultSet = pstmt.executeQuery();
+				 while(resultSet.next()){
+						System.out.println("Printing values.....");
+						//System.out.println(resultSet.getString(1));
+						System.out.println(resultSet.getString(1));
+						//System.out.println(resultSet.getString(3));
+				 }
+				
 			  }catch(Exception e){e.printStackTrace();}  
 			 return status;  
 			}  
