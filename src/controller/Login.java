@@ -54,6 +54,9 @@ SessionMap<String,String> sessionmap;
 	    	//===========================================
 	    	System.out.println(hospitalID);
 	    	sessionmap.put("hospitalID", hospitalID);
+	    	/*Notes
+	    	 * use session.get("hospitalID") to retrieve the current hospital ID in any class that's Session Aware
+	    	*/
 	    	try{
 	    		sessionmap.put("hospitalName", hospitalNames.get(hospitalID));
 	    	} catch (Exception f){
