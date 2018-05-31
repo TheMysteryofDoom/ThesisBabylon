@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import model.Upload;
 import model.PatientBean;
 import model.User;
+import controller.FileUploadAction;
 
 //Create encryption 
 
@@ -100,8 +101,10 @@ public class DBSQLOperation implements SQLCommand{
 			try{
 				PreparedStatement pstmnt = 
 						connection.prepareStatement(INSERT_UPLOAD);
-				pstmnt.setString(1, md.getFilePathToSaveInDB().toString());
-			
+				pstmnt.setInt(1, md.getFileID());
+				pstmnt.setString(2, md.getFileUploadFileName());
+				pstmnt.setString(3,  md.filePath());
+
 				//insert
 				pstmnt.executeUpdate();
 				isSuccessful = true;

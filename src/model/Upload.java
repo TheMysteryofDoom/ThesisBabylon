@@ -5,11 +5,7 @@ import java.io.File;
 
 
 public class Upload {
-	
-	
-	
-
-	//private int fileID;
+	private int fileID;
 	private File fileUpload;
     private String fileUploadFileName;
     private String fileUploadContentType;
@@ -17,12 +13,12 @@ public class Upload {
     
     
     
-	//public int getFileID() {
-		//return fileID;
-	//}
-	//public void setFileID(int fileID) {
-	//	this.fileID = fileID;
-//	}
+	public int getFileID() {
+		return fileID;
+	}
+	public void setFileID(int fileID) {
+		this.fileID = fileID;
+	}
 	
     
 	public File getFileUpload() {
