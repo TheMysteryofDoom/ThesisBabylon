@@ -42,8 +42,8 @@ public class UpdateMedicalStatusAction extends ActionSupport implements ModelDri
 		mdb.setMedHistory(request.getParameter("medHistory"));
 		mdb.setTreatmentPlan(request.getParameter("treatmentPlan"));
 		//=============================================================
-		System.out.println(request.getParameter("medHistory"));
-		System.out.println(request.getParameter("treatmentPlan"));
+		//System.out.println(request.getParameter("medHistory"));
+		//System.out.println(request.getParameter("treatmentPlan"));
 		//===================
 		
 		if(DBSQLOperation.insertMedicalStatus(mdb, connection)){
