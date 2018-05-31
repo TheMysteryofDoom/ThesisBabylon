@@ -19,8 +19,9 @@ public interface SQLCommand {
 	String INSERT_MEDICAL_STATUS = "INSERT INTO "
 			+ "medicalstatus(patientID, medicalStatusid, bloodPressure, prcr,"
 			+ " repiratoryRate, temperature, weight, height,"
-			+ " headCircumference, chestCircumference, Abdominal)"
-			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
+			+ " headCircumference, chestCircumference, Abdominal, medHistory,"
+			+ " treatmentPlan)"
+			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
 	
 	String INSERT_UPLOAD = "INSERT INTO "
 			+"upload(filePath) VALUES(?)";

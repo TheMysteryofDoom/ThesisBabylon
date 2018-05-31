@@ -17,6 +17,8 @@ public class MedicalDataBean {
 	private float headCircumference;
 	private float chestCircumference;
 	private float Abdominal;
+	private String medHistory;
+	private String treatmentPlan;
 	
 	
 	public int getPatientId() {
@@ -86,6 +88,19 @@ public class MedicalDataBean {
 	public void setAbdominal(float abdominal) {
 		Abdominal = abdominal;
 	}
+	public String getMedHistory() {
+		return medHistory;
+	}
+	public void setMedHistory(String medHistory) {
+		this.medHistory = medHistory;
+	}
+	public String getTreatmentPlan() {
+		return treatmentPlan;
+	}
+	public void setTreatmentPlan(String treatmentPlan) {
+		this.treatmentPlan = treatmentPlan;
+	}
+	
 	
 	
 	

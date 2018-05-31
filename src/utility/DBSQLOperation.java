@@ -113,6 +113,8 @@ public class DBSQLOperation implements SQLCommand{
 				pstmnt.setFloat(9, mdb.getHeadCircumference());
 				pstmnt.setFloat(10, mdb.getChestCircumference());
 				pstmnt.setFloat(11, mdb.getAbdominal());
+				pstmnt.setString(12, mdb.getMedHistory());
+				pstmnt.setString(13, mdb.getTreatmentPlan());
 				
 				
 				pstmnt.executeUpdate();
