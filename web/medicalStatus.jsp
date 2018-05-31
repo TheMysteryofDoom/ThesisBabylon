@@ -72,26 +72,38 @@
 		<hr>
 		<%
 		String medData = "";
+		String bldPressure = "";
+		String prcr = "";
+		String resrate = "";
+		String temp = "";
+		String weight = "";
+		String height = "";
+		String headCirc = "";
+		String chestCirc = "";
+		String abdCirc = "";
+		String medHistory="";
+		String treatmentPlans = "";
+		
 		try{
 			ResultSet medicalData = (ResultSet)session.getAttribute("medicalHistory");
-			StringBuilder medicalDataBuilder = new StringBuilder();
+			//StringBuilder medicalDataBuilder = new StringBuilder();
 			if (medicalData.next()){
-				medicalDataBuilder.append("Blood Pressure: "+medicalData.getString(3)+"mm/HG \n");
-				medicalDataBuilder.append("PR/CR: "+medicalData.getString(4)+" bpm \n");
-				medicalDataBuilder.append("Respiratory Rate: "+medicalData.getString(5)+" bpm \n");
-				medicalDataBuilder.append("Temperature: "+medicalData.getString(6)+" Celsius \n");
-				medicalDataBuilder.append("Weight: "+medicalData.getString(7)+"kg \n");
-				medicalDataBuilder.append("Height: "+medicalData.getString(8)+"cm \n");
-				medicalDataBuilder.append("Head Circumference: "+medicalData.getString(9)+"cm \n");
-				medicalDataBuilder.append("Chest Circumference: "+medicalData.getString(10)+"cm \n");
-				medicalDataBuilder.append("Abdominal Circumference: "+medicalData.getString(11)+"cm \n");
-				medicalDataBuilder.append("Medical History: "+medicalData.getString(12)+"\n");
-				medicalDataBuilder.append("Treatment Plans: "+medicalData.getString(13)+"\n");
+				bldPressure = medicalData.getString(3);
+				prcr = medicalData.getString(4);
+				resrate = medicalData.getString(5);
+				temp = medicalData.getString(6);
+				weight = medicalData.getString(7);
+				height = medicalData.getString(8);
+				headCirc = medicalData.getString(9);
+				chestCirc = medicalData.getString(10);
+				abdCirc = medicalData.getString(11);
+				medHistory = medicalData.getString(12);
+				treatmentPlans = medicalData.getString(13);
 			}
-			medData = medicalDataBuilder.toString();
+			//medData = medicalDataBuilder.toString();
 		} catch (Exception e) {
 			session.setAttribute("medicalHistory", "Exception");
-			medData = "No Medical Data yet";
+			//medData = "No Medical Data yet";
 		}
 		%>
 		<input type="hidden" name="patientID" id="patientID" value="<%=session.getAttribute("patientid") %>">
@@ -106,7 +118,7 @@
 				<label>Blood Pressure:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="bloodPressure" id="bloodPressure" placeholder="mm/HG"> (mm/HG)
+				<input type="text" onkeypress="return isNumberKey(event)" name="bloodPressure" id="bloodPressure" value="<%= bldPressure %>" placeholder="mm/HG"> (mm/HG)
 			</div>
 		</div>
 		<br>
@@ -115,7 +127,7 @@
 				<label>PR/CR:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="prcr" id="prcr" placeholder="bpm"> (bpm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="prcr" id="prcr" value="<%= prcr %>" placeholder="bpm"> (bpm)
 			</div>
 		</div>
 		<br>
@@ -124,7 +136,7 @@
 				<label>Respiratory Rate:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="respiratoryRate" id="respiratoryRate" placeholder="bpm"> (bpm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="respiratoryRate" id="respiratoryRate" value="<%= resrate %>" placeholder="bpm"> (bpm)
 			</div>
 		</div>
 		<br>
@@ -133,7 +145,7 @@
 				<label>Temperature:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="temperature" id="temperature" placeholder="Celsius"> (Celsius)
+				<input type="text" onkeypress="return isNumberKey(event)" name="temperature" id="temperature" value="<%= temp %>" placeholder="Celsius"> (Celsius)
 			</div>
 		</div>
 		<br>
@@ -142,7 +154,7 @@
 				<label>Weight:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="weight" id="weight" placeholder="kg"> (kg)
+				<input type="text" onkeypress="return isNumberKey(event)" name="weight" id="weight" value="<%= weight %>" placeholder="kg"> (kg)
 			</div>
 		</div>
 		<br>
@@ -151,7 +163,7 @@
 				<label>Height:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="height" id="height" placeholder="cm"> (cm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="height" id="height" value="<%= height %>" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<hr>
@@ -166,7 +178,7 @@
 				<label>Head Circumference:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" placeholder="cm"> (cm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="headCirc" id="headCirc" value="<%= headCirc %>" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<br>
@@ -175,7 +187,7 @@
 				<label>Chest Circumference:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" placeholder="cm"> (cm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="chestCirc" id="chestCirc" value="<%= chestCirc %>" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<br>
@@ -184,7 +196,7 @@
 				<label>Abdominal:</label>
 			</div>
 			<div class="nine columns">
-				<input type="text" onkeypress="return isNumberKey(event)" name="abdCirc" id="abdCirc" placeholder="cm"> (cm)
+				<input type="text" onkeypress="return isNumberKey(event)" name="abdCirc" id="abdCirc" value="<%= abdCirc %>" placeholder="cm"> (cm)
 			</div>
 		</div>
 		<hr>
@@ -195,7 +207,7 @@
 		</div>
 		<div class ="row">
 			<div class="twelve columns">
-				<textarea class="u-full-width dontresize textboxheight" name="medHistory" placeholder="Write down the patient's Medical History here."></textarea>
+				<textarea class="u-full-width dontresize textboxheight" name="medHistory" placeholder="Write down the patient's Medical History here."><%= medHistory %></textarea>
 			</div>
 		</div>
 		<hr>
@@ -206,7 +218,7 @@
 		</div>
 		<div class ="row">
 			<div class="twelve columns">
-				<textarea class="u-full-width dontresize textboxheight" name="treatmentPlan" placeholder="Write down the patient's Treatment Plan here."></textarea>
+				<textarea class="u-full-width dontresize textboxheight" name="treatmentPlan" placeholder="Write down the patient's Treatment Plan here."><%= treatmentPlans %></textarea>
 			</div>
 		</div>
 		<br>

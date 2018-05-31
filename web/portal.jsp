@@ -136,7 +136,7 @@
 		try{
 			ResultSet medicalData = (ResultSet)session.getAttribute("medicalHistory");
 			StringBuilder medicalDataBuilder = new StringBuilder();
-			if (medicalData.next()){
+			//if (medicalData.next()){
 				medicalDataBuilder.append("Blood Pressure: "+medicalData.getString(3)+"mm/HG \n");
 				medicalDataBuilder.append("PR/CR: "+medicalData.getString(4)+" bpm \n");
 				medicalDataBuilder.append("Respiratory Rate: "+medicalData.getString(5)+" bpm \n");
@@ -148,11 +148,11 @@
 				medicalDataBuilder.append("Abdominal Circumference: "+medicalData.getString(11)+"cm \n");
 				medicalDataBuilder.append("Medical History: "+medicalData.getString(12)+"\n");
 				medicalDataBuilder.append("Treatment Plans: "+medicalData.getString(13)+"\n");
-			}
+			//}
 			medData = medicalDataBuilder.toString();
 		} catch (Exception e) {
 			session.setAttribute("medicalHistory", "Exception");
-			medData = "No Medical Data yet";
+			//medData = "No Medical Data yet";
 		}
 		%>
 		<div class="six columns">

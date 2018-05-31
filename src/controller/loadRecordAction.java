@@ -61,6 +61,7 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 				//=================================
 				PreparedStatement pstmt2 = connection.prepareStatement(query2);
 				resultSet2 = pstmt2.executeQuery();
+				resultSet2.next();
 				session.put("medicalHistory", resultSet2);
 				//==============================
 				 while(resultSet.next()){
