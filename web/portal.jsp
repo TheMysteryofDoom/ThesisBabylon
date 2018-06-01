@@ -101,6 +101,7 @@
 	<div class="row">
 		<%
 		String patientDetails2 = "";
+		String medData = "";
 		try{
 			//patientDetails2 = (String)session.getAttribute("patientDetails");
 			ResultSet patientValues = (ResultSet)session.getAttribute("patientDetails");
@@ -132,12 +133,33 @@
 		} catch (Exception e) {
 			session.setAttribute("patientDetails", "Exception");
 		}
+		try{
+			ResultSet medicalData = (ResultSet)session.getAttribute("medicalHistory");
+			StringBuilder medicalDataBuilder = new StringBuilder();
+			//if (medicalData.next()){
+				medicalDataBuilder.append("Blood Pressure: "+medicalData.getString(3)+"mm/HG \n");
+				medicalDataBuilder.append("PR/CR: "+medicalData.getString(4)+" bpm \n");
+				medicalDataBuilder.append("Respiratory Rate: "+medicalData.getString(5)+" bpm \n");
+				medicalDataBuilder.append("Temperature: "+medicalData.getString(6)+" Celsius \n");
+				medicalDataBuilder.append("Weight: "+medicalData.getString(7)+"kg \n");
+				medicalDataBuilder.append("Height: "+medicalData.getString(8)+"cm \n");
+				medicalDataBuilder.append("Head Circumference: "+medicalData.getString(9)+"cm \n");
+				medicalDataBuilder.append("Chest Circumference: "+medicalData.getString(10)+"cm \n");
+				medicalDataBuilder.append("Abdominal Circumference: "+medicalData.getString(11)+"cm \n");
+				medicalDataBuilder.append("Medical History: "+medicalData.getString(12)+"\n");
+				medicalDataBuilder.append("Treatment Plans: "+medicalData.getString(13)+"\n");
+			//}
+			medData = medicalDataBuilder.toString();
+		} catch (Exception e) {
+			session.setAttribute("medicalHistory", "Exception");
+			//medData = "No Medical Data yet";
+		}
 		%>
 		<div class="six columns">
 		<textarea class="u-full-width dontresize textboxheight" name="patientDetails" placeholder="Basic Patient Information will show up here. Please input the patient ID number on top to see the data."><%= patientDetails2 %></textarea>
 		</div>
 		<div class="six columns">
-		<textarea class="u-full-width dontresize textboxheight" name="medicalRecords" placeholder="The Medical Data of the Patient will show up here. Please input the patient ID number on top to see the data."></textarea>
+		<textarea class="u-full-width dontresize textboxheight" name="medicalRecords" placeholder="The Medical Data of the Patient will show up here. Please input the patient ID number on top to see the data."><%= medData %></textarea>
 		</div>
 	</div>
 </div>

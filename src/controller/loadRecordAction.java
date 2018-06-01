@@ -33,6 +33,7 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 	Connection connection = DBSingletonConnection.getConnection();
 	private PatientBean pb = new PatientBean();
 	ResultSet resultSet = null;
+	ResultSet resultSet2 = null;
 	 
 	@Override
 	public String execute(){
@@ -52,11 +53,17 @@ public class loadRecordAction extends ActionSupport implements ModelDriven<Patie
 				ArrayList al = null;
 	            ArrayList pid_list = new ArrayList();
 				String query = "select * from patient where patientid = '"+patientid+"'";
+				String query2 = "select * from medicalstatus where patientid = '"+patientid+"'";
+				//==================================
 				PreparedStatement pstmt = connection.prepareStatement(query);
-				// pstmt.setInt(1, pb.getPatientID());
 				resultSet = pstmt.executeQuery();
 				session.put("patientDetails", resultSet);
-				 //==============================
+				//=================================
+				PreparedStatement pstmt2 = connection.prepareStatement(query2);
+				resultSet2 = pstmt2.executeQuery();
+				resultSet2.next();
+				session.put("medicalHistory", resultSet2);
+				//==============================
 				 while(resultSet.next()){
 					System.out.println("Printing values.....");
 					System.out.println(resultSet.getString(1));
