@@ -24,11 +24,17 @@ import utility.DBSingletonConnection;
 public class FileUploadAction extends ActionSupport implements ModelDriven<Upload>,SessionAware,ServletRequestAware{	
     
 	Upload md = new Upload();
+	protected Map<String,Object> session;
+	protected HttpServletRequest request;
 	Connection connection = DBSingletonConnection.getConnection();
     public String execute(){
     	String Status = "error";
 				
     	try{
+    		//============
+    		// use request.getParameter("patientID") for Patient ID
+    		System.out.println(request.getParameter("patientID"));
+    		//============
     		String filePath = "C:/Users/glenn_ailen/Desktop/My Private Property/3rd yr 1st term/entjava/thesis-ws/Upload";  // Path where uploaded file will be stored
 	        System.out.println("Server path:" + filePath); // check your path in console
 	        File fileToCreate = new File(filePath,md.getFileUploadFileName());// Create file name  same as original
@@ -58,16 +64,16 @@ public class FileUploadAction extends ActionSupport implements ModelDriven<Uploa
 			 return SUCCESS;
 			 }   
     
-  @Override
-	public void setServletRequest(HttpServletRequest arg0) {
+    @Override
+	public void setServletRequest(HttpServletRequest req) {
 		// TODO Auto-generated method stub
-		
+    	this.request = req;
 	}
 
 	@Override
-	public void setSession(Map<String, Object> arg0) {
+	public void setSession(Map sess) {
 		// TODO Auto-generated method stub
-		
+		this.session = sess;
 	}
 
 	@Override
