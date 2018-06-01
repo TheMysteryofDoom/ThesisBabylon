@@ -233,6 +233,7 @@
 		<div class ="row">
 			<div class="twelve columns" align="center">
 				<h5><b>Upload a Patient File</b></h5>
+				<input type="hidden" name="patientID" id="patientID" value="<%=session.getAttribute("patientid") %>">
 			</div>
 		</div>
 		<div class ="row">
