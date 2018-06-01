@@ -137,7 +137,7 @@ public class DBSQLOperation implements SQLCommand{
 						connection.prepareStatement(INSERT_UPLOAD);
 				pstmnt.setInt(1, md.getFileID());
 				pstmnt.setString(2, md.getFileUploadFileName());
-				pstmnt.setString(3,  md.filePath());
+				pstmnt.setString(3,  "Application/PDF");
 
 				//insert
 				pstmnt.executeUpdate();

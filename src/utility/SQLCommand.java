@@ -7,7 +7,6 @@ public interface SQLCommand {
 			+ "admin (adminID, firstName, lastName, lastName, "
 			+ "middleName, email, contactNo, "
 			+ "role, gender)";
-			
 	
 	String INSERT_PATIENT = "INSERT INTO "
 			+ "patient(patientID, firstName, lastName, middleName,"
@@ -18,23 +17,18 @@ public interface SQLCommand {
 			+ " emcContactNo, relationship, isAlive, patientCardID, pinID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
 			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	
-<<<<<<< HEAD
 
-=======
-	//String INSERT_MEDICALRECORDS = "INSERT INTO"
-			//+"medicalresults(fileID,fileUploadFileName,filePath)"
-			//+ "VALUES(?,?,?)";
+
 	String INSERT_MEDICAL_STATUS = "INSERT INTO "
 			+ "medicalstatus(patientID, medicalStatusid, bloodPressure, prcr,"
 			+ " repiratoryRate, temperature, weight, height,"
 			+ " headCircumference, chestCircumference, Abdominal, medHistory,"
 			+ " treatmentPlan)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
->>>>>>> ac0455ba3963c6dd49d0f16553191d4381c84afd
+
 	
 	String INSERT_UPLOAD = "INSERT INTO "
-			+"upload(fileID, filePath, FileUploadFileName ) VALUES(?, ?, ?)";
+			+"upload(patientID, filePath, fileUploadContentType ) VALUES(?, ?, ?)";
 			
 	
 	

@@ -1,6 +1,7 @@
 package controller;
 import java.io.File;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -22,7 +24,7 @@ import utility.DBSingletonConnection;
 
 
 public class FileUploadAction extends ActionSupport implements ModelDriven<Upload>,SessionAware,ServletRequestAware{	
-    
+	Map sess = ActionContext.getContext().getSession();
 	Upload md = new Upload();
 	Connection connection = DBSingletonConnection.getConnection();
     public String execute(){
@@ -34,6 +36,8 @@ public class FileUploadAction extends ActionSupport implements ModelDriven<Uploa
 	        File fileToCreate = new File(filePath,md.getFileUploadFileName());// Create file name  same as original
 	        FileUtils.copyFile(md.getFileUpload(), fileToCreate); // Just copy temp file content tos this file
 	        System.out.println("Before: ");
+	        ResultSet patient = (ResultSet)sess.get("patientdetails");
+	        md.setFileID(20188485);
 	        md.setFilePathToSaveInDB(fileToCreate);
 	        System.out.println(md.getFileUploadFileName());
 	        if (DBSQLOperation.insertUpload(md, connection)) {
@@ -47,6 +51,8 @@ public class FileUploadAction extends ActionSupport implements ModelDriven<Uploa
 				System.out.println(md.getFileUploadFileName());
 				System.err.println("Upload did not insert");
 			}  
+	        
+	        
 	        
 		}catch(Exception e)
 			 {
