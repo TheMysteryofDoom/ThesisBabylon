@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2018 at 08:12 AM
+-- Generation Time: Jun 01, 2018 at 10:37 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -150,6 +150,25 @@ INSERT INTO `patient` (`patientID`, `firstName`, `lastName`, `middleName`, `birt
 (20188485, 'Mark Luis Gabriel', 'Ticzon', 'V.', '1998-02-17', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09159324417', '', '', 'Cellphone', 'N/A', 'N/A', 'markvticzon@gmail.com', 'Mandaluyong City', 'Mandaluyong City', 'Philippines', '1001', 'Melody', 'Ticzon', 'V.', '09158562992', 'Mother', 1, '2785382128', '7556'),
 (20188838, 'Gabriel', 'Ticzon', 'Zero', '7', 'M', 'Quezon City', 'filipino', 'Christianity', 'single', 'Student', '09494334664', '', '', 'Cellphone', 'N/A', 'N/A', 'gabriel@email.com', 'San Joaquin', 'Mandaluyong', 'Philippines', '1550', 'Charlie', 'Zero', 'One', '09494334663', 'Sibling', 1, '2785382128', '4815');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `upload`
+--
+
+CREATE TABLE `upload` (
+  `patientID` int(100) NOT NULL,
+  `filePath` varchar(255) NOT NULL,
+  `fileUploadContentType` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `upload`
+--
+
+INSERT INTO `upload` (`patientID`, `filePath`, `fileUploadContentType`) VALUES
+(20188485, 'CSB Application Form for Loan.pdf', 'Application/PDF');
+
 --
 -- Indexes for dumped tables
 --
@@ -183,6 +202,12 @@ ALTER TABLE `medicalstatus`
 --
 ALTER TABLE `patient`
   ADD PRIMARY KEY (`patientID`);
+
+--
+-- Indexes for table `upload`
+--
+ALTER TABLE `upload`
+  ADD UNIQUE KEY `patientID` (`patientID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -222,6 +247,12 @@ ALTER TABLE `patient`
 --
 ALTER TABLE `medicalresults`
   ADD CONSTRAINT `medicalresults_ibfk_1` FOREIGN KEY (`fileID`) REFERENCES `patient` (`patientID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `upload`
+--
+ALTER TABLE `upload`
+  ADD CONSTRAINT `upload_ibfk_1` FOREIGN KEY (`patientID`) REFERENCES `patient` (`patientID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
