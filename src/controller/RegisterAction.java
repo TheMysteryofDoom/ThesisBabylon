@@ -105,7 +105,8 @@ public class RegisterAction extends ActionSupport implements ModelDriven<Patient
 		String patientID = String.valueOf(year)+String.valueOf(randomPatientID);
 		pb.setPatientID(Integer.parseInt(patientID));
 		//
-		pb.setPatientCardID("2785382128");
+		pb.setHospitalId(Integer.parseInt(session.get("hospitalID").toString()));
+		//pb.setPatientCardID("2785382128");
 		//Pin generator.
 		int randomPin = (int)(Math.random()*9000)+1000;
 		pb.setPinID(String.valueOf(randomPin));

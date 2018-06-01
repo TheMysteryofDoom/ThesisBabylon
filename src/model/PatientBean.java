@@ -55,7 +55,8 @@ public class PatientBean implements Serializable{
 	private boolean isAlive;
 	
 	//Patient Card ID
-	private String patientCardID;
+	//private String patientCardID;
+	private int hospitalId;
 	private String pinID;
 	
 	public int getPatientID() {
@@ -229,11 +230,11 @@ public class PatientBean implements Serializable{
 	public void setAlive(boolean isAlive) {
 		this.isAlive = isAlive;
 	}
-	public String getPatientCardID() {
-		return patientCardID;
+	public int getHospitalId() {
+		return hospitalId;
 	}
-	public void setPatientCardID(String patientCardID) {
-		this.patientCardID = patientCardID;
+	public void setHospitalId(int hospitalId) {
+		this.hospitalId = hospitalId;
 	}
 	public String getPinID() {
 		return pinID;

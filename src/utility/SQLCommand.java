@@ -9,7 +9,7 @@ public interface SQLCommand {
 			+ " citizenship, religion, civil, job, contactNo1, contactNo2,"
 			+ " contactNo3, type1, type2, type3, email, street, city,"
 			+ " country, zipcode, emcFirstName, emcLastName, emcMiddleName,"
-			+ " emcContactNo, relationship, isAlive, patientCardID, pinID)"
+			+ " emcContactNo, relationship, isAlive, hospitalID, pinID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
 			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
