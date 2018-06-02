@@ -37,13 +37,13 @@ public class FileUploadAction extends ActionSupport implements ModelDriven<Uploa
     		// use request.getParameter("patientID") for Patient ID
     		System.out.println(request.getParameter("patientID"));
     		//============
-    		String filePath = "C:/Users/glenn_ailen/Desktop/My Private Property/3rd yr 1st term/entjava/thesis-ws/Upload";  // Path where uploaded file will be stored
+    		String filePath = "E:/Patient Medical Data/"+request.getParameter("patientID");  // Path where uploaded file will be stored
 	        System.out.println("Server path:" + filePath); // check your path in console
 	        File fileToCreate = new File(filePath,md.getFileUploadFileName());// Create file name  same as original
 	        FileUtils.copyFile(md.getFileUpload(), fileToCreate); // Just copy temp file content tos this file
 	        System.out.println("Before: ");
 	        ResultSet patient = (ResultSet)sess.get("patientdetails");
-	        md.setFileID(20188485);
+	        md.setFileID(Integer.parseInt(request.getParameter("patientID").toString()));
 	        md.setFilePathToSaveInDB(fileToCreate);
 	        System.out.println(md.getFileUploadFileName());
 	        if (DBSQLOperation.insertUpload(md, connection)) {
