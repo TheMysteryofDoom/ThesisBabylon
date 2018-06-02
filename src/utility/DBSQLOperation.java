@@ -10,6 +10,7 @@ import model.MedicalDataBean;
 import model.Upload;
 import model.PatientBean;
 import model.User;
+import controller.FileUploadAction;
 
 //Create encryption 
 
@@ -135,8 +136,10 @@ public class DBSQLOperation implements SQLCommand{
 			try{
 				PreparedStatement pstmnt = 
 						connection.prepareStatement(INSERT_UPLOAD);
-				pstmnt.setString(1, md.getFilePathToSaveInDB().toString());
-			
+				pstmnt.setInt(1, md.getFileID());
+				pstmnt.setString(2, md.getFileUploadFileName());
+				pstmnt.setString(3,  "Application/PDF");
+
 				//insert
 				pstmnt.executeUpdate();
 				isSuccessful = true;

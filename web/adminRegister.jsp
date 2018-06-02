@@ -28,7 +28,7 @@
 						</div>												<!-- Tier 2 -->
 					</div>
 					
-					<form action="registerAdmin.action" method="post">
+	<form action="AdminAction" method="post">
 		<div class="row">
 			<div class="three columns">
 				<label>Full Name:</label>
@@ -42,8 +42,14 @@
 			<div class="three columns">
 			    <input class="u-full-width" type="text" name="middleName" id="middleName" placeholder="Mother's Maiden Name"></input>
 			</div>
-		</div>
-		<br>
+		</div>	
+			<div class="two columns">
+				<label>Birthday:</label>
+			</div>
+			<div class="three columns">
+				<input type="date" id="birthDay2" name="birthDay2"  required="required" class="u-full-width">
+			</div>
+			
 		<div class="row">
 		<div class="three columns">
 		<label>UserName:</label>
@@ -56,13 +62,56 @@
 		<div class="row">
 		<div class="three columns">
 		<label>Password:</label>
-		</div>
-			<div class="three columns">
-				<input class="u-full-width" type="password" name="password" id="password" placeholder="Password"></input>
-			</div>
-		</div>
-		
 		<br>
+		
+				<div class="row"> <!-- 1 Row -->
+			<div class="three columns">
+				<label>Birthday:</label>
+			</div>
+			<div class="three columns">
+				<input type="date" id="birthDay2" name="birthDay2"  required="required" class="u-full-width">
+			</div>
+		
+			<div class="row"> <!-- 1 Row -->
+				<div class="three columns">
+					<label>Email: </label>
+				</div>
+				<div class="three columns">
+					<input class="u-full-width" type="text" name="email" id="email" placeholder="e.g. email@email.com" required="required"></input>
+				</div>
+			</div> <!-- 1 Row End -->
+			<br>
+			
+			<div class="row"> <!-- 1 Row -->
+				<div class="three columns">
+					<label>Contact Number: </label>
+				</div>
+				<div class="three columns">
+					<input class="u-full-width" type="text" name="contactNo" id="contactNo" placeholder="e.g. 04799755545" required="required"></input>
+				</div>
+				<div class="three columns">
+					<select id="type1" name="type1" required="required" class="u-full-width">
+					 <option selected="selected" disabled="disabled" value="none">Select Type</option>
+					 <option value="Cell">Cellphone</option>
+					 <option value="Home">Home</option>
+					 <option value="Work">Work</option>
+					</select>
+				</div>
+			</div> <!-- 1 Row End -->
+			<br>
+			<div class="row"> <!-- 1 Row -->
+					<div class="three columns">
+						<label>Admin Role:</label>
+					</div>
+					<div class="three columns">
+						<input type="radio" name ="role" id="nurse" value="nurse" checked="checked"> Nurse
+					</div>
+					<div class="three columns">
+						<input type="radio" name ="role" id="doctor" value="doctor"> Doctor
+					</div>
+				</div> <!-- 1 Row End -->
+		
+			<br>
 			<div class="row"> <!-- 1 Row -->
 				<div class="two columns">
 					<label>Gender:</label>
@@ -75,13 +124,16 @@
 				</div>
 			</div> <!-- 1 Row End -->
 			
-				<br>
+		
+			</div> <!-- 1 Row End -->
 		<div class="row">
 			<div class="three columns">
 			<input class="button-primary u-pull-right" value="Register" type="submit"></input>
 			</div>
 		</div>
-			</form>
+	</div>
+	</div>
+	</form>
 
 </body>
 </html>

@@ -3,6 +3,11 @@ package utility;
 public interface SQLCommand {
 	String LOGIN_USER = "SELECT username, password FROM adminaccounts";
 	
+	String INSERT_ADMIN = "INSERT INTO"
+			+ "admin (adminID, firstName, lastName, lastName, "
+			+ "middleName, email, contactNo, "
+			+ "role, gender)";
+	
 	String INSERT_PATIENT = "INSERT INTO "
 			+ "patient(patientID, firstName, lastName, middleName,"
 			+ " birthDay, gender, birthPlace, "
@@ -12,19 +17,20 @@ public interface SQLCommand {
 			+ " emcContactNo, relationship, isAlive, hospitalID, pinID)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,"
 			+ "  ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-	
-	//String INSERT_MEDICALRECORDS = "INSERT INTO"
-			//+"medicalresults(fileID,fileUploadFileName,filePath)"
-			//+ "VALUES(?,?,?)";
+
+
 	String INSERT_MEDICAL_STATUS = "INSERT INTO "
 			+ "medicalstatus(patientID, medicalStatusid, bloodPressure, prcr,"
 			+ " repiratoryRate, temperature, weight, height,"
 			+ " headCircumference, chestCircumference, Abdominal, medHistory,"
 			+ " treatmentPlan)"
 			+ "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";		
+
 	
 	String INSERT_UPLOAD = "INSERT INTO "
-			+"upload(filePath) VALUES(?)";
+			+"upload(patientID, filePath, fileUploadContentType ) VALUES(?, ?, ?)";
+			
+	
 	
 	
 	String GET_PATIENT = "select * from"

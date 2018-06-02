@@ -42,6 +42,9 @@
 			    		<input class="u-full-width" type="password" name="password" id="password" placeholder="Password"></input>
 			    	</div>
 				</div>
+				
+				<a href="adminRegister.jsp">Sign up here.....</a>
+				
 				<div class="row">
 					<br>
 			    	<div class="twelve columns">
